@@ -1,0 +1,23 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'es';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Política editorial: cómo revisa US Passport Cost cada tarifa" description="Cómo US Passport Cost obtiene tarifas, tiempos y reglas de destino del Departamento de Estado, con qué frecuencia las revisa, cómo corrige errores y por qué es independiente." lang={lang} noindex={true} breadcrumbs={[{ label: 'Política editorial' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Política editorial</h1>
+    <h2>Primero las fuentes</h2>
+    <p>Cada tarifa sale de la tabla de tarifas y de la página de costos del Departamento de Estado y se contrasta con el 22 CFR 22.1; cada tiempo, de la página oficial de tiempos; cada regla de renovación, de las páginas de renovación en línea y por correo; cada regla de destino, de las fichas de país de Asuntos Consulares, citadas palabra por palabra. Nunca se usa un sitio secundario como fuente.</p>
+    <h2>Actualizaciones</h2>
+    <p>Una tarea programada lee las fuentes cada semana. Los tiempos publicados se actualizan solos; las tarifas, reglas y textos de países los relee una persona antes de publicar cualquier cambio. La fecha al pie de cada página es la de la última revisión.</p>
+    <h2>Correcciones</h2>
+    <p>Los errores enviados a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> se comparan con la fuente oficial y se corrigen; el caso pasa a las pruebas automáticas.</p>
+    <h2>Independencia</h2>
+    <p>Ninguna mensajería, gestoría, estudio de fotos ni agencia paga por una mención o un enlace. No hay páginas patrocinadas, formularios de contacto comercial ni enlaces de afiliados. Editor: {AUTHOR_NAME}. Actualizado el {upd}.</p>
+  </div>
+</PageLayout>

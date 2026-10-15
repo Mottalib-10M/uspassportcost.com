@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'es';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Cookies: ninguna en la calculadora US Passport Cost" description="US Passport Cost no instala cookies ni muestra avisos: sus fechas y elecciones se quedan en su navegador, y la calculadora insertada no mide nada en el sitio que la aloja." lang={lang} noindex={true} breadcrumbs={[{ label: 'Cookies' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Cookies</h1>
+    <p>Este sitio <strong>no instala cookies</strong> ni guarda nada en el almacenamiento de su navegador, por eso no hay aviso de consentimiento.</p>
+    <h2>Medición anónima de errores</h2>
+    <p>Si está activada, Microsoft Clarity funciona sin cookies: no se crean <code>_clck</code>, <code>_clsk</code>, <code>MUID</code> ni <code>CLID</code> y los campos se ocultan. Bloquear clarity.ms no cambia nada en las calculadoras.</p>
+    <h2>Calculadora insertada</h2>
+    <p>La versión en iframe no carga ninguna medición. Preguntas: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Vea la <a href={route('privacy', lang)}>política de privacidad</a>. Actualizado el {upd}.</p>
+  </div>
+</PageLayout>

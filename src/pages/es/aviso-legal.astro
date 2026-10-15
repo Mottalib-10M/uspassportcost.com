@@ -1,0 +1,26 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'es';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Aviso legal: editor de la calculadora US Passport Cost" description="Aviso legal de US Passport Cost: editor, alojamiento, lo que hace y no hace el sitio, sin relación con el Departamento de Estado de EE. UU. y sin venta de servicios de pasaporte." lang={lang} noindex={true} breadcrumbs={[{ label: 'Aviso legal' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Aviso legal</h1>
+    <h2>Editor</h2>
+    <LegalIdentity lang={lang} />
+    <p>Director de la publicación: {AUTHOR_NAME}. Contacto: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Alojamiento</h2>
+    <LegalIdentity mode="hosting" lang={lang} />
+    <h2>No es un sitio del gobierno</h2>
+    <p>{SITE_URL} publica información general y cálculos con datos públicos: tarifas del pasaporte, tiempos de trámite, reglas de renovación y reglas de entrada por destino. No está afiliado al Departamento de Estado de EE. UU. ni a ninguna agencia, no vende servicios de agilización ni de solicitud y no da asesoría legal. El Departamento decide las tarifas, el trámite y la elegibilidad de cada caso.</p>
+    <h2>Datos</h2>
+    <p>Las páginas, tablas y datos de Asuntos Consulares son obras del gobierno federal de EE. UU., de dominio público. No se usa ningún sello ni logotipo oficial.</p>
+    <h2>Responsabilidad e inserción</h2>
+    <p>Las cifras se revisan y prueban antes de cada actualización y se ofrecen sin garantía. La calculadora puede insertarse gratis: <a href={route('widget', lang)}>insertar la calculadora</a>. Métodos: <a href={route('method', lang)}>método y fuentes</a>. Actualizado el {upd}.</p>
+  </div>
+</PageLayout>

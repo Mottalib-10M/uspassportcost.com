@@ -1,0 +1,113 @@
+---
+/**
+ * Accueil (pilier, RECETTE §5), trame propre au site : ligne des deux relevés datés, H1 et chapeau replié, aussitôt
+ * le calculateur « combien je paie et quand je le reçois », la réponse courte, puis six cas chiffrés par le moteur,
+ * la frise des délais (trois voies côte à côte), les destinations à six mois, le texte et la FAQ.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import PassportTool from './calc/PassportTool';
+import Clamp from './Clamp.astro';
+import { HOME } from '../content/home';
+import { route, hasRoute, type Locale } from '../i18n/routes';
+import { label } from '../i18n/nav';
+import { helpers } from '../lib/helpers';
+import { P, type SourceKey } from '../lib/params';
+import { cost, legs, type Situation, type Doc, type Service } from '../lib/engine/passport';
+import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import C from '../data/countries.json';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const T = (en: string, sp: string) => (es ? sp : en);
+const x = HOME[lang];
+const h = helpers(lang);
+const path = route('home', lang);
+const parts = x.body(h).split(/<!--mini:([A-Za-z0-9_]+)-->/);
+import MiniSim from './calc/MiniSim';
+const keys: SourceKey[] = ['feeChart', 'feesPage', 'cfr', 'processing', 'getFast', 'online', 'mail', 'caApi'];
+const sources = keys.map((k) => ({ name: P.sources[k].label[lang], url: P.sources[k].url }));
+const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(x.faqs, lang)];
+const r = (id: string) => (hasRoute(id, lang) ? route(id, lang) : hasRoute(id, 'en') ? route(id, 'en') : route('home', lang));
+const cases: Array<{ id: string; t: string; s: Situation; d: Doc; v: Service; dl: boolean }> = [
+  { id: 'first-time-passport', t: T('First adult passport book', 'Primera libreta de adulto'), s: 'first', d: 'book', v: 'routine', dl: false },
+  { id: 'passport-renewal', t: T('Adult renewal by mail', 'Renovación por correo'), s: 'renew-mail', d: 'book', v: 'routine', dl: false },
+  { id: 'child-passport', t: T('Child under 16, book', 'Menor de 16, libreta'), s: 'child', d: 'book', v: 'routine', dl: false },
+  { id: 'passport-card', t: T('First adult passport card', 'Primera tarjeta de adulto'), s: 'first', d: 'card', v: 'routine', dl: false },
+  { id: 'expedited-passport', t: T('Renewal, expedited + 1-3 day delivery', 'Renovación urgente + entrega 1-3 días'), s: 'renew-mail', d: 'book', v: 'expedited', dl: true },
+  { id: 'renew-passport-online', t: T('Online renewal, book', 'Renovación en línea, libreta'), s: 'renew-online', d: 'book', v: 'routine', dl: false },
+];
+const priced = cases.map((c) => ({ ...c, k: cost({ situation: c.s, doc: c.d, service: c.v, delivery: c.dl, fileSearch: false }), l: legs({ situation: c.s, doc: c.d, service: c.v, delivery: c.dl }) }));
+const wk = (d: number) => Math.round((d / 7) * 10) / 10;
+const lanes = [
+  { t: T('Routine, by mail or in person', 'Ordinario, por correo o en persona'), l: legs({ situation: 'first', doc: 'book', service: 'routine', delivery: false }) },
+  { t: T('Expedited + 1-3 day delivery', 'Urgente + entrega 1-3 días'), l: legs({ situation: 'first', doc: 'book', service: 'expedited', delivery: true }) },
+  { t: T('Online renewal', 'Renovación en línea'), l: legs({ situation: 'renew-online', doc: 'book', service: 'routine', delivery: false }) },
+];
+const MAX = Math.max(...lanes.map((z) => z.l.mailIn[1] + z.l.processing[1] + z.l.mailOut[1]));
+const six = C.list.filter((c) => c.months === 6);
+const cid = (code: string) => `country-${code.toLowerCase()}`;
+---
+<PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={x.faqs} sources={sources}>
+  <header class="mb-4">
+    <p class="text-sm font-semibold uppercase tracking-wide text-accent-700">{T(`Fee chart of ${P.feeChartEdition} · processing times of ${h.date(P.times.pageUpdated)}`, `Tabla de tarifas de octubre de 2026 · tiempos del ${h.date(P.times.pageUpdated)}`)}</p>
+    <h1 class="mt-1 text-3xl font-bold text-navy-900 md:text-[2.5rem] md:leading-tight">{x.h1}</h1>
+    <Clamp text={x.intro} lang={lang} id="clamp-intro" sentences={1} class="mt-2" />
+  </header>
+  <section id="calculator" data-outil aria-label={T('Passport cost and arrival date calculator', 'Calculadora de costo y fecha del pasaporte')}>
+    <PassportTool client:load lang={lang} methodHref={route('method', lang)} />
+  </section>
+  <section class="mt-8" aria-labelledby="short">
+    <h2 id="short" class="text-2xl font-bold text-navy-900">{T('The short answer', 'La respuesta corta')}</h2>
+    <p class="mt-3 text-navy-800">{x.resume}</p>
+    <p class="mt-2 text-sm text-navy-700"><a class="underline" href={route('method', lang)}>{label('method', lang)}</a> · <a class="underline" href={route('about', lang)}>{label('about', lang)}</a></p>
+  </section>
+  <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="cases" data-chrome>
+    <h2 id="cases" class="text-2xl font-bold text-navy-900">{T('Six cases, priced to the cent', 'Seis casos, al centavo')}</h2>
+    <div class="mt-4 overflow-x-auto">
+      <table class="journal w-full text-sm">
+        <thead><tr><th scope="col" class="py-2 pr-3 text-left">{T('Case', 'Caso')}</th><th scope="col" class="py-2 px-3 text-right">{T('Check to the State Department', 'Cheque al Departamento')}</th><th scope="col" class="py-2 px-3 text-right">{T('Facility', 'Centro')}</th><th scope="col" class="py-2 px-3 text-right">{T('Total', 'Total')}</th><th scope="col" class="py-2 pl-3 text-right">{T('Weeks, door to door', 'Semanas, puerta a puerta')}</th></tr></thead>
+        <tbody>
+          {priced.map((c) => (
+            <tr class="border-t border-navy-200">
+              <th scope="row" class="py-2 pr-3 text-left font-normal"><a class="text-navy-900 underline" href={r(c.id)}>{c.t}</a></th>
+              <td class="tabular-nums py-2 px-3 text-right">{h.usd2(c.k.state)}</td>
+              <td class="tabular-nums py-2 px-3 text-right">{c.k.facility ? h.usd(c.k.facility) : '–'}</td>
+              <td class="tabular-nums py-2 px-3 text-right font-semibold text-navy-900">{h.usd2(c.k.total)}</td>
+              <td class="tabular-nums py-2 pl-3 text-right">{`${wk(c.l.mailIn[0] + c.l.processing[0] + c.l.mailOut[0])} – ${wk(c.l.mailIn[1] + c.l.processing[1] + c.l.mailOut[1])}`}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="lanes" data-chrome>
+    <h2 id="lanes" class="text-2xl font-bold text-navy-900">{T('Where the weeks go', 'Dónde se van las semanas')}</h2>
+    <p class="mt-2 text-sm text-navy-700">{T('Longest published time of each leg, in weeks: mail to the State Department, processing, mail back.', 'Tiempo publicado más largo de cada tramo, en semanas: correo de ida, trámite, correo de regreso.')}</p>
+    <ul class="mt-4 space-y-4">
+      {lanes.map((z) => {
+        const tot = z.l.mailIn[1] + z.l.processing[1] + z.l.mailOut[1];
+        return (
+          <li>
+            <p class="flex flex-wrap justify-between gap-2 text-sm"><span class="font-medium text-navy-900">{z.t}</span><span class="tabular-nums text-navy-700">{T(`up to ${wk(tot)} weeks`, `hasta ${wk(tot)} semanas`)}</span></p>
+            <div class="mt-1 flex h-5 w-full overflow-hidden rounded bg-navy-100" role="img" aria-label={`${z.t}: ${wk(z.l.mailIn[1])} + ${wk(z.l.processing[1])} + ${wk(z.l.mailOut[1])}`}>
+              {z.l.mailIn[1] > 0 && <span class="h-full bg-navy-400" style={`width:${(z.l.mailIn[1] / MAX) * 100}%`}></span>}
+              <span class="h-full bg-accent-600" style={`width:${(z.l.processing[1] / MAX) * 100}%`}></span>
+              <span class="h-full bg-navy-700" style={`width:${Math.max(z.l.mailOut[1], 1) / MAX * 100}%`}></span>
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+    <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-navy-700"><span><span class="mr-1 inline-block h-2.5 w-2.5 rounded-sm bg-navy-400 align-middle"></span>{T('mail to them', 'correo de ida')}</span><span><span class="mr-1 inline-block h-2.5 w-2.5 rounded-sm bg-accent-600 align-middle"></span>{T('processing', 'trámite')}</span><span><span class="mr-1 inline-block h-2.5 w-2.5 rounded-sm bg-navy-700 align-middle"></span>{T('mail back', 'correo de regreso')}</span></p>
+  </section>
+  <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="six" data-chrome>
+    <h2 id="six" class="text-2xl font-bold text-navy-900">{T('Destinations that want six months left', 'Destinos que piden seis meses de vigencia')}</h2>
+    <p class="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+      {six.map((c) => <a class="font-medium text-accent-800 underline" href={r(cid(c.code))}>{c.name[lang]}</a>)}
+      <a class="font-medium text-navy-800 underline" href={r('passport-validity')}>{T('All 24 destinations', 'Los 24 destinos')}</a>
+    </p>
+  </section>
+  <div class="prose prose-slate mt-10 max-w-none border-t border-navy-200 pt-4">
+    {parts.map((p, i) => i % 2 === 0 ? <Fragment set:html={p} /> : <div data-chrome class="not-prose"><MiniSim client:load kind={p} lang={lang} href={route('home', lang) + '#calculator'} /></div>)}
+  </div>
+</PageLayout>

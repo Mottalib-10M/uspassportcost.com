@@ -1,0 +1,22 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Contact US Passport Cost: Report a Wrong Fee or Date" description="Write to US Passport Cost if a passport fee, a processing time or a destination rule looks wrong, or if you would like to embed the passport cost calculator." lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description: 'Report an error or embed the calculator.', path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Contact</h1>
+    <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. We read every message and usually answer within a week, in English or Spanish.</p>
+    <h2>A number looks wrong</h2>
+    <p>Tell us the page and the official figure you see, with its link. Please do not send passport numbers, application locator numbers or copies of documents: we do not need them.</p>
+    <h2>Embedding</h2>
+    <p>Libraries, county clerks, travel agencies and community groups can embed the calculator free of charge: <a href={route('widget', lang)}>embed the calculator</a>.</p>
+    <h2>What we cannot do</h2>
+    <p>We cannot check your application status, contact the State Department for you, expedite anything or book an appointment. For that, use passportstatus.state.gov or call the National Passport Information Center at 877-487-2778.</p>
+  </div>
+</PageLayout>

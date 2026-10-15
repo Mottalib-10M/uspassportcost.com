@@ -1,0 +1,23 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Editorial Policy: How US Passport Cost Checks Each Fee" description="How US Passport Cost sources fees, processing times and destination rules from the State Department, how often they are checked, how errors are corrected, and its independence." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Editorial policy</h1>
+    <h2>Sources first</h2>
+    <p>Every fee comes from the State Department’s fee chart and Passport Fees page and is cross-checked with 22 CFR 22.1; every time from the official processing-time page; every renewal rule from the Renew Online and Renew by Mail pages; every destination rule from the Consular Affairs country information, quoted word for word. Secondary sites are never used as a source.</p>
+    <h2>Updates</h2>
+    <p>A scheduled job reads the sources every week. Published processing times are updated automatically; fees, rules and country texts are re-read by a person before any change is published. The date at the bottom of every page is the date of the last check.</p>
+    <h2>Corrections</h2>
+    <p>Errors reported to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> are checked against the official source and corrected; the case then joins the automated tests.</p>
+    <h2>Independence</h2>
+    <p>No courier, expediter, photo service or agency pays for a mention or a link. There are no sponsored pages, lead forms or affiliate links. Publisher: {AUTHOR_NAME}. Last updated: {upd}.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,26 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'es';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Privacidad: sus fechas del pasaporte no salen del navegador" description="Política de privacidad de US Passport Cost: edad, fechas del pasaporte, fechas de viaje y elecciones se calculan en su navegador y nunca se envían; sin cookies ni formularios." lang={lang} noindex={true} breadcrumbs={[{ label: 'Privacidad' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Política de privacidad</h1>
+    <h2>1. Responsable</h2>
+    <LegalIdentity lang={lang} />
+    <p>Correo: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>2. Lo que escribe</h2>
+    <p>Su situación, edad, fechas del pasaporte, destino y fechas de viaje solo los procesa su navegador. <strong>Nada se nos envía ni a nadie más y nada se guarda.</strong> Después de cambiar un campo, sus elecciones se escriben en la barra de direcciones de su propio navegador para que pueda copiar el enlace; esa dirección no se transmite salvo que usted la comparta.</p>
+    <h2>3. Lo que ve el alojamiento</h2>
+    <p>Al cargar una página, el servicio de alojamiento procesa los datos técnicos necesarios: dirección IP, hora, página pedida, navegador y página de origen. Base legal: interés legítimo en hacer funcionar el sitio (artículo 6, apartado 1, letra f, del RGPD, ya que el editor está en Francia).</p>
+    <h2>4. Medición</h2>
+    <p>No se instalan cookies. Si la medición anónima de errores (Microsoft Clarity, sin cookies) está activada, registra errores y tiempos de carga con todos los campos ocultos. Proveedor: Microsoft Ireland Operations Limited, Dublín, Irlanda.</p>
+    <h2>5. Sus derechos</h2>
+    <p>Puede pedir acceso, rectificación, supresión u oposición escribiendo a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>; respondemos en un mes. También puede reclamar ante la {LEGAL.supervisoryAuthority} (<a href={LEGAL.supervisoryAuthorityUrl} rel="nofollow noopener" target="_blank">{LEGAL.supervisoryAuthorityUrl}</a>). Quien vive en California conserva los derechos de la CCPA; no vendemos ni compartimos datos personales. Vea también las <a href={route('cookies', lang)}>cookies</a>. Actualizado el {upd}.</p>
+  </div>
+</PageLayout>

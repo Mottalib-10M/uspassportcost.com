@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Publisher of US Passport Cost: Who Adds Up Fees and Dates" description="Who publishes US Passport Cost, why it exists, how fees and dates are read from State Department sources and checked, how it is funded, and what it never sells." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">About {SITE_NAMES.en}</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{SITE_NAMES.en} is published by Radif Partners. It answers the two questions every passport applicant asks before going to the post office: how much will I pay, to whom, and will the passport arrive before my trip? The State Department publishes the answers in pieces: a PDF fee chart, a processing-time page, renewal rules on two other pages and entry rules on a page per country. This site puts them together for one person and one trip.</p>
+    <h2>Why this site does better than the first search result</h2>
+    <p>Many pages that rank for passport fees still print an older delivery fee or a processing time from a past backlog, and several calculators exist mainly to sell expediting. Here the fees come from the October 2026 chart and 22 CFR 22.1, the times from the page updated on the date shown, each total is split by payee, and the arrival date is compared with your departure. Nothing is for sale.</p>
+    <h2>How the numbers are checked</h2>
+    <p>A script reads the official sources, stores them, and automated tests compare them with the values the calculators use. When the published processing times change, the site follows; when a fee or a rule changes, a notice is opened and a person reads the source again. The <a href={route('method', lang)}>method page</a> lists every source and date.</p>
+    <h2>What we are not</h2>
+    <p>We are not the State Department, a courier, an expediter or a law firm. We do not handle applications or book appointments. The only official online renewal is on opr.travel.state.gov.</p>
+    <h2>Funding and your data</h2>
+    <p>The calculators are free and need no account. What you type stays in your browser. If the site carries advertising, it will never sit between a field and its result, and there will never be more than three spaces on a page.</p>
+    <h2>Contact</h2>
+    <p>A fee that changed, a date that looks wrong? Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. See also the <a href={route('editorial', lang)}>editorial policy</a> and the <a href={route('terms', lang)}>legal notice</a>. Data checked on <time datetime={LAST_UPDATED}>{upd}</time>.</p>
+  </div>
+</PageLayout>

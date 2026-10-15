@@ -1,0 +1,12 @@
+# US, anglais, Keyword Planner objetech, relevé 2026-10-15 (lot A, idée A11), copie du résumé
+# reports/etude-niches-2026-10-15-volumes-KP.txt : « A11 Passeport ~1,16M (how long does it take to get a passport
+# 100k-1M ; passport fees/cost/renewal 10k-100k) 0,6-2,4 € ». Seules les fourchettes écrites dans ce résumé sont
+# reprises ici (borne prudente : 411 000) ; le total mesuré sur les 28 requêtes de la liste fermée est ~1 160 000.
+how long does it take to get a passport
+100 k – 1 M
+passport fees
+10 k – 100 k
+how much does a passport cost
+10 k – 100 k
+passport renewal
+10 k – 100 k

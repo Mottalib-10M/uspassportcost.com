@@ -1,0 +1,68 @@
+---
+/**
+ * Méthode et sources (RECETTE §6.6 règle 6, §17.3) : d'où vient chaque chiffre, comment la date est calculée,
+ * comment les sources sont relues automatiquement, et ce que le site ne fait pas.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import { route, type Locale } from '../i18n/routes';
+import { helpers } from '../lib/helpers';
+import { P, type SourceKey } from '../lib/params';
+import { articleSchema, breadcrumbSchema, webPageSchema } from '../lib/seo';
+import O from '../data/official.json';
+import C from '../data/countries.json';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const T = (en: string, sp: string) => (es ? sp : en);
+const h = helpers(lang);
+const o = O as any;
+const F = P.fees, TT = P.times;
+const title = T('Passport Cost Method: Sources, Dates and Weekly Checks', 'Método del costo del pasaporte: fuentes, fechas y revisión');
+const description = T('How US Passport Cost reads the State Department fee chart, 22 CFR 22.1, the processing-time page and 24 country pages, how dates are computed, what it skips.', 'Cómo US Passport Cost lee la tabla de tarifas, el 22 CFR 22.1, la página de tiempos y 24 fichas de país, cómo calcula las fechas y qué deja fuera del cálculo.');
+const path = route('method', lang);
+const sources: SourceKey[] = ['feeChart', 'feeChartFeb2026', 'feesPage', 'cfr', 'processing', 'getFast', 'refund', 'online', 'mail', 'caApi', 'opm'];
+const jsonLd = [articleSchema({ title, description, path, lang }), webPageSchema({ name: title, description, path, lang }), breadcrumbSchema([{ name: T('Home', 'Inicio'), path: route('home', lang) }, { name: T('Method', 'Método'), path }])];
+const table = h.table([T('Data', 'Dato'), T('Official source', 'Fuente oficial'), T('Read on', 'Leído el'), T('Value used', 'Valor usado')], [
+  [T('Application fees', 'Tarifas de solicitud'), T(`Fee chart, ${P.feeChartEdition} (PDF)`, 'Tabla de tarifas, octubre de 2026 (PDF)'), h.date(o.retrieved_at), `${h.usd(F.book.adult)} / ${h.usd(F.card.adult)} / ${h.usd(F.both.adult)}; ${T('child', 'menor')} ${h.usd(F.book.minor)} / ${h.usd(F.card.minor)} / ${h.usd(F.both.minor)}`],
+  [T('Execution, expedite, delivery, file search', 'Ejecución, urgente, entrega, búsqueda'), T('Fee chart and Passport Fees page', 'Tabla y página de costos'), h.date(o.retrieved_at), `${h.usd(F.execution)} · ${h.usd(F.expedite)} · ${h.usd2(F.delivery)} · ${h.usd(F.fileSearch)}`],
+  [T('Legal fee schedule', 'Lista legal de tarifas'), '22 CFR 22.1 (eCFR)', h.date(o.cfr.issue_date), `${h.usd(P.feeLaw.bookApplication16Plus)} + ${h.usd(P.feeLaw.securitySurcharge)}`],
+  [T('Processing times', 'Tiempos de trámite'), T(`Get Your Processing Time, updated ${h.date(TT.pageUpdated)}`, `Página de tiempos, actualizada el ${h.date(TT.pageUpdated)}`), h.date(o.retrieved_at), T(`${TT.routineWeeks.join('-')} wk routine, ${TT.expeditedWeeks.join('-')} wk expedited, mail ≤ ${TT.mailInMaxWeeks} wk each way`, `${TT.routineWeeks.join('-')} sem. ordinario, ${TT.expeditedWeeks.join('-')} urgente, correo ≤ ${TT.mailInMaxWeeks} sem. por tramo`)],
+  [T('Online and mail renewal rules', 'Reglas de renovación'), T('Renew Online / Renew by Mail pages', 'Páginas de renovación en línea y por correo'), h.date(o.retrieved_at), T(`age ${P.online.minAge}+, 1-year / 5-year window, ${P.online.noTravelWeeks} weeks; ${P.mail.issuedWithinYears} years, age ${P.mail.issuedAtAge}`, `${P.online.minAge} años, ventana de 1 y 5 años, ${P.online.noTravelWeeks} semanas; ${P.mail.issuedWithinYears} años, ${P.mail.issuedAtAge} años`)],
+  [T('Expedite commitment', 'Compromiso urgente'), T('Expedited Service Fee Refund page', 'Página de reembolso'), h.date(o.retrieved_at), T(`${TT.expediteCommitmentBusinessDays} business days, OPM holidays excluded`, `${TT.expediteCommitmentBusinessDays} días hábiles, feriados de la OPM excluidos`)],
+  [T('Validity by destination', 'Vigencia por destino'), T('Consular Affairs country information (API)', 'Fichas de país de Asuntos Consulares (API)'), h.date(C.checked), T(`${C.list.length} destinations`, `${C.list.length} destinos`)],
+  [T('Locations and statistics', 'Lugares y estadísticas'), T('Consular Affairs data service', 'Servicio de datos de Asuntos Consulares'), h.date(o.retrieved_at), T(`${h.num(o.stats.locations_total)} locations; fiscal years to ${o.stats.issuances_fy.at(-1)[0]}`, `${h.num(o.stats.locations_total)} lugares; años fiscales hasta ${o.stats.issuances_fy.at(-1)[0]}`)],
+], undefined, ['l', 'l', 'l', 'l']);
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={jsonLd} sources={sources.map((k) => ({ name: P.sources[k].label[lang], url: P.sources[k].url }))} breadcrumbs={[{ label: T('Method and sources', 'Método y fuentes') }]} dateEnHaut>
+  <article class="prose prose-slate max-w-none">
+    <h1>{T('Method and sources', 'Método y fuentes')}</h1>
+    {es ? (
+      <Fragment>
+        <p>Cada monto y cada plazo de este sitio vienen de páginas del Departamento de Estado leídas por un programa que cualquiera puede volver a ejecutar, y se guardan en un archivo de parámetros que las pruebas automáticas comparan con la última lectura. Esta página dice qué se lee, cuándo, y qué se hace cuando algo cambia.</p>
+        <div set:html={table} />
+        <h2>Cómo se leen las fuentes</h2>
+        <p>travel.state.gov rechaza a los programas automáticos con una protección de Cloudflare, y no intentamos saltarla. El mismo Bureau of Consular Affairs sirve las mismas páginas y el mismo PDF de tarifas en adoptions.state.gov, abierto a los programas: ahí se hace la lectura, y las citas del sitio enlazan a travel.state.gov. La lista legal de tarifas se lee en la API del eCFR, y las fichas de país, los lugares de solicitud y las estadísticas en la API pública de Asuntos Consulares, cadataapi.state.gov.</p>
+        <h2>La revisión automática</h2>
+        <p>Una tarea programada vuelve a leer todo cada semana. Si cambia el rango de tiempos publicado, el nuevo rango pasa a la calculadora, el sitio se reconstruye y queda un aviso escrito. Si cambia una tarifa, una regla de renovación o el texto de entrada de un país, no se cambia nada solo: las pruebas fallan, se abre un aviso con el antes y el después, y una persona relee la fuente antes de publicar.</p>
+        <h2>Cómo se calcula la fecha</h2>
+        <p>La fecha más temprana suma solo el trámite mínimo y, si pagó la entrega rápida, un día de correo de regreso. La más tardía suma el correo de ida al máximo publicado ({TT.mailInMaxWeeks} semanas), el trámite máximo y el correo de regreso máximo ({TT.mailOutMaxWeeks} semanas, o 3 días con la entrega pagada). La renovación en línea no tiene correo de ida. Una cita en agencia no tiene fecha: el pasaporte se emite en la agencia cuando la cita lo permite. El plazo del reembolso urgente cuenta {TT.expediteCommitmentBusinessDays} días hábiles sin fines de semana ni los feriados federales que publica la OPM.</p>
+        <h2>Lo que no hacemos</h2>
+        <p>No llenamos ni enviamos solicitudes, no vendemos servicios de agilización, no pedimos correo ni teléfono, y lo que escribe en las calculadoras no sale de su navegador. No tenemos relación con el Departamento de Estado. El Departamento decide su caso: un error en la foto o en los documentos alarga cualquier plazo.</p>
+      </Fragment>
+    ) : (
+      <Fragment>
+        <p>Every amount and every time on this site comes from State Department pages read by a program anyone can run again, and is stored in a parameter file that automated tests compare with the latest reading. This page says what is read, when, and what happens when something changes.</p>
+        <div set:html={table} />
+        <h2>How the sources are read</h2>
+        <p>travel.state.gov turns away automated readers with a Cloudflare protection, and we do not try to get around it. The same Bureau of Consular Affairs serves the same pages and the same fee PDF on adoptions.state.gov, which is open to programs: the reading is done there, and the citations on this site link to travel.state.gov. The legal fee schedule is read through the eCFR API, and the country pages, application locations and statistics through the public Consular Affairs API, cadataapi.state.gov.</p>
+        <h2>The automatic check</h2>
+        <p>A scheduled job reads everything again every week. If the published processing range changes, the new range goes into the calculator, the site is rebuilt and a written notice is kept. If a fee, a renewal rule or the entry text of a country changes, nothing is changed on its own: the tests fail, a notice is opened with the before and after, and a person reads the source again before anything is published.</p>
+        <h2>How the date is computed</h2>
+        <p>The earliest date adds only the shortest processing time and, if you paid for faster delivery, one day of return mail. The latest adds outbound mail at its published maximum ({TT.mailInMaxWeeks} weeks), the longest processing time and return mail at its maximum ({TT.mailOutMaxWeeks} weeks, or 3 days with paid delivery). Online renewal has no outbound mail. An agency appointment has no date: the passport is issued at the agency when the appointment allows. The expedite refund deadline counts {TT.expediteCommitmentBusinessDays} business days, leaving out weekends and the federal holidays published by OPM.</p>
+        <h2>What we do not do</h2>
+        <p>We do not fill in or submit applications, sell expediting services, or ask for an email or phone number, and what you type in the calculators never leaves your browser. We are not affiliated with the Department of State. The Department decides your case: a rejected photo or a missing document lengthens any time shown here.</p>
+      </Fragment>
+    )}
+    <p class="text-sm text-navy-600"><a href={route('about', lang)}>{T('About this site', 'Quiénes somos')}</a> · <a href={route('home', lang)}>{T('Back to the calculator', 'Volver a la calculadora')}</a></p>
+  </article>
+</PageLayout>

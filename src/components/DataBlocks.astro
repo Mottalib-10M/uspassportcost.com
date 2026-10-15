@@ -1,0 +1,69 @@
+---
+/**
+ * Blocs de données générés (tableaux tirés de params-2026.json, countries.json et du relevé official.json).
+ * Ce sont des données, pas de la prose : check-unique retire les tableaux ; les blocs portent data-chrome.
+ */
+import { helpers } from '../lib/helpers';
+import { route, hasRoute, type Locale } from '../i18n/routes';
+import { P } from '../lib/params';
+import C from '../data/countries.json';
+import O from '../data/official.json';
+import { pageById } from '../lib/guides';
+import type { DataSpec } from '../lib/guide-types';
+interface Props { data: DataSpec; lang: Locale }
+const { data, lang } = Astro.props;
+const h = helpers(lang);
+const es = lang === 'es';
+const T = (en: string, sp: string) => (es ? sp : en);
+const F = P.fees;
+const o = O as any;
+const STATE: Record<string, string> = { AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', DC: 'District of Columbia', FL: 'Florida', GA: 'Georgia', HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming', PR: 'Puerto Rico', GU: 'Guam', VI: 'U.S. Virgin Islands', AS: 'American Samoa', MP: 'Northern Mariana Islands' };
+const RULE = (k: string, m: number) => ({ entry: T('valid on entry, no minimum written', 'vigente al entrar, sin mínimo escrito'), stay: T('valid for the whole stay', 'vigente toda la estancia'), afterDeparture: T(`${m} months after departure`, `${m} meses después de salir`), afterEntry: T(`${m} months after arrival`, `${m} meses después de llegar`) } as Record<string, string>)[k];
+const country = data.country ? C.list.find((c) => c.code === data.country) : undefined;
+const rec = country ? o.countries?.[country.code] : undefined;
+const cpage = (code: string) => `country-${code.toLowerCase()}`;
+const blocks: string[] = [];
+if (data.fees) {
+  const row = (label: string, form: string, who: 'adult' | 'minor', exec: boolean) => [label, form, h.usd(F.book[who]), h.usd(F.card[who]), h.usd(F.both[who]), exec ? h.usd(F.execution) : T('none', 'no'), h.usd(F.book[who] + (exec ? F.execution : 0))];
+  blocks.push(`<h2>${T(`Every passport fee, ${P.feeChartEdition} chart`, 'Todas las tarifas, tabla de octubre de 2026')}</h2>` + h.table([T('Who', 'Quién'), T('Form', 'Formulario'), T('Book', 'Libreta'), T('Card', 'Tarjeta'), T('Both', 'Ambas'), T('Facility fee', 'Centro'), T('Book, all in', 'Libreta, total')], [
+    row(T('First adult passport, 16+', 'Primer pasaporte, 16 años o más'), 'DS-11', 'adult', true),
+    row(T('Adult renewal by mail', 'Renovación por correo'), 'DS-82', 'adult', false),
+    row(T('Adult renewal online', 'Renovación en línea'), T('online', 'en línea'), 'adult', false),
+    row(T('Child under 16', 'Menor de 16 años'), 'DS-11', 'minor', true),
+  ], T('Application fee paid to the U.S. Department of State; the facility fee is a separate payment.', 'La tarifa de solicitud se paga al Departamento de Estado; la del centro es un pago aparte.'), ['l', 'l', 'r', 'r', 'r', 'r', 'r']) +
+  h.table([T('Option', 'Opción'), T('Fee', 'Tarifa'), T('Paid to', 'Se paga a')], [[T('Expedited service', 'Servicio urgente'), h.usd(F.expedite), T('State Department', 'Departamento de Estado')], [T('1-3 day return delivery (book only)', 'Entrega de 1 a 3 días (solo libreta)'), h.usd2(F.delivery), T('State Department', 'Departamento de Estado')], [T('File search (no citizenship evidence)', 'Búsqueda de expediente'), h.usd(F.fileSearch), T('State Department', 'Departamento de Estado')], [T('Data or printing error, DS-5504', 'Error de datos o de impresión, DS-5504'), h.usd(F.dataCorrection), '–']], undefined, ['l', 'r', 'l']));
+}
+if (data.law) {
+  blocks.push(`<h2>${T('Where the $130 comes from: 22 CFR 22.1', 'De dónde salen los 130 dólares: 22 CFR 22.1')}</h2>` + h.table([T('Item of the fee schedule', 'Partida de la lista'), T('Age 16+', '16 años o más'), T('Under 16', 'Menor de 16')], [[T('Book application services', 'Servicios de solicitud de libreta'), h.usd(P.feeLaw.bookApplication16Plus), h.usd(P.feeLaw.bookApplicationUnder16)], [T('Security surcharge (enhanced border security fee)', 'Recargo de seguridad fronteriza'), h.usd(P.feeLaw.securitySurcharge), h.usd(P.feeLaw.securitySurcharge)], [T('Book, total', 'Libreta, total'), h.usd(F.book.adult), h.usd(F.book.minor)], [T('Card application services', 'Tarjeta'), h.usd(P.feeLaw.card16Plus), h.usd(P.feeLaw.cardUnder16)], [T('Execution fee', 'Tarifa de ejecución'), h.usd(P.feeLaw.execution), h.usd(P.feeLaw.execution)]], T(`eCFR edition of ${h.date(o.cfr?.issue_date ?? P.retrieved_at)}.`, `Edición del eCFR del ${h.date(o.cfr?.issue_date ?? P.retrieved_at)}.`), ['l', 'r', 'r']));
+}
+if (data.delivery) {
+  blocks.push(`<h2>${T('The 1-3 day delivery fee in 2026', 'La tarifa de entrega de 1 a 3 días en 2026')}</h2>` + h.table([T('Fee chart edition', 'Edición de la tabla'), T('1-3 day delivery', 'Entrega 1-3 días')], P.deliveryHistory.map((d) => [d.edition, h.usd2(d.amount)]), T('Editions read on the State Department’s own PDF charts.', 'Ediciones leídas en las tablas PDF del propio Departamento.'), ['l', 'r']));
+}
+if (data.times) {
+  const tt = P.times;
+  blocks.push(`<h2>${T('Published times, page of', 'Tiempos publicados, página del')} ${h.date(tt.pageUpdated)}</h2>` + h.table([T('Step', 'Etapa'), T('Published time', 'Tiempo publicado')], [[T('Mail to the State Department', 'Correo hacia el Departamento'), T(`up to ${tt.mailInMaxWeeks} weeks`, `hasta ${tt.mailInMaxWeeks} semanas`)], [T('Routine processing', 'Trámite ordinario'), T(`${tt.routineWeeks[0]} to ${tt.routineWeeks[1]} weeks`, `${tt.routineWeeks[0]} a ${tt.routineWeeks[1]} semanas`)], [T('Expedited processing', 'Trámite urgente'), T(`${tt.expeditedWeeks[0]} to ${tt.expeditedWeeks[1]} weeks (commitment: ${tt.expediteCommitmentBusinessDays} business days)`, `${tt.expeditedWeeks[0]} a ${tt.expeditedWeeks[1]} semanas (compromiso: ${tt.expediteCommitmentBusinessDays} días hábiles)`)], [T('Mail back to you', 'Correo de regreso'), T(`up to ${tt.mailOutMaxWeeks} weeks, or 1 to 3 days with paid delivery`, `hasta ${tt.mailOutMaxWeeks} semanas, o 1 a 3 días con entrega pagada`)], [T('Urgent travel', 'Viaje urgente'), T(`agency appointment within ${tt.urgentDays} days of travel (${tt.urgentVisaDays} with a foreign visa)`, `cita en agencia a ${tt.urgentDays} días del viaje (${tt.urgentVisaDays} con visa extranjera)`)], [T('Old passport and documents returned', 'Pasaporte anterior y documentos'), T(`up to ${tt.oldPassportReturnWeeks} weeks and ${tt.documentsReturnWeeks} weeks after the new one`, `hasta ${tt.oldPassportReturnWeeks} y ${tt.documentsReturnWeeks} semanas después del nuevo`)]], undefined, ['l', 'l']));
+}
+if (country) {
+  const q = country.quote.map((s) => `<p>“${s}”</p>`).join('');
+  blocks.push(`<h2>${T(`What the State Department says about ${country.name.en}`, `Lo que dice el Departamento de Estado sobre ${country.name.es}`)}</h2><blockquote lang="en" class="border-l-4 border-accent-600 bg-accent-50/40 py-1 pl-4 not-italic">${q}</blockquote><p class="text-sm text-navy-700">${T('Country information page', 'Ficha del país')} ${rec?.last_update ? T(`last updated ${h.date(rec.last_update)}`, `actualizada el ${h.date(rec.last_update)}`) : ''}, ${T('read through the Consular Affairs data service on', 'leída en el servicio de datos de Asuntos Consulares el')} ${h.date(C.checked)}.</p>`);
+}
+if (data.countries) {
+  const rows = [...C.list].sort((a, b) => a.name[lang].localeCompare(b.name[lang], lang)).map((c) => {
+    const id = cpage(c.code);
+    const nm = hasRoute(id, lang) ? `<a href="${route(id, lang)}">${c.name[lang]}</a>` : pageById(id) ? `<a href="${route(id, 'en')}">${c.name[lang]}</a>` : c.name[lang];
+    return [nm, RULE(c.kind, c.months), (c as any).recommend ? ((c as any).recommend === 'stay' ? T('whole stay', 'toda la estancia') : T(`${(c as any).recommend} months`, `${(c as any).recommend} meses`)) : '–', c.card === 'land-sea' ? T('land and sea', 'tierra y mar') : c.card === 'cruise' ? T('cruise only', 'solo crucero') : T('no', 'no')];
+  });
+  blocks.push(`<h2>${T('Validity rule for 24 destinations', 'Regla de vigencia de 24 destinos')}</h2>` + h.table([T('Destination', 'Destino'), T('Passport must be', 'El pasaporte debe estar'), T('Advised', 'Recomendado'), T('Passport card', 'Tarjeta')], rows, T(`Read in each Consular Affairs country page, checked ${h.date(C.checked)}.`, `Leído en cada ficha de Asuntos Consulares, revisado el ${h.date(C.checked)}.`), ['l', 'l', 'l', 'l']));
+}
+if (data.states && o.stats?.locations_by_state) {
+  const L = o.stats.locations_by_state as Record<string, any>;
+  const rows = Object.entries(L).filter(([k]) => STATE[k]).sort((a, b) => b[1].total - a[1].total).map(([k, v]) => [STATE[k], v.total, v.Postal, v.Court + v['County / State'] + v.Municipal, v.Library]);
+  blocks.push(`<h2>${T('Application locations by state', 'Lugares de solicitud por estado')}</h2>` + h.table([T('State', 'Estado'), T('Listed locations', 'Lugares'), T('Post offices', 'Correos'), T('Courts, county and city offices', 'Juzgados y oficinas'), T('Libraries', 'Bibliotecas')], rows, T(`Consular Affairs location list (${h.num(o.stats.locations_total)} rows, read ${h.date(o.retrieved_at)}); rows without a type are counted only in the total.`, `Lista de Asuntos Consulares (${h.num(o.stats.locations_total)} filas, leída el ${h.date(o.retrieved_at)}); las filas sin tipo solo cuentan en el total.`), ['l', 'r', 'r', 'r', 'r']));
+}
+if (data.stats && o.stats?.issuances_fy) {
+  const iss = Object.fromEntries(o.stats.issuances_fy), app = Object.fromEntries(o.stats.applications_fy), val = Object.fromEntries(o.stats.valid_fy);
+  const years = Object.keys(iss).map(Number).filter((y) => y >= 2015).sort((a, b) => b - a);
+  blocks.push(`<h2>${T('Passports issued, by fiscal year', 'Pasaportes emitidos por año fiscal')}</h2>` + h.table([T('Fiscal year', 'Año fiscal'), T('Applications', 'Solicitudes'), T('Passports issued', 'Emitidos'), T('Valid passports in circulation', 'Pasaportes vigentes')], years.map((y) => [String(y), app[y] ?? '–', iss[y], val[y] ?? '–']), T('Consular Affairs data service, fiscal years ending September 30.', 'Servicio de datos de Asuntos Consulares, años fiscales que terminan el 30 de septiembre.'), ['l', 'r', 'r', 'r']));
+}
+---
+{blocks.length > 0 && <section data-chrome class="prose prose-slate mt-10 max-w-none border-t border-navy-200 pt-4">{blocks.map((b) => <Fragment set:html={b} />)}</section>}

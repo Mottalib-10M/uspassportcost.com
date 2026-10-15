@@ -1,0 +1,47 @@
+{
+ "legalCountry": "France",
+ "registerLabel": "SIREN",
+ "vatLabel": "VAT",
+ "jurisdiction": "France",
+ "supervisoryAuthority": "Commission nationale de l'informatique et des libertés (CNIL)",
+ "supervisoryAuthorityUrl": "https://www.cnil.fr",
+ "consentMode": "none",
+ "year": 2026,
+ "founded": "2026",
+ "volumes": "volumes-us-passport.txt",
+ "volumesNote": "~1 160 000 recherches/mois (28 requêtes mesurées au Keyword Planner objetech le 2026-10-15, lot A, idée A11) ; borne prudente 411 096 sur les seules fourchettes citées : GO volume, validé par l'éditeur le 2026-10-15.",
+ "folder": "passport-cost",
+ "outDir": "a-publier/Mottalib-10M",
+ "url": "https://uspassportcost.com",
+ "locales": ["en", "es"],
+ "names": {"en": "US Passport Cost", "es": "US Passport Cost"},
+ "langTags": {"en": "en-US", "es": "es-US"},
+ "ogLocales": {"en": "en_US", "es": "es_US"},
+ "localeTag": "en-US",
+ "currency": "USD",
+ "flag": "us",
+ "symbol": "PP",
+ "accent": "#24407A",
+ "authorRole": {
+  "en": "Publisher of a free US passport cost and arrival-date calculator built on State Department fee charts",
+  "es": "Editor de una calculadora gratuita del costo y la fecha de llegada del pasaporte de EE. UU., con las tarifas del Departamento de Estado"
+ },
+ "authorDesc": {
+  "en": "Radif Partners reads the State Department's own fee chart (October 2026 edition), the fee schedule in 22 CFR 22.1 and the processing times page, then adds up what you will write on each check and when the passport should reach your mailbox. No expediting service is sold here and nothing you type leaves your browser.",
+  "es": "Radif Partners lee la tabla de tarifas del Departamento de Estado (edición de octubre de 2026), la lista de tarifas del 22 CFR 22.1 y la página de tiempos de trámite, y suma lo que usted escribirá en cada cheque y cuándo debería llegar el pasaporte a su buzón. Aquí no se vende ningún servicio de agilización y nada de lo que escribe sale de su navegador."
+ },
+ "email": "contact@uspassportcost.com",
+ "indexnow": "8c2e5a1f7b9d4c3e6a0f2b8d1e7c4a95",
+ "shortName": "Passport Cost",
+ "description": "What a US passport costs in 2026 and when it will arrive: DS-11, DS-82, online renewal, child, card, expedite and 1-3 day delivery, split by check, with a date.",
+ "port": 5525,
+ "og": [
+  {"file": "og-en.png", "title": "What your passport costs\nand when it arrives", "subtitle": "DS-11 · DS-82 · online renewal · child · card · expedite", "badge": "State Department fee chart, October 2026", "brand": "US Passport Cost"},
+  {"file": "og-es.png", "title": "Cuánto cuesta su pasaporte\ny cuándo llega", "subtitle": "DS-11 · DS-82 · renovación en línea · menores · tarjeta · urgente", "badge": "Tarifas del Departamento de Estado, octubre de 2026", "brand": "US Passport Cost"}
+ ],
+ "lastUpdated": "2026-10-15",
+ "knowsAbout": {
+  "en": ["US passport fees (DS-11, DS-82, passport card)", "Passport processing times and expedited service", "Online passport renewal eligibility", "Child passport applications under 16", "Passport validity requirements by destination country", "Passport acceptance facilities and execution fee"],
+  "es": ["Tarifas del pasaporte de EE. UU. (DS-11, DS-82, tarjeta)", "Tiempos de trámite del pasaporte y servicio urgente", "Requisitos de la renovación en línea", "Pasaporte para menores de 16 años", "Vigencia del pasaporte exigida por país de destino", "Centros de aceptación y tarifa de ejecución"]
+ }
+}

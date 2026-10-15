@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'es';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Quiénes somos en US Passport Cost: tarifas y fechas" description="Quién publica US Passport Cost, por qué existe, cómo lee tarifas y fechas en las fuentes del Departamento de Estado, cómo se financia y por qué no vende nada." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Inicio', path: route('home', lang) }, { name: 'Quiénes somos', path: route('about', lang) }])]} breadcrumbs={[{ label: 'Quiénes somos' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">Quiénes somos</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{SITE_NAMES.es} lo publica Radif Partners. Responde las dos preguntas de todo solicitante antes de ir a la oficina de correos: cuánto voy a pagar, a quién, y si el pasaporte llegará antes del viaje. El Departamento de Estado publica las respuestas por partes: una tabla de tarifas en PDF, una página de tiempos, las reglas de renovación en otras dos páginas y las reglas de entrada en una ficha por país. Este sitio las reúne para una persona y un viaje.</p>
+    <h2>Por qué este sitio es mejor que el primer resultado</h2>
+    <p>Muchas páginas sobre tarifas del pasaporte muestran todavía una tarifa de entrega antigua o un tiempo de trámite de la época del atraso, y varias calculadoras existen sobre todo para vender gestorías. Aquí las tarifas salen de la tabla de octubre de 2026 y del 22 CFR 22.1, los tiempos de la página oficial con su fecha, cada total se reparte por destinatario y la fecha de llegada se compara con su salida. No se vende nada.</p>
+    <h2>Cómo se revisan las cifras</h2>
+    <p>Un programa lee las fuentes oficiales y las pruebas automáticas las comparan con los valores de las calculadoras. Si cambian los tiempos publicados, el sitio los sigue; si cambia una tarifa o una regla, se abre un aviso y una persona relee la fuente. La <a href={route('method', lang)}>página de método</a> lista cada fuente y fecha.</p>
+    <h2>Lo que no somos</h2>
+    <p>No somos el Departamento de Estado, ni mensajería, ni gestoría, ni bufete. No tramitamos solicitudes ni reservamos citas. La única renovación oficial en línea está en opr.travel.state.gov.</p>
+    <h2>Financiación y datos</h2>
+    <p>Las calculadoras son gratuitas y sin cuenta. Lo que escribe se queda en su navegador. Si hay publicidad, nunca estará entre un campo y su resultado, y nunca habrá más de tres espacios por página.</p>
+    <h2>Contacto</h2>
+    <p>¿Una tarifa que cambió, una fecha que parece errónea? Escriba a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Vea también la <a href={route('editorial', lang)}>política editorial</a> y el <a href={route('terms', lang)}>aviso legal</a>. Datos revisados el <time datetime={LAST_UPDATED}>{upd}</time>.</p>
+  </div>
+</PageLayout>

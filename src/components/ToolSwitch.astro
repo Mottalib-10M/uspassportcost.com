@@ -1,0 +1,14 @@
+---
+/** Outil principal d'une page, hydraté au chargement (RECETTE §17.5 : check-saisie ne voit pas client:visible). */
+import PassportTool from './calc/PassportTool';
+import RenewTool from './calc/RenewTool';
+import ValidityTool from './calc/ValidityTool';
+import type { ToolSpec } from '../lib/guide-types';
+import type { Locale } from '../i18n/routes';
+interface Props { tool: ToolSpec; lang: Locale; methodHref: string }
+const { tool, lang, methodHref } = Astro.props;
+const t = tool as any;
+---
+{tool.kind === 'passport' && <PassportTool client:load lang={lang} situation={t.situation} doc={t.doc} service={t.service} delivery={t.delivery} fileSearch={t.fileSearch} focus={t.focus} methodHref={methodHref} />}
+{tool.kind === 'renew' && <RenewTool client:load lang={lang} focus={t.focus} methodHref={methodHref} />}
+{tool.kind === 'validity' && <ValidityTool client:load lang={lang} country={t.country} methodHref={methodHref} />}

@@ -1,0 +1,1533 @@
+{
+ "retrieved_at": "2026-10-15",
+ "fee_chart": {
+  "file": "Passport_Fees_OCT_2026.pdf",
+  "url_official": "https://travel.state.gov/content/dam/tsg_aem/passports/documents/forms-fees/Passport_Fees_OCT_2026.pdf",
+  "sha256": "d2a4cba78f40e5b740fd23b649790d7df0a5c37dc0e02da6df618ff457ece2f2",
+  "edition": "October 2026",
+  "adult_first": {
+   "Book": {
+    "form": "DS-11",
+    "app": 130.0,
+    "exec": 35.0
+   },
+   "Card*": {
+    "form": "DS-11",
+    "app": 30.0,
+    "exec": 35.0
+   },
+   "Book & Card": {
+    "form": "DS-11",
+    "app": 160.0,
+    "exec": 35.0
+   }
+  },
+  "adult_renew": {
+   "Book": {
+    "form": "DS-82",
+    "app": 130.0,
+    "exec": null
+   },
+   "Card*": {
+    "form": "DS-82",
+    "app": 30.0,
+    "exec": null
+   },
+   "Book & Card": {
+    "form": "DS-82",
+    "app": 160.0,
+    "exec": null
+   }
+  },
+  "minor": {
+   "Book": {
+    "form": "DS-11",
+    "app": 100.0,
+    "exec": 35.0
+   },
+   "Card*": {
+    "form": "DS-11",
+    "app": 15.0,
+    "exec": 35.0
+   },
+   "Book & Card": {
+    "form": "DS-11",
+    "app": 115.0,
+    "exec": 35.0
+   }
+  },
+  "expedite": 60.0,
+  "delivery": 26.87,
+  "file_search": 150.0
+ },
+ "fee_page": {
+  "url_official": "https://travel.state.gov/en/passports/apply/help/fees.html",
+  "last_updated": "2026-03-19",
+  "execution": 35.0,
+  "expedite": 60.0,
+  "delivery": 26.87,
+  "file_search": 150.0,
+  "check_payee": "U.S. Department of State"
+ },
+ "cfr": {
+  "issue_date": "2026-10-13",
+  "url": "https://www.ecfr.gov/current/title-22/chapter-I/subchapter-F/part-22/section-22.1",
+  "execution": 35.0,
+  "book_16_plus": 50.0,
+  "book_under_16": 20.0,
+  "security_surcharge": 80.0,
+  "expedite": 60.0,
+  "file_search": 150.0,
+  "card_16_plus": 30.0,
+  "card_under_16": 15.0
+ },
+ "times": {
+  "url_official": "https://travel.state.gov/en/passports/apply/help/processing-time.html",
+  "last_updated": "2026-10-05",
+  "routine_weeks": [
+   4,
+   6
+  ],
+  "expedited_weeks": [
+   2,
+   3
+  ],
+  "mail_in_max_weeks": 2,
+  "mail_out_max_weeks": 2,
+  "urgent_days": 14
+ },
+ "get_fast": {
+  "last_updated": "2026-09-30",
+  "visa_days": 28,
+  "expedite_if_travel_within_weeks": 6
+ },
+ "refund": {
+  "last_updated": "2026-05-11",
+  "expedite_commitment_business_days": 15
+ },
+ "online": {
+  "url_official": "https://travel.state.gov/en/passports/renew-replace/online.html",
+  "last_updated": "2026-09-30",
+  "min_age": 25,
+  "expiring_within_years": 1,
+  "expired_less_than_years": 5,
+  "no_travel_weeks": 6,
+  "can_expedite": false
+ },
+ "mail": {
+  "url_official": "https://travel.state.gov/en/passports/renew-replace/mail.html",
+  "last_updated": "2026-10-01",
+  "issued_within_years": 15,
+  "issued_at_age": 16,
+  "appointment_if_travel_within_weeks": 3
+ },
+ "countries": {
+  "MX": {
+   "name": "Mexico",
+   "last_update": "2025-08-11",
+   "sha256": "c06c1f3b3b4d53e689be406be3a3d2469a6ab3d47b132762e6231485d1e32234",
+   "sentences": [
+    "passport card to board a plane at the airport.",
+    "passport card, a trusted traveler card (such as NEXUS, SENTRI or FAST), or a state-issued REAL ID ."
+   ],
+   "text": "Helpful resources Mexican government entry, exit, and visa requirements (in Spanish) U.S. Embassy in Mexico Common terms FMM = Forma Migratoria Multiple (entry permit). FMMD = Forma Migratoria Multiple Digital INM = Instituto Nacional de Migracion (National Migration Institute) PROFECO = Procuraduría Federal del Consumidor (Mexico’s consumer protection agency) CONDUSEF = Comision Nacional para la Proteccion y Defensa de los Usuarios de Servicios Financiero (Mexico’s banking regulatory agency) Passport requirements Air travel: You need a passport book to enter Mexico. You can’t use a U.S. passport card to board a plane at the airport. Land travel: You need a passport book or card to enter Mexico. All travelers to Mexico, must apply for an FMM, (entry permit) online or from an INM office, including travelers who are only staying within 12 miles (or 20 kilometers). Entry and exit procedures By air: Mexican authorities issue digital Forma Migratoria Multiple Digital (FMMD) at all 66 international airports in Mexico. When you arrive at an airport in Mexico, the Mexican immigration authorities will determine how long you are authorized to stay. A date stamp will be placed in your passport. You may be directed through a self-service electronic gate (E-Gate) that will generate a printed receipt with a QR code. Air travelers can visit National Migration Institute (INM) (in Spanish) to download a record of their FMMD or find more information. By land: All travelers are required to have a passport book or card and apply for an FMM, online or from an INM office, including travelers who are only staying within 12 miles from the border (or 20 kilometers) By sea: If you are traveling to Mexico by sea , you must have either a valid passport, a U.S. passport card, a trusted traveler card (such as NEXUS, SENTRI or FAST), or a state-issued REAL ID . If the cruise departs from and returns to the same U.S. port (“closed-loop” cruises), U.S. citizens may instead provide an original government-issued birth certificate or certified copy (with raised seal). If you are 16 or older, you also need a government-issued photo identification, such as a valid driver’s license. People entering Mexico on a private boat or ship must get a permit from the Mexican Government before traveling. For more information contact the Embassy of Mexico in Washington D.C. Vehicle regulations Temporary vehicle import permits are required for U.S. registered vehicles traveling beyond the border zone. You must obtain this permit from Banjercito (office of temporary vehicle import) and pay a refundable deposit. Hassle-free zones in the states of Baja California, Baja California Sur, and Sonora allow cars to drive throughout the state without an entry permit. Car registration is also available within the zone if you prefer. Legal and customs entry information Declare goods worth over $300 USD (arriving by land) or $500 USD (arriving by air) with Mexican customs to avoid fines or confiscation. This includes used goods and donations. More information is available from Mexican customs (ANAM). While not always enforced, Mexican regulations allow the tax-free import of only one portable computer (like a laptop or tablet) per person. If you bring more than one, you might have to pay a fee of up to 19% on the value of the extra device, or up to $4,000 USD. · Importing drugs, including medical marijuana, is illegal. It is also illegal to import e-cigarettes (vaping devices). Bringing weapons including guns, ammunition, and knives into Mexico without permits issued by the Mexican government is a serious crime. Criminal history or charges can be a reason Mexican authorities may deny you entry. Dual nationality is permitted by both Mexico and the United States. Learn more about dual nationality requirements and customs regulations . Having HIV/AIDS does not result in a restriction on entry for visitors or residents. Travelers under 18 may require a notarized parental consent letter if they are not traveling with both parents. Bring a notarized consent letter from parents who are not on the trip."
+  },
+  "CA": {
+   "name": "Canada",
+   "last_update": "2025-08-11",
+   "sha256": "018b009cf2133533480165263c45297885eea879ef0c20b17769b968a18a0538",
+   "sentences": [
+    "passport, passport card, or NEXUS card to enter Entry into the U."
+   ],
+   "text": "Helpful resources Immigration Refugees and Citizenship Canada (IRCC) Canada Border Services Agency (CBSA) NEXUS trusted traveler program U.S. Customs and Border Protection (CBP) CBP ROAM app (boaters report offsite arrival) Dual Nationality Prevention of International Child Abduction Customs Regulations Visas • U.S. citizens do not need a tourist visa to visit Canada for less than 180 days. • Visits longer than 180 days generally require a visa. • Review visa information from Immigration, Refugees and Citizenship Canada (IRCC) Entry and exit procedures • Canadian law requires everyone entering the country to show proof of citizenship and identity. • Both U.S. and Canadian governments urge frequent travelers to join the NEXUS trusted traveler program. • U.S. citizens can use a valid U.S. passport, passport card, or NEXUS card to enter Entry into the U.S. from Canada • If you are flying into the U.S. from Canada, you must show a U.S. passport book or another approved ID. • U.S. Customs and Border Protection (CBP) provides an approved list of documents. Traveling with minors • If you are traveling with a minor without having full custody, the Canadian Border Services Agency (CBSA) requires a letter of authorization from the child’s parents or guardian(s). • Review the CBSA traveling with minors information for details. Entry and exit by boat to Canada • If you bring a private boat into Canada, you must report to the Canadian Border Services Agency (CBSA). • You can report your return to the U.S. or apply for a boater program through the CBP Reporting Offsite Arrival Mobile (CBP ROAM) app. HIV/AIDS entry restrictions The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Canada. Review the information about restrictions for HIV-positive residents from IRCC"
+  },
+  "DR": {
+   "name": "DominicanRepublic",
+   "last_update": "2025-08-11",
+   "sha256": "a981fc12b72507db4de37f9a7c7ddb7d7196da2469d7e9b5e602e37568ec372a",
+   "sentences": [
+    "Visitors must have: A roundtrip airline ticket for entry Enough funds to pay for the expenses of their stay An address of a place to stay in the Dominican Republic Disembarked cruise ship passengers without a passport valid for 6 months must pay a daily migration escort service fee of approximately $125 USD."
+   ],
+   "text": "Helpful resources Embassy of the Dominican Republic Visa Information Dominican Migration Department Electronic Ticket (eTicket) Portal for the Dominican Republic (required digital form to enter and leave) Visas Required for visits longer than 30 days. Contact the Migration Department in Santo Domingo for visa extension requests. Failure to request an extension will result in a fine upon departure starting after 30 days. The fine is payable at the airport upon departure via credit card, or via local bank transfer or cash payment to the Migration Department’s bank account at a Banco Reservas branch. Fines for overstays range from approximately $56 for one month to more than $1,660. $10 tourist card fee Included in airline charges. Cruise passengers need a tourist card if staying on land for over 24 hours. Allows stays up to 30 days, extendable from the Migration Department in Santo Domingo. Entry and exit requirements Travelers are required to complete an eTicket for each entry and exit. Visitors must have: A roundtrip airline ticket for entry Enough funds to pay for the expenses of their stay An address of a place to stay in the Dominican Republic Disembarked cruise ship passengers without a passport valid for 6 months must pay a daily migration escort service fee of approximately $125 USD. This is subject to change. You must follow all immigration laws when entering or exiting the Dominican Republic via a land border with Haiti. Only cross at an open, official border crossing. The four official crossing points are: Malpasse-Jimaní Ouanaminthe-Dajabón Anse-à-Pitres-Pedernales Belladère-Comendador (also known as Elias Piña) You must get an entry or exit stamp in your passport from Dominican border authorities. Failure to do so may lead to detention, fines, deportation, and/or a 10-year ban from returning to the Dominican Republic. The U.S. Embassy cannot help U.S. citizens cross the land border between the Dominican Republic and Haiti in either direction. There are military-run checkpoints in the Dominican Republic near the border. You must show your passport upon request. U.S. citizens have reported being asked for bribes. Politely refuse and ask to contact the U.S. Embassy. Exit requirements for children Minors (under 18) who are citizens or legal residents of the Dominican Republic (including dual citizens) must have written permission from both parents or legal guardians to leave the country. Refer to the Certification of Departure of Minors instructions for required documents. Health entry restrictions HIV/AIDS: There are no HIV/AIDS restrictions for visitors nor residents. There are restrictions for other serious contagious diseases. Verify the most current information with the Migration Department . Yellow Fever: Proof of vaccination is required for travelers from Brazil and other high-risk countries. Similar requirements may apply to those traveling from other countries with yellow fever risk."
+  },
+  "JM": {
+   "name": "Jamaica",
+   "last_update": "2026-07-02",
+   "sha256": "81bd56434e0d5b13c8cd146de5cc3512fd664e5d829c1e7d76f2163372a33166",
+   "sentences": [
+    "If you are traveling to Jamaica on a cruise, you may use another Western Hemisphere Travel Initiative (WHTI) compliant document."
+   ],
+   "text": "U.S. citizens are generally required to present a valid U.S. passport when traveling to Jamaica, as well as proof of anticipated departure from Jamaica. If you are traveling to Jamaica on a cruise, you may use another Western Hemisphere Travel Initiative (WHTI) compliant document. However, we strongly recommend you obtain a passport before travel in case an emergency requires you to disembark and return by air. You do not need a visa for tourist travel up to 90 days. All other travelers will need a visa and/or work permit. Visit the Passport, Immigration, & Citizenship Agency of Jamaica or the Embassy of Jamaica in Washington D.C. websites for the most current visa information. Exit Information: Your departure tax is regularly included in the airfare. You won’t be charged an exit tax on your way out. HIV/AIDS restrictions: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Jamaica. Find information on dual nationality , prevention of international child abduction , and customs regulations on our websites."
+  },
+  "BF": {
+   "name": "Bahamas",
+   "last_update": "2026-09-17",
+   "sha256": "579bac819ef6fb5892dcc271a27d915323d7a3b2f781e3b025e185c6e0f181b3",
+   "sentences": [
+    "Those traveling to The Bahamas on a cruise may use another Western Hemisphere Travel Initiative (WHTI) compliant document, such as a U.",
+    "passport card."
+   ],
+   "text": "Visit the Bahamas Immigration website for the most current visa information. U.S. citizens are generally required to present a valid U.S. passport when traveling to The Bahamas, as well as proof of anticipated departure from The Bahamas. Those traveling to The Bahamas on a cruise may use another Western Hemisphere Travel Initiative (WHTI) compliant document, such as a U.S. passport card. However, we strongly recommend you obtain a passport before travel in case of an unforeseen emergency that requires you to disembark and return by air. U.S. travelers coming for tourism will not need a visa for travel up to 90 days. All other travelers will need a visa and/or work permit. The Bahamas requires compliance with regulations to divert child abduction similar to U.S. policies . Review those policies before traveling. HIV/AIDS restrictions: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of The Bahamas. Find information on dual nationality , prevention of international child abduction , and customs regulations on our websites."
+  },
+  "CS": {
+   "name": "CostaRica",
+   "last_update": "2025-08-11",
+   "sha256": "e877b37f80f4831211a9b2d44265b3a31b09ee56a9dafb7ba5e39c23abefb68b",
+   "sentences": [
+    "Exit, entry and visa requirements Helpful resources Embassy of Costa Rica Dual Nationality Prevention of International Child Abduction Customs Regulations General entry requirements A valid passport for the duration of your stay."
+   ],
+   "text": "Exit, entry and visa requirements Helpful resources Embassy of Costa Rica Dual Nationality Prevention of International Child Abduction Customs Regulations General entry requirements A valid passport for the duration of your stay. Immigration may deny your entry if the passport is damaged. Return ticket or proof of onward travel to another country. Proof of yellow fever vaccination if you are arriving from certain countries in South America or Africa. Tourist stays up to 180 days Authorities may allow visitors to stay in Costa Rica for up to 180 days without a visa, but this is not guaranteed. Make sure to leave by your required departure date. If you stay longer than allowed, immigration authorities could fine you. If you overstay, this could lead to delays and deportation. They can also deny you entry to Costa Rica in the future. Entry and exit for minor children All children born in Costa Rica get Costa Rican citizenship at birth. All Costa Rican minors must have an exit permit from immigration to leave the country. Non-Costa Rican minor children who are residents of Costa Rica may also be subject to this rule. This is strictly enforced. Parents of minors born in Costa Rica should consult Costa Rican immigration authorities before traveling. Debts If you owe money in Costa Rica, authorities may not allow you to leave. This includes unpaid bills from car accidents or medical costs. If you owe child support in Costa Rica, you may need to pay up to 13 months of support before leaving. Documentation requirements Always carry copies of your ID and immigration papers. Local authorities may ask for your original passport and documents. They can detain you to check your identity and immigration status."
+  },
+  "CO": {
+   "name": "Colombia",
+   "last_update": "2025-08-11",
+   "sha256": "1bcd52f9989558cb3f2ddb5dac844060c4d98307bbc125196604a87ad8d8c9a8",
+   "sentences": [
+    "If you have a Colombian visa valid for over 3 months, you must register it at a Migración Colombia office or online within 15 days of arrival or face fines."
+   ],
+   "text": "Helpful resources Embassy of Colombia Visa Information Consulates General of Colombia in the United States Dual Nationality Prevention of International Child Abduction Customs Regulations Colombian Ministry of Health Colombia’s Ministry of Commerce, Industry, and Tourism Passport and Visas You should complete Colombia’s free Online Check-Mig Form 72 hours before your flight to or from Colombia. You must show a valid U.S. passport to enter and leave Colombia if you are not a Colombian citizen. U.S. citizens do not need a Colombian visa for tourism or business if staying for 90 days or less. The same applies to cumulative stays of 180 days or less per calendar year. Before your 90-day stay expires, you can request a 90-day extension from Migración Colombia (Spanish only). You face a fine if you stay in Colombia longer than allowed. You may not be able to leave until you pay. If you have a Colombian visa valid for over 3 months, you must register it at a Migración Colombia office or online within 15 days of arrival or face fines. You may be denied entry to Colombia if you do not have a return ticket. Special entry and exit instructions for dual U.S.-Colombian citizens U.S.-Colombian citizens must travel with both passports. They should use their Colombian passport to enter and exit Colombia, and their U.S. passport for entry into the United States: Colombia may consider anyone born in the country, or with Colombian parents, a citizen. U.S. citizens (with or without Colombian citizenship) must show a valid, non-expired U.S. passport upon returning to the United States. All Colombian citizens (with or without U.S. citizenship): Must show a valid, non-expired Colombian passport for entry and exit. Cannot leave the country without a Colombian passport. Exit Requirements for Minors There are exit rules for Colombian children under 18 (including dual nationals). If traveling without both parents or a legal guardian, please check all exit requirements. Children who do not meet the exit requirements have been kept by the Colombian child welfare agency for weeks before being allowed to return to the United States. Visit Migración Colombia website. Lost or Stolen Passport If your U.S. passport is lost or stolen in Colombia: You must obtain a new one before leaving the country. You can report the loss or theft on the Colombian National Police website . HIV/AIDS Restrictions The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Colombia."
+  },
+  "PE": {
+   "name": "Peru",
+   "last_update": "2026-08-20",
+   "sha256": "9c5c0402a4c20efde81579f1f61aceb3641a10382386a04b58126e5d44772aec",
+   "sentences": [
+    "Requirements for Entry: Peru requires everyone entering the country to have passports valid for at least six months from the date of entry into Peru."
+   ],
+   "text": "Requirements for Entry: Peru requires everyone entering the country to have passports valid for at least six months from the date of entry into Peru. Travelers with less than six months validity in their passports will be refused entry into Peru. Your approved length of stay will be determined by Peruvian border officials at the time of entry. Overstays result in fines you must pay to Peru to depart the country. The U.S. Embassy is unable to assist if you are denied entry into Peru. Airlines must return travelers who are denied entry to their point of origin. Requirements for Exit: Make sure immigration officials record your entry into Peru upon arrival. An entry record (such as a passport stamp) is required even at remote land border crossings. If you do not have an entry record, you will not be allowed to exit the country until immigration authorities confirm the time and place of your entry into the country. This process can take several weeks for you to resolve through Superintendencia Nacional de Migraciones (Immigration). You will likely have to pay an exit fine and can be subject to a 15-year ban on re-entering Peru. Report lost/stolen passports to local police immediately and keep the report. You must apply for a new passport at the Embassy to depart Peru. You may be required to present your police report to immigration authorities upon departure. Travel with Minors: Peruvian immigration procedures are complex for minors traveling without one or both parents/legal guardians. U.S. citizen minors under the age of 18 traveling to Peru alone or with only one parent do not usually require additional documentation if entering as a tourist and staying for less than 183 days. If the stay lasts more than 183 days, or if they are dual U.S.-Peruvian nationals entering Peru with their Peruvian passport, they will require an \"Autorización de Viaje para Menores de Edad\" (Travel Authorization for Minors) to leave the country, regardless of the length of their trip. Please refer to the Peruvian Ministry of Foreign Affairs’ website for more information. There are very limited exceptions to this rule. An “ Autorización de Viaje ” is a written, notarized authorization issued by the Peruvian government with the approval and consent of the non-traveling parent. It can also be authorized by a Peruvian judge when the non-traveling parent is absent or missing. Peruvian immigration authorities will not accept a document notarized by the U.S. Embassy or a U.S. notary in lieu of an “Autorización de Viaje.” You can get an “Autorización de Viaje” from a Peruvian notary or a judge, or overseas at a Peruvian consulate . An apostilled U.S. birth certificate may be required for issuance of an “Autorización de Viaje.” The U.S. Embassy is unable to assist travelers who are prevented from traveling for lack of an Autorización de Viaje. Visit the Embassy of Peru website for the most current visa information. HIV/AIDS Restrictions: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Peru. Find information on dual nationality , prevention of international child abduction , and customs regulations on our websites."
+  },
+  "ES": {
+   "name": "ElSalvador",
+   "last_update": "2026-06-25",
+   "sha256": "173de0eab8190d9951228285cbb7b7aa94983d444f001c6b9ce222145e3b71d2",
+   "sentences": [],
+   "text": "You need a U.S. passport and either a Salvadoran visa or a one-entry tourist card to enter El Salvador. You may obtain a tourist card when you arrive at the airport or seaport from immigration officials for a $12 fee. The card is valid for 90 days or 180 days depending on passport validity and/or purpose of travel Questions about extending your stay can be addressed to migracion.visas@seguridad.gob.sv. In June 2006, El Salvador entered into the “Central America-4 (CA-4) Border Control Agreement” with Guatemala, Honduras, and Nicaragua. Under that agreement, U.S. citizens who legally enter any of those four countries may travel freely among the other three countries for up to 90 days total. If you wish to remain in the CA-4 region for more than 90 days, you must request a one-time extension from local immigration authorities in the country where you are present. If you are “expelled” from one of the four countries, you are expelled from the entire CA-4 region. Minors: A U.S. citizen minor present in El Salvador for more than one year is considered a resident of El Salvador. To leave El Salvador, a minor resident needs written consent from any parent listed on the child’s birth certificate that is not traveling with the minor. The consent form must be notarized by a Salvadoran notary. The Salvadoran government will not accept a consent form notarized at the U.S. Embassy. The process to obtain the consent can be lengthy. Plan ahead if you intend to have your minor child travel without both parents after being present in El Salvador for more than one year . HIV/AIDS Restrictions: The U.S. Department of State is unaware of any specific HIV/AIDS entry restrictions for visitors to or for foreign residents of El Salvador. Antiretroviral medication with a prescription can be imported for personal use and for the duration of stay. Find information on dual nationality , prevention of international child abduction , customs regulations on our websites. Volunteers, Mission Groups, and Non-Profits: Groups bringing donated supplies, equipment, or medicine may experience difficulties with customs. Groups should clear all donated material with the appropriate Salvadoran government office before arriving in El Salvador. Contact the Dirección Nacional de Medicamentos (National Directorate of Medications) via email at donaciones@medicamentos.gob.sv to bring in donated medicines."
+  },
+  "GT": {
+   "name": "Guatemala",
+   "last_update": "2026-06-11",
+   "sha256": "4f30f33bcaf3caf609a8a6271a93e5b2544455362fbcfe492d6fdd1cba172b2a",
+   "sentences": [
+    "passport that is valid when you arrive with at least one blank page for an entry and exit stamp.",
+    "There is no required minimum validity period for a U."
+   ],
+   "text": "To enter Guatemala, you need a U.S. passport that is valid when you arrive with at least one blank page for an entry and exit stamp. There is no required minimum validity period for a U.S. passport, and U.S. citizens do not need a visa. There are no vaccinations required for entry. Review the U.S. Center for Disease Control and Prevention website for general vaccination advice for travelers. Guatemala has an electronic immigration form that you must fill out to enter and exit the country. Some airlines may ask for proof that you completed this form before you check-in. U.S. citizens are usually allowed to stay in Guatemala for 90 days, but this can possibly be extended if you ask. If you stay longer than you are allowed, you will have to pay a fine of 15 Guatemalan quetzals (GTQ) (about $2) for each day you exceed your stay. This fine must be paid to Guatemala’s immigration authority ( Instituto Guatemalteco de Migración (IGM) ) before you can leave the country. If your U.S. passport is lost or stolen in Guatemala, go to the U.S. Embassy to get a new one as soon as possible. To leave Guatemala, you must show your new passport along with a police report about the loss or theft to Guatemala’s immigration authority ( Instituto Guatemalteco de Migración (IGM) ). You may also have to pay a fine of $100 for not having an entry stamp or proof of entry into the country. Fines and amounts can change. Visit Guatemala’s Ministry of Foreign Affairs website (in Spanish only) for information about Guatemalan embassies and consulates, and the latest visa requirements. HIV/AIDS Restrictions: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors or foreign residents of Guatemala. Check our websites for more information on dual nationality , prevention of international child abduction , and customs regulations ."
+  },
+  "HO": {
+   "name": "Honduras",
+   "last_update": "2026-08-13",
+   "sha256": "8a00cc55865284008cc71b5874c87d91d4907ec3c3a14716044fc0ea0e676efd",
+   "sentences": [],
+   "text": "To enter Honduras, you need: A U.S. passport with at least six months validity. Evidence of onward travel. For stays of up to 90 days, you do not need a visa for tourism. Please note, individuals who do not obtain the appropriate visa, or overstay their time in Honduras, may face significant exit fines. Visit the Embassy of Honduras website or any of the Honduran consulate websites for the most current visa information. Special Requirements for Minors : Under Honduran law, children under age 21 who are traveling unaccompanied or with only one parent must have written, notarized permission to travel from the non-traveling parent(s). If notarizing a permission letter in Honduras, the letter should be notarized by a Honduran notary public. If notarizing a permission letter in the United States, the letter should be apostilled by the U.S. state registrar where the notary is registered. Honduran immigration authorities may also accept permission letters notarized at a Honduran embassy or consulate in the United States. If there is no second parent with legal custody of the child (e.g., the second parent is deceased, one parent has sole custody, etc.), travelers can provide copies of the relevant paperwork such as a court decision, birth certificate naming only one parent, death certificate, etc. The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors or residents of Honduras. Find information on dual nationality , prevention of international child abduction , and customs information on our websites."
+  },
+  "UK": {
+   "name": "UnitedKingdom",
+   "last_update": "2025-08-11",
+   "sha256": "938613b6f6abb9d330e4fc8b5a048279bd8d1bcd6f80486ca7d1d7494ce56c53",
+   "sentences": [
+    "Travelers in Europe UK Visas and Immigration (UKVI) Dual Nationality Prevention of International Child Abduction Customs Regulations Passport requirements Your passport must be valid for the entire length of your stay in the United Kingdom.",
+    "Onward travel to more countries Many countries require the passport to be valid for 6 months or more during travel."
+   ],
+   "text": "Helpful resources Registered Traveler Service (RTS) UK Electronic Travel Authorization (ETA) eVisa in the UK U.S. Travelers in Europe UK Visas and Immigration (UKVI) Dual Nationality Prevention of International Child Abduction Customs Regulations Passport requirements Your passport must be valid for the entire length of your stay in the United Kingdom. Since June 2019, U.S. passport holders can use ePassport Gates when arriving in the UK. If you previously registered for the UK Registered Traveler Service (RTS ), you should now use the ePassport Gates. Onward travel to more countries Many countries require the passport to be valid for 6 months or more during travel. Review those country pages if you continue your travel after leaving the UK. Learn more about U.S. travelers in Europe’s Schengen Area . Visa requirements All U.S. citizens traveling to the UK for tourism, family visits, business meetings, conferences, or short-term study for 6 months or less must have an Electronic Travel Authorization (ETA) before travel. U.S. citizens can apply for ETAs . As of fall 2024, UK Visas and Immigration (UKVI) is working to replace physical documents with a new online record of immigration status called an eVisa. Review the UK Visas and Immigration (UKVI) information, including: Visa requirements for your type of travel (research, work, study, medical treatment). Information for unpaid and paid workers (interns, volunteers, charity, religious, and temporary workers). Visitor information if you plan to get married in the UK, even if you don’t plan to live there. Extra fees about certain visa categories related to work, study, or residency for more than 6 months. We cannot help with your UK visa application. If denied entry, we cannot press for your admission into the UK. HIV/AIDS entry restrictions The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of the UK."
+  },
+  "EI": {
+   "name": "Ireland",
+   "last_update": "2026-03-26",
+   "sha256": "c4f8c39409bc73eeff99f542e92fdc524072e9b6fcddc410c2ade8ff075920fd",
+   "sentences": [
+    "We recommend you have a passport that is valid for the duration of your stay, evidence of sufficient funds to support your stay in Ireland, and a return airline ticket.",
+    "Your passport should be valid for at least three months beyond the period of stay if you plan on transiting a Schengen country."
+   ],
+   "text": "Visit the Embassy of Ireland’ s website for the most current visa information. You must have a valid passport to enter Ireland. U.S. citizens can enter visa-free for tourism or business stays of up to 90 days. There is no minimum passport validity requirement for U.S. citizens entering Ireland. We recommend you have a passport that is valid for the duration of your stay, evidence of sufficient funds to support your stay in Ireland, and a return airline ticket. An increased number of U.S. citizens have been refused entry to Ireland or granted a limited stay because they failed to sufficiently demonstrate their travel intent to Irish immigration officials at the port of entry . You may be asked to provide evidence of sufficient funds to support your stay in Ireland regardless of your purpose of travel. For any travel other than tourism, please ensure you obtain the appropriate documentation prior to travel. You can find more information at the Irish Naturalization and Immigration Service website or by contacting your nearest Irish Embassy or Consulate in the United States . We cannot intervene on your behalf when applying for a visa or residency permit, nor can we assist if you are denied entry into Ireland. Traveling Through Europe : If you are planning to visit or travel through European countries, you should be familiar with the requirements of the Schengen Agreement. Ireland is not a full member of the Schengen Area, which means that if you travel to Ireland from the Schengen Area, you are required to show your passport. Your passport should be valid for at least three months beyond the period of stay if you plan on transiting a Schengen country. You will need sufficient proof of funds and a return plane ticket . For additional information about visas for the Schengen area, see the Schengen Visa page. The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to Ireland or for foreign residents of Ireland. Find information on dual nationality , prevention of international child abduction , and customs regulations on our websites."
+  },
+  "FR": {
+   "name": "France",
+   "last_update": "2025-08-11",
+   "sha256": "3517ab41417b9ce3a14d89a59057de2a7942c126aec7432033ef3e5c9276428a",
+   "sentences": [
+    "Your passport should be valid for at least three months beyond the period of stay if you plan on transiting a Schengen country."
+   ],
+   "text": "Visit the Embassy of France website for the most current visa and entry requirement information. The Government of France does not recognize the 12-page U.S. emergency passport, issued by U.S. embassies and consulates overseas, as a valid travel document for visa-free entry into France. If traveling on this emergency passport, you may be refused boarding and/or entry by immigration officials and/or held at the airport until a return flight to the U.S. is available. Direct transit through France for another destination accepting an emergency passport may be permitted. You should check entry requirements of any other country of destination to make sure the emergency passport is accepted for entry. You may enter the Schengen area, including France, for up to 90 days for tourist and business purposes without a visa. Immigration officers may also request you show sufficient funds for your intended stay and a return airline ticket. If you are traveling to France or Monaco for reasons other than business or tourism, such as employment (including diplomatic or official travel), study, or internship, you must obtain the appropriate French or Monegasque (Monaco) visa for that purpose before you leave the United States. You should be aware that it is nearly impossible to obtain or change visa status while in France. All minors (under age 18) traveling without a parent or legal guardian and who are residents in France must have the written consent of at least one parent or legal guardian to leave France. The minor must travel with his or her own I.D., a copy of the parent/guardian’s I.D., and form number 15646*01, executed by the parent/guardian and available here . If you are transiting through France to South Africa, there are special requirements for minors. See Entry, Exit and Visa Requirements for South Africa for additional information. Contact the French Embassy in Washington at 4101 Reservoir Road NW, Washington, DC 20007, tel. (202) 944 6000, or one of the French Consulates General in Atlanta, Boston, Chicago, Houston, Los Angeles, Miami, New Orleans, New York, or San Francisco for the most current visa information. Special Note: Overseas departments and territories of France (i.e. those not located in Europe) are not included in the Schengen Agreement. Please see Country Specific Information on French Guiana , French Polynesia , and the French West Indies for entry and exit requirements. For other departments and territories, visit the Embassy of France website for the most current visa and entry requirement information for those areas. Monaco: For further information on entry requirements to Monaco, travelers may contact the Embassy of the Principality of Monaco , 888 17th Street NW, Suite 500, Washington D.C. 20006, Tel: (202) 234-1530, Email: info@monacodc.org ; or the Consulate General of Monaco, 565 Fifth Avenue – 23rd floor, New York, NY 10017, Tel: (212) 286-0500, Email: info@monaco-consulate.com . Traveling Through Europe : If you are planning to visit or travel through European countries, you should be familiar with the requirements of the Schengen Agreement. Your passport should be valid for at least three months beyond the period of stay if you plan on transiting a Schengen country. Please review our U.S. Travelers in Europe page. We recommend that your passport have at least six months’ validity remaining. You will need s ufficient proof of funds and a return plane ticket . For additional information about visas for the Schengen area, see the Schengen Visa page. HIV/AIDS Restrictions: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of France. Find information about dual nationality , prevention of international child abduction and customs regulations on our websites."
+  },
+  "IT": {
+   "name": "Italy",
+   "last_update": "2025-08-11",
+   "sha256": "4e740b7233ebca813c7c1e9b4e164f7235f64c0512b26047b5ef5fc516578aec",
+   "sentences": [
+    "Helpful resources Embassy of Italy Visa Information Consulate General of Italy in New York Dual Nationality Prevention of International Child Abduction Customs Regulations Italian Customs Traveling through Europe If you plan to visit or travel through Europe, know the Schengen Agreement's requirements : Your passport must be valid for at least 3 months beyond the period of stay."
+   ],
+   "text": "Helpful resources Embassy of Italy Visa Information Consulate General of Italy in New York Dual Nationality Prevention of International Child Abduction Customs Regulations Italian Customs Traveling through Europe If you plan to visit or travel through Europe, know the Schengen Agreement's requirements : Your passport must be valid for at least 3 months beyond the period of stay. Visit our U.S. Travelers in Europe page. You will need proof of sufficient funds and a return plane ticket . Passports and visas U.S. citizens must arrive at Italian ports of entry with a valid passport. This regulation is strictly enforced. If your passport has ever been reported as lost or stolen, or is expired, Italian authorities could deny you entry and return you immediately to the United States. U.S. citizens may enter Italy for up to 90 days for tourist or business purposes without a visa. If you intend to live or stay in Italy for longer than 90 days, you must apply for a visa from an Italian Embassy or Consulate. Once in Italy, you must also obtain a permit of stay (permesso di soggiorno). You can get more information from the Ministry of Foreign Affairs and the Polizia di Stato . HIV/AIDS restrictions The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Italy."
+  },
+  "SP": {
+   "name": "Spain",
+   "last_update": "2025-08-11",
+   "sha256": "b1734169c51cc46a77d351c7655eb5572a89c3314b02cf0afc5e844d55d82fab",
+   "sentences": [
+    "Your passport should be valid for at least 3 months beyond your period of stay if you plan on transiting a Schengen country."
+   ],
+   "text": "Helpful resources Embassy of Spain in the United States . U.S. Travelers in Europe’s Schengen Area Schengen Area Visa Information Dual Nationality Prevention of International Child Abduction Customs Regulations Traveling through Europe: It is important to be familiar with the Schengen Agreement requirements when traveling through European countries . Your passport should be valid for at least 3 months beyond your period of stay if you plan on transiting a Schengen country. We recommend you have at least 6 month’s validity remaining. You will need sufficient proof of funds and a return plane ticket. For more information: Schengen Visa . Students and athletes: Students, prospective students, and athletes should visit the Embassy of Spain for additional information on entry requirements. You must have a visa to participate in athletic or study programs. U.S. students and athletes have been denied entry and held at Spanish airports because they didn't have the right visa. If your coach or program says you don't need a visa to study or play sports in Spain, confirm it with the nearest Spanish consulate before you travel. U.S. citizen minors living in Spain Parents and guardians should prepare a notarized, written permission. It should allow their minor children to travel to or from Spain alone or with someone else. All Spanish minors, including dual U.S. citizens, must have this parental permission to travel without a parent or guardian. Spanish authorities have sometimes blocked U.S. citizen minors from leaving the country when traveling without a parent or guardian. HIV/AIDS restrictions: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Spain."
+  },
+  "GM": {
+   "name": "Germany",
+   "last_update": "2025-08-11",
+   "sha256": "b51b27ba89e8c74b19d13696640ec2e93967ac25b93efadb7acf387e93bc5df2",
+   "sentences": [
+    "Your passport should be valid for at least 3 months beyond your period of stay if you plan on transiting a Schengen country."
+   ],
+   "text": "Helpful resources Embassy of Germany in the United States U.S. Travelers in Europe’s Schengen Area Schengen Area Visa Information Dual Nationality Prevention of International Child Abduction Customs Regulations Traveling through Europe If you are planning to visit or travel through European countries, be familiar with the requirements of the Schengen Agreement . Your passport should be valid for at least 3 months beyond your period of stay if you plan on transiting a Schengen country. Please review our U.S. Travelers in Europe page. We recommend you have at least 6 month’s validity remaining. You will need sufficient proof of funds and a return plane ticket. For more information about visas for the Schengen area, see the Schengen Visa page. Visit the Embassy of Germany for the most current visa information. Prescription medications If traveling with prescription medications, review all requirements related to pharmaceuticals to avoid potential fines and confiscation. HIV/AIDS restrictions The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Germany."
+  },
+  "GR": {
+   "name": "Greece",
+   "last_update": "2026-02-19",
+   "sha256": "4a87831b5958a1354ed7ed964361d83f0cd69c777f3c37389100b2786ab5c29c",
+   "sentences": [
+    "While Greek law requires three months of passport validity beyond the intended date of your departure, if you are transiting a country that requires six months of validity, you may not be permitted to continue your trip."
+   ],
+   "text": "Visit the Embassy of Greece website for the most current visa information. Greece is a party to the Schengen Agreement; therefore, U.S. citizens may enter Greece without a visa for stays of up to 90 days for tourism or business purposes. For additional details about travel into and within Schengen countries, please see our Schengen fact sheet . For entry into Greece, your passport should have at least six months of remaining validity . While Greek law requires three months of passport validity beyond the intended date of your departure, if you are transiting a country that requires six months of validity, you may not be permitted to continue your trip. We recommend that you have at least six months of validity to avoid any travel disruptions. U.S. citizens traveling on a passport reported lost or stolen will not be permitted entry into Greece and may be returned to their original departure point. This decision is the purview of the Greek immigration authorities; the U.S. Embassy cannot intervene. Emergency passports are issued only at the Embassy in Athens. Staff members do not travel to the air, land, or sea ports of entry. You must arrive in country with proof of sufficient funds and a return airline ticket or other evidence that you will depart Greece if asked. The sufficient funds requirement is often met with credit cards. U.S. official and diplomatic passport holders must obtain a Schengen visa prior to arrival. If you are traveling on a U.S. official or diplomatic passport, you will not be allowed to enter Greece without a visa. If traveling on official military orders , review the guidance in the Department of Defense Foreign Clearance Guide . If you are a U.S. citizen with a passport listing your place of birth as the Northern Republic of Macedonia, the Greek authorities will stamp your passport. If you are a U.S. citizen with a passport listing your place of birth as Skopje or the Republic of Macedonia, your U.S. passport should be recognized as a valid travel document. However, be aware: Greek Immigration officers at ports of entry (land, air, and sea) will not place entry stamps in a passport listing the traveler’s place of birth as Macedonia or the Republic of Macedonia. You will be asked to complete a short form on which the entry stamp will be placed. Keep the form with your passport while you are in Greece and present it upon departure. If you lose the form, you must visit a police station and file a report before the Greek authorities will permit you to depart the country. HIV/AIDS RESTRICTIONS: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Greece. Find information on dual nationality , prevention of international child abduction , and customs information on our website ."
+  },
+  "JA": {
+   "name": "Japan",
+   "last_update": "2025-08-11",
+   "sha256": "b51ecbd5f322851fef7a20281f57eca5066917890991dfaeb6ae66da84330a28",
+   "sentences": [
+    "Your passport must be valid for the entire time you are staying in Japan.",
+    "Transiting through Japan Ensure that your passport and visa are valid for your entire stay."
+   ],
+   "text": "Helpful resources Embassy of Japan Dual Nationality Prevention of International Child Abduction (IPCA) Customs Regulations Entry and exit requirements For tourist or business “visa free” stays up to 90 days: You must have a valid passport and should have proof of return or onward ticket. Your passport must be valid for the entire time you are staying in Japan. You cannot work on the local economy. You cannot change to another visa while in Japan (like a spouse, work, or study visa). You will need to leave and re-enter Japan with the correct visa. Immigration officers may deny entry if you lack proof of how you'll support yourself in Japan. They may also deny you exit from Japan if you have unpaid bills. All visitors must provide fingerprints and have their photo taken upon arrival. This doesn't apply to those entering on diplomatic visas, minors, or certain members of the military traveling on official orders. For further information about landing procedures, please visit the Immigration Bureau of Japan . Lost or stolen passports You cannot use a passport that you’ve reported as lost or stolen, even if you find it later. Japanese authorities will likely deny you entry if you try. If your passport was lost or stolen, you need to get a new one before traveling. Visit the Embassy of Japan to see instructions on how to replace a lost or stolen passport. Transiting through Japan Ensure that your passport and visa are valid for your entire stay. Passport services are not available at the airport. Airlines in Japan may not let you board if you don't have the right travel documents for your next destination, or if your passport has less than 6 months of validity. Military and SOFA travelers Active-duty U.S. military personnel may enter Japan under the Status of Forces Agreement (SOFA) with proper Department of Defense (DoD) identification and travel orders. However, all SOFA family members, civilian employees, and contractors must have valid passports to enter Japan. Please consult the DOD Foreign Clearance Guide before leaving the United States. VisitSee the Immigration Services Agency website for various immigration procedures. HIV/AIDS restrictions The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or for foreign residents of Japan."
+  },
+  "TH": {
+   "name": "Thailand",
+   "last_update": "2026-08-20",
+   "sha256": "a73e74726ed907a6ad17213627fef90011de3f7a4e2b8961cc0d2aa563325eec",
+   "sentences": [
+    "We strongly recommend that your passport be valid for at least six months beyond the date of your arrival in Thailand to avoid possible denied entry."
+   ],
+   "text": "Visit the Royal Thai Embassy website for the most current visa information. U.S. citizen tourists entering Thailand for fewer than 60 days do not require a visa but pre-arrival online registration is required. We strongly recommend that your passport be valid for at least six months beyond the date of your arrival in Thailand to avoid possible denied entry. Thai immigration officials or airline staff may ask for your onward/return ticket or financial ability to remain in Thailand. Business travelers, U.S. government employees travelling on official business, teachers, retirees, and those planning to stay longer than 60 days should check with the Royal Thai Embassy about visa requirements . If you overstay your visa, you will be fined. Depending on the length of overstay, you may also be arrested, detained, deported at your own expense, and banned from re-entering Thailand. We strongly recommend you always carry a digital or physical copy of your U.S. passport identification page and current Thai visa while in Thailand to help avoid detention by the Thai immigration police. Thailand’s entry/exit information is subject to change without notice. For the most current information, please see The Royal Thai Police Immigration Bureau . You can find detailed information on vaccinations and other health precautions on the CDC website . HIV/AIDS Restrictions: Some HIV/AIDS entry restrictions exist for visitors to and foreign residents of Thailand. Please verify this information with the Royal Thai Embassy before you travel. Find information on dual nationality , prevention of international child abduction and customs regulations on our websites."
+  },
+  "TU": {
+   "name": "Turkey",
+   "last_update": "2026-06-11",
+   "sha256": "d85da24a11e230666520f144c40f2e82ff8f0414cd0b78e54ca546e0a7197d65",
+   "sentences": [
+    "Passports must be valid for six months beyond your entry date."
+   ],
+   "text": "Visit the Embassy of the Republic of Turkey website for the most current visa and residency permit information. In Turkey, contact the nearest Directorate General of Migration Management office to obtain a residence permit. Obey all Turkish visa regulations and maintain valid residence permits at all times. The U.S. Embassy is unable to assist with Turkish immigration or visa-related matters. Turkish authorities enforce immigration laws. Passports must be valid for six months beyond your entry date. You will be denied entry into Turkey if there is not enough space for entry and exit stamps in your passport. Official passport holders are required to have visa to enter Türkiye . Ordinary passport holders are exempted from visa up to 90 days in any 180-day period. Get entry and exit stamps . You must have a Turkish entry stamp to fly domestically. Get an exit stamp in your passport when leaving the country or you may face difficulties re-entering Turkey in the future and a fine . If you are planning to work, study, or conduct academic or scientific research in Turkey, you must receive a visa from a Turkish embassy or consulate before arriving in Turkey. Visit “Living in Turkey” on the U.S. Embassy’s website. Syria: See the Syria travel advisory. The U.S. Embassy in Damascus suspended operations in February 2012. The Department of State continues to warn U.S. citizens against all travel to Syria. At this time, the Turkey-Syria border is closed except in cases of urgent medical treatment or safety from immediate danger as defined by the Government of Turkey. Iraq: See the Iraq travel advisory . The Department of State continues to warn U.S. citizens against all travel to Iraq. The Turkish Government tightly controls entry and exit on the border. HIV/AIDS restrictions: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Turkey. Find information on dual nationality , prevention of international child abduction and customs regulations on our websites."
+  },
+  "AE": {
+   "name": "UnitedArabEmirates",
+   "last_update": "2026-09-17",
+   "sha256": "0137f3317b7580a98f51fd0f3d6cc982fab07060f80de575fedf04b4eb39371f",
+   "sentences": [
+    "Passport Validity: A passport valid for at least six months beyond the date of entry is required to enter the UAE."
+   ],
+   "text": "COVID-19 Requirements: There are no COVID-related entry requirements for U.S. citizens. U.S. citizens are subject to all UAE immigration laws. Passport Validity: A passport valid for at least six months beyond the date of entry is required to enter the UAE. The UAE government does not accept 12-page emergency passports for entry to the UAE. The UAE government also does not accept passports with the “X” marker for travel to, in, or through the UAE. Travelers with these passports will be denied boarding or entry. Personal travel of 30 days or less: A U.S. citizen with a regular (non-emergency) passport with an M or F marker may obtain a no fee visitor visa upon arrival. The UAE government does not accept passports with the “X” marker for travel to, in, or through the UAE. Travelers with these passports will be denied boarding or entry. Stays longer than 30 days: Visitors on a 30-day visa may request a visa extension, which is at the discretion of immigration officials. Anyone planning to work or study in the UAE must obtain the appropriate visa. Medical Exam: A full medical exam is required for work or residence permits. The exam and tests for HIV/AIDS, viral hepatitis B, tuberculosis, leprosy, and pregnancy must be performed after arrival. U.S. citizens have been detained and deported for testing positive for HIV, active tuberculosis, or hepatitis. Medical exams performed outside of the UAE will not be accepted. Travel on Diplomatic or Official Passports: U.S. citizens traveling to or through the UAE on diplomatic or official passports are required to obtain a visa before travel (transit passengers only require a visa if exiting the airport). This requirement is strictly enforced by UAE officials and those not meeting the requirement will be denied entry. U.S. military travelers should not assume military ID cards will be accepted, but should consult the Foreign Clearance Guide. Land Exit Departure Fee: All travelers who depart the UAE by land and who are not citizens of a Gulf Cooperation Council (GCC) country must pay a departure fee. The fee is 35 UAE dirhams and is payable only in the local currency. Please verify this information with the Embassy of the United Arab Emirates before you travel. Exit Controls: The UAE maintains tight exit controls. All travelers must exit the country with the passport on which they entered. Travelers should visit a UAE immigration office prior to departure to obtain an exit pass if they plan to leave the UAE without the passport on which they entered. Travelers both departing the UAE and transiting will be barred from exiting the UAE if there are any criminal or civil legal cases against them. Travelers have been arrested at the airport and have had their passports seized due to outstanding financial cases, unsettled legal disputes, and late credit card payments, including for cases that were previously unknown to the traveler. In such cases, some individuals have been arrested and detained for long periods of time. Individuals will be barred from leaving the UAE until legal cases are settled in full. This affects all persons whether they are in the UAE as residents, tourists, or transit passengers with no intention of exiting the airport. UAE residents can verify with UAE authorities whether they have an exit ban due to outstanding cases in Dubai or Abu Dhabi. More information on this process can be found on the UAE Government Portal . The Government of the UAE requires that all persons residing in the country have a national identification card. U.S. citizens who are working or living in the UAE should visit the Emirates Identity Authority website for more information on card registration procedures and requirements. Cancellation of Visas: All UAE visas must be formally cancelled through the General Directorate of Residency and Foreigners Affairs (GDRFA) before a new visa can be issued. This includes visas that have already expired or have never been used. Travelers may be denied entry to, or not permitted to depart, the UAE if previous visas have not been properly cancelled. More information on the process is available on the UAE Government portal . Dual Nationality: The UAE does not recognize dual nationality. The UAE recognizes only the citizenship of the passport on which a person enters the UAE. The embassy may be prohibited from providing certain consular services to those who did not enter the UAE on a U.S. passport. The UAE has imposed HIV/AIDS travel restrictions on all foreigners seeking residency. Travelers for tourism are not tested or requested to provide information about HIV/AIDS status. Please verify this information with the Embassy of the UAE before you travel. Information about dual nationality and the prevention of international child abduction can be found on our website. For further information about customs regulations, please read the embassy’s Customs Information page . Current restrictions: Weapons and Law Enforcement Equipment: The transportation of arms or items that may be considered law enforcement or military equipment is strictly prohibited without written approval from the UAE government. Do not transport any arms or items that may be considered law enforcement or military equipment. Such items include, but are not limited to: Weapons Weapon parts and tools Functional, inert, or decorative ammunition, even one bullet Empty or spent shell casings Body armor Handcuffs Any other military or police equipment U.S. citizens, military personnel, and U.S. government/military contractors found to be carrying such items, even in the smallest quantities, will be arrested and face strict criminal penalties, including imprisonment, large monetary fines, forfeiture of the items, and deportation , even though airlines and U.S. authorities allowed shipment on a U.S.-originating flight. Other prohibited items: Importation of the following items is also prohibited under UAE law: pornographic material, non-Islamic religious pamphlets for missionary activities, e-cigarettes, fireworks, ivory, chemical and organic fertilizers, laser pointers, radar jammers/other unauthorized communication devices, products and medications containing cannabidiol (CBD), endangered animal species, and any objects, sculptures, paintings, books or magazines which do not adhere to the religious and moral values of the UAE. Possession of any of these items can lead to detention and lengthy jail sentences."
+  },
+  "CH": {
+   "name": "China",
+   "last_update": "2026-03-12",
+   "sha256": "18d442602db40f8dab4d6dbf080086674355f81231ab54ceca09ca867373b9f5",
+   "sentences": [
+    "Transiting without a visa requires a valid passport with at least six months of remaining validity, a visa for your onward destination (if required), and an onward ticket from the same city."
+   ],
+   "text": "Entry & Exit: You must obtain a visa prior to arriving in the People’s Republic of China (PRC). Your passport must have at least six months' validity remaining. If your visa is not in your valid passport, the biographical data on the valid passport and the visa must match exactly. Failure to provide any of these items may result in denial of entry and possibly additional penalties. U.S. citizens may apply for a ten-year multiple entry visa, which is useful for repeated travel. If you plan to work in the PRC, be sure to obtain the correct visa. You cannot work in the PRC on a student or tourist visa. Working without the proper visa may result in detention, deportation, criminal charges, or imprisonment. You must have a valid visa to exit the PRC. You must leave the PRC before the expiration of the listed duration of stay. Do not travel to the PRC if you have a warrant for your arrest in the United States. Lack of a visa, having an expired visa, or overstaying your visa will result in detention and/or fines. If your visa has expired or is due to expire, apply for a visa extension from the local Entry-Exit Bureau before attempting to leave the PRC. Do not expect your request to be expedited, so apply ahead of time. Staying in the PRC on an expired visa may lead to a fine, imprisonment, and deportation. Visit the website of the Embassy of the People’s Republic of China in the United States of America for current visa information. You can also review information on the PRC’s immigration and nationality laws. The Tibet Autonomous Region (TAR): You must obtain a special permit for tourist travel to the TAR. This is different from a PRC visa. Special permits can often be obtained through a travel agent in the PRC. To learn more about entry requirements for the TAR or other restricted areas, check with the Embassy of the People’s Republic of China in the United States of America . The U.S. government has limited ability to help if you encounter problems in the TAR. The PRC government does not usually allow U.S. government personnel to travel there, even to provide consular assistance to U.S. citizens. HIV/AIDS: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of the PRC. Visa-Free Travel to Hainan : Citizens of the United States and certain other countries can enter the province of Hainan visa-free for up to 30 days for tourism, temporary commercial and trade activities, medical treatment, exhibitions and sports competitions, but excluding work and study. Travelers must arrive by direct international flight or via Hong Kong or Macau. Transiting the PRC: You may transit through certain international airports in mainland China without a PRC visa. However, this “visa-free travel” permit is typically only valid for specific cities or regions and is subject to change. Different rules apply for different ports of entry. Travelers may not pursue any official meetings or take part in any work-related activities while on a “visa-free travel” permit. How long you can stay and where you may travel while in transit varies by region. Transiting without a visa requires a valid passport with at least six months of remaining validity, a visa for your onward destination (if required), and an onward ticket from the same city. This visa-free transit is only allowed if the flight to the PRC departs from a different country than the onward destination. If you enter the PRC by flying into an airport, you must depart from the same airport. You must inform your airline upon check-in and get an endorsement stamp at the immigration desk before leaving the airport. Consult the Embassy of the People’s Republic of China in the United States of America for a current list of eligible airports and more detailed guidance. PRC border officials have the authority to deny foreign travelers’ entry to the PRC without warning or explanation. The U.S. Embassy and Consulates General cannot intervene on your behalf if you are denied entry to the PRC. During Your Stay: You must register your stay within 24 hours of arrival in the PRC, and at each hotel or residence where you stay. Failure to do so could result in fines and deportation. You can register with hotel staff or the local police station. Foreigners must carry valid passports and PRC visas or residence permits at all times. Entry and exit requirements are strictly enforced. Do not overstay your visa. Only participate in activities allowed by your visa class. For example, if you are on a tourist visa or student visa, you should not be working. Police, school administrators, transportation officials, and hotel staff may check your visa to make sure you have not overstayed. If you overstay your visa’s duration of stay, you may be denied service by hotels, airports, and train stations, as well as face fines and arrest. Dual Nationality: The PRC government does not recognize dual nationality. If you are a citizen of both the United States and the PRC and you enter the PRC on a PRC passport, Mainland Travel Permit for Taiwan Residents, or other PRC-issued travel document, local authorities will assert that you are a PRC citizen only and refuse to recognize you as a U.S. citizen. U.S. citizens with ethnic or historical ties to China may also be considered PRC nationals by local authorities. This could limit your ability to access certain consular services. For example, if you are detained, local officials could deny access to U.S. consular officials and assistance. Dual U.S.-PRC citizens may encounter challenges when seeking public benefits in the PRC. This can include enrolling in public schools, getting treatment at public hospitals and clinics, or obtaining PRC identity and citizenship documents, such as passports. The U.S. government may be unable to assist U.S.-PRC dual citizens in overcoming these challenges or navigating other consequences of PRC nationality. The PRC government may inconsistently apply interpretations of dual nationality. If you are a naturalized U.S. citizen or have a possible claim to PRC citizenship, and you are traveling to the PRC, inform yourself about PRC nationality law and practices relating to determination and loss of PRC citizenship. PRC authorities generally consider a child born in the PRC to at least one PRC-national parent to be a PRC citizen, even if the child was issued a U.S. passport at the time of birth. If you have or had a claim to PRC citizenship and your child is born in the PRC, prior to departing the PRC with your child, you may wish to contact the local Public Security Bureau and/or Entry-Exit Bureau for information on obtaining a travel document. If you have or had a claim to PRC citizenship and your child is born in the United States, please contact the Embassy of the People’s Republic of China in the United States of America for specific information on the documentation requirements to bring your child to the PRC. Find information on dual nationality , prevention of international child abduction , and customs regulations on our websites."
+  },
+  "VM": {
+   "name": "Vietnam",
+   "last_update": "2026-07-02",
+   "sha256": "87f7d288cae25b82bffb755eca5dfbaa4319acd8fb6ea36a85afd9a80ebf6d0b",
+   "sentences": [
+    "Your passport must be valid for six months beyond your planned stay, and you must have at least one blank visa page (not including the endorsement page).",
+    "Immigration officials have been issuing visas valid for only for the period requested on the E-visa application; travelers who change their plans or are delayed in departing the country for any reason will likely incur overstay fines and/or delays in obtaining permission to exit Vietnam.",
+    "The certificate has a maximum validity of five years, during which time the holder can enter Vietnam and stay for up to six months without applying for a visa."
+   ],
+   "text": "Entry Requirements: You must have a valid passport and a visa (or pre-approval for a visa on arrival) to enter Vietnam. Your passport must be valid for six months beyond your planned stay, and you must have at least one blank visa page (not including the endorsement page). You will be denied entry to Vietnam if you do not meet these passport and visa requirements. Visit Mission Vietnam’s website for the most current information. The U.S. Mission to Vietnam cannot assist U.S. citizens who arrive in Vietnam without required documents. U.S.-Vietnam dual nationals should consult the Department of State’s information page for Travelers with Dual Nationality and the Embassy of Vietnam for travel requirements. You must enter and exit Vietnam on the same passport. If using a Vietnamese passport to enter and exit the country, your passport must have at least six months’ validity from your return date to the United States. Visas: Travelers can apply for visas through Vietnamese Embassies or Consulates, or online via the Government of Vietnam’s electronic visa (E-visa) interface . The Government of Vietnam requires a “visa sponsor” for all visa categories, except for E-visas. A visa sponsor is a local business or travel agent to apply for a pre-approval letter with a Vietnamese Immigration Office in Vietnam on behalf of the traveler. Only on receipt of the pre-approval letter can a foreigner apply for an appropriate visa at a Vietnamese Embassy or Consulate abroad, or for a visa on arrival. For more information about this process, please visit the website of the Vietnamese Embassy here . When you apply for a visa to enter Vietnam, be sure to request the visa category that corresponds to your purpose of travel. Special Note Regarding E-visas: U.S. citizens can apply online for an E-visa on the Vietnam Immigration website . Applicants may apply for single or multiple entry visas, and the Government of Vietnam does not allow for renewal or extension from within the country. Please be advised that the Government of Vietnam may deny you an E-visa to enter Vietnam if you apply using an emergency passport. Immigration officials have been issuing visas valid for only for the period requested on the E-visa application; travelers who change their plans or are delayed in departing the country for any reason will likely incur overstay fines and/or delays in obtaining permission to exit Vietnam. We encourage you to take these facts into account when requesting an E-visa visa and noting your intended length of stay E-visa applications are usually processed within three to five working days after the Vietnam Immigration Department receives the completed application and E-visa fee. E-visa holders must present the printed E-visa and valid passport at the port of entry. Prior to your travel with an E-visa to Vietnam, we recommend travelers to carefully check their E-visa to make sure all information is correct, and that you will enter/exit Vietnam through a port of entry that you had selected at the time of application. An error on E-visa, including minor differences between the information on the application and the biographical information on the passport such as typos in names or missing middle names, may result in a denial of entry by immigration authorities. The U.S. Embassy and Consulate General are unable to change the information on your E-visa or help expedite the process as Vietnamese E-visa is under the sole jurisdiction of the Vietnamese government. Pre-approval for Visa on Arrival: The Government of Vietnam has authorized some businesses and travel agencies to arrange for pre-approval for a “visa on arrival” at the airport. On receipt of a pre-approval letter, travelers may then travel to Vietnam and apply for a visa upon landing to Vietnam. Please be advised that you should not travel to Vietnam without having been issued a pre-approval letter as it may result in a denial of entry by immigration authorities. To avoid having to rearrange your travel date, please do not make travel arrangement before you receive your pre-approval letter. Additional considerations regarding visas : Please refer to Vietnam’s Ministry of Foreign Affairs website for information detailing visa categories. If you plan to work in Vietnam, you must obtain a work permit before applying for your visa. If you change the purpose of your visit after you have received your visa, you must obtain a new visa outside of Vietnam appropriate for your new activities before beginning those activities. Under local immigration law, employment-based visas are based on a petition from a specific employer, and workers may be unable to switch jobs without securing a new visa. In addition, employers may prevent the departure of contracted employees from Vietnam if they violate contract terms. Before accepting employment in Vietnam, make sure you understand the conditions of contracts and employment-based visas. Note that travelers with a U.S. APEC Business Travel Card will still need a valid visa to enter Vietnam. The United States is a transitional member of APEC and does not reciprocate with other economies regarding full pre-clearance benefits to applicants. As such, no countries are listed on the back of U.S. APEC Business Travel Cards and card holders are required to present any travel or identity documentation, such as a passport and visa (where applicable), required by Vietnam. If a U.S. APEC Business Travel Card holder does not conform to Vietnam’s entry requirements, the card holder may be refused entry. Please consult Mission Vietnam’s website for more information. Please note that Vietnam requires a valid visa, residence card, or approval from the Immigration Department to leave the country. Immigration officials will apply a fee to replace lost/stolen visas or will assess a fine for any visa overstays. The Government of Vietnam has recently increased penalties and enforcement of visa overstays, including substantial fines and significant processing times for required exit visas – one to two weeks, and longer for more complex cases). In addition, hotels and other lodging establishments may refuse to host foreigners who have overstayed their visa due to potential fines and sanctions from the Government of Vietnam. If your U.S. passport is lost or stolen in Vietnam, you will need both a replacement passport and a replacement Vietnamese visa to legally remain in or depart Vietnam. The U.S. Embassy in Hanoi and the Consulate General in Ho Chi Minh City can usually issue you a limited validity replacement passport in as little as one business day for emergency purposes; however, the Vietnamese government requires at least three to five working days to issue a replacement visa. For lost and stolen passports, immigration officials will also request a police report. You must file a report of a lost or stolen passport with the police in the location where the loss or theft of your passport occurred, or authorities may refuse to accept the report. The U.S. Embassy and the Consulate General cannot expedite the replacement of your Vietnamese visa. If you plan to travel from Vietnam to Laos by land, you should request that an adhesive visa be affixed to your passport instead of a detachable one. Lao immigration officials require proof that travelers have departed Vietnam, something that can only be shown with an adhesive visa. Vietnamese officials remove detachable visas from passports when travelers depart Vietnam, leaving travelers with no proof of their Vietnam departure. This situation can result in Lao officials requiring travelers to return to Vietnam. Certificate of Visa Exemption: Vietnamese nationals residing abroad indefinitely, their spouses, and their children may apply for a Certificate of Visa Exemption. The certificate has a maximum validity of five years, during which time the holder can enter Vietnam and stay for up to six months without applying for a visa. More information can be found on the Vietnam Embassy website . Travelers with HIV/AIDS: The U.S. Department of State is unaware of any HIV/AIDS entry restrictions for visitors to or foreign residents of Vietnam. Immunization information for travelers can be found on the Centers for Disease and Control’s website . Information about dual nationality or the prevention of international child abduction can be found on our website. For further information about customs regulations, please read our Customs Information page ."
+  }
+ },
+ "stats": {
+  "issuances_fy": [
+   [
+    1996,
+    5547693
+   ],
+   [
+    1997,
+    6295003
+   ],
+   [
+    1998,
+    6539864
+   ],
+   [
+    1999,
+    6722198
+   ],
+   [
+    2000,
+    7292182
+   ],
+   [
+    2001,
+    7119506
+   ],
+   [
+    2002,
+    7001482
+   ],
+   [
+    2003,
+    7300667
+   ],
+   [
+    2004,
+    8825410
+   ],
+   [
+    2005,
+    10123424
+   ],
+   [
+    2006,
+    12133537
+   ],
+   [
+    2007,
+    18382798
+   ],
+   [
+    2008,
+    16132536
+   ],
+   [
+    2009,
+    14170171
+   ],
+   [
+    2010,
+    14794604
+   ],
+   [
+    2011,
+    12613153
+   ],
+   [
+    2012,
+    13125829
+   ],
+   [
+    2013,
+    13529757
+   ],
+   [
+    2014,
+    14087341
+   ],
+   [
+    2015,
+    15556216
+   ],
+   [
+    2016,
+    18676547
+   ],
+   [
+    2017,
+    21378994
+   ],
+   [
+    2018,
+    21103475
+   ],
+   [
+    2019,
+    20690481
+   ],
+   [
+    2020,
+    11711945
+   ],
+   [
+    2021,
+    15496590
+   ],
+   [
+    2022,
+    21995760
+   ],
+   [
+    2023,
+    24021257
+   ],
+   [
+    2024,
+    24515786
+   ]
+  ],
+  "applications_fy": [
+   [
+    1986,
+    4114532
+   ],
+   [
+    1987,
+    4794993
+   ],
+   [
+    1988,
+    4206472
+   ],
+   [
+    1989,
+    3663323
+   ],
+   [
+    1990,
+    3704833
+   ],
+   [
+    1991,
+    3124527
+   ],
+   [
+    1992,
+    3479946
+   ],
+   [
+    1993,
+    3912154
+   ],
+   [
+    1994,
+    4748763
+   ],
+   [
+    1995,
+    5242488
+   ],
+   [
+    1996,
+    5531268
+   ],
+   [
+    1997,
+    6330968
+   ],
+   [
+    1998,
+    6557987
+   ],
+   [
+    1999,
+    6801129
+   ],
+   [
+    2000,
+    7367472
+   ],
+   [
+    2001,
+    7182304
+   ],
+   [
+    2002,
+    7217320
+   ],
+   [
+    2003,
+    7355537
+   ],
+   [
+    2004,
+    9046790
+   ],
+   [
+    2005,
+    10412146
+   ],
+   [
+    2006,
+    12333428
+   ],
+   [
+    2007,
+    18581977
+   ],
+   [
+    2008,
+    16054336
+   ],
+   [
+    2009,
+    14045147
+   ],
+   [
+    2010,
+    14005102
+   ],
+   [
+    2011,
+    12028710
+   ],
+   [
+    2012,
+    12481013
+   ],
+   [
+    2013,
+    12673903
+   ],
+   [
+    2014,
+    13287573
+   ],
+   [
+    2015,
+    14596917
+   ],
+   [
+    2016,
+    16838457
+   ],
+   [
+    2017,
+    19603630
+   ],
+   [
+    2018,
+    19108577
+   ],
+   [
+    2019,
+    18578593
+   ],
+   [
+    2020,
+    11533128
+   ],
+   [
+    2021,
+    14263338
+   ],
+   [
+    2022,
+    18693257
+   ],
+   [
+    2023,
+    21577377
+   ],
+   [
+    2024,
+    20437207
+   ]
+  ],
+  "valid_fy": [
+   [
+    1989,
+    7261711
+   ],
+   [
+    1990,
+    11116489
+   ],
+   [
+    1991,
+    14344241
+   ],
+   [
+    1992,
+    17950578
+   ],
+   [
+    1993,
+    21245840
+   ],
+   [
+    1994,
+    25156620
+   ],
+   [
+    1995,
+    29559666
+   ],
+   [
+    1996,
+    34365046
+   ],
+   [
+    1997,
+    39729749
+   ],
+   [
+    1998,
+    42576973
+   ],
+   [
+    1999,
+    45337044
+   ],
+   [
+    2000,
+    48614417
+   ],
+   [
+    2001,
+    52155057
+   ],
+   [
+    2002,
+    55169571
+   ],
+   [
+    2003,
+    57642868
+   ],
+   [
+    2004,
+    60890770
+   ],
+   [
+    2005,
+    64772634
+   ],
+   [
+    2006,
+    70598794
+   ],
+   [
+    2007,
+    82100668
+   ],
+   [
+    2008,
+    92038623
+   ],
+   [
+    2009,
+    97597368
+   ],
+   [
+    2010,
+    101797872
+   ],
+   [
+    2011,
+    109780364
+   ],
+   [
+    2012,
+    113431943
+   ],
+   [
+    2013,
+    117443735
+   ],
+   [
+    2014,
+    121512341
+   ],
+   [
+    2015,
+    125907176
+   ],
+   [
+    2016,
+    131841062
+   ],
+   [
+    2017,
+    136114038
+   ],
+   [
+    2018,
+    137588631
+   ],
+   [
+    2019,
+    146775089
+   ],
+   [
+    2020,
+    143116633
+   ],
+   [
+    2021,
+    145028408
+   ],
+   [
+    2022,
+    151814305
+   ],
+   [
+    2023,
+    160668889
+   ],
+   [
+    2024,
+    169915821
+   ]
+  ],
+  "state_issuances_fy": {
+   "year": 2015,
+   "rows": [
+    [
+     "ALABAMA",
+     101159
+    ],
+    [
+     "ALASKA",
+     37134
+    ],
+    [
+     "AMERICAN SAMOA",
+     1389
+    ],
+    [
+     "ARIZONA",
+     259214
+    ],
+    [
+     "ARKANSAS",
+     63606
+    ],
+    [
+     "CALIFORNIA",
+     2067980
+    ],
+    [
+     "COLORADO",
+     276611
+    ],
+    [
+     "CONNECTICUT",
+     195662
+    ],
+    [
+     "DELAWARE",
+     37089
+    ],
+    [
+     "DISTRICT OF COLUMBIA",
+     189106
+    ],
+    [
+     "FLORIDA",
+     914532
+    ],
+    [
+     "GEORGIA",
+     348086
+    ],
+    [
+     "GUAM",
+     13589
+    ],
+    [
+     "HAWAII",
+     72974
+    ],
+    [
+     "IDAHO",
+     59876
+    ],
+    [
+     "ILLINOIS",
+     588689
+    ],
+    [
+     "INDIANA",
+     186204
+    ],
+    [
+     "IOWA",
+     103857
+    ],
+    [
+     "KANSAS",
+     96394
+    ],
+    [
+     "KENTUCKY",
+     98113
+    ],
+    [
+     "LOUISIANA",
+     107715
+    ],
+    [
+     "MAINE",
+     52667
+    ],
+    [
+     "MARYLAND",
+     301107
+    ],
+    [
+     "MASSACHUSETTS",
+     399177
+    ],
+    [
+     "MICHIGAN",
+     333115
+    ],
+    [
+     "MINNESOTA",
+     256008
+    ],
+    [
+     "MISSISSIPPI",
+     47341
+    ],
+    [
+     "MISSOURI",
+     183889
+    ],
+    [
+     "MONTANA",
+     38469
+    ],
+    [
+     "NEBRASKA",
+     66063
+    ],
+    [
+     "NEVADA",
+     118478
+    ],
+    [
+     "NEW HAMPSHIRE",
+     66472
+    ],
+    [
+     "NEW JERSEY",
+     560998
+    ],
+    [
+     "NEW MEXICO",
+     58858
+    ],
+    [
+     "NEW YORK",
+     1169590
+    ],
+    [
+     "NORTH CAROLINA",
+     301152
+    ],
+    [
+     "NORTH DAKOTA",
+     29683
+    ],
+    [
+     "NORTHERN MARIANAS",
+     3044
+    ],
+    [
+     "OHIO",
+     366525
+    ],
+    [
+     "OKLAHOMA",
+     107229
+    ],
+    [
+     "OREGON",
+     174385
+    ],
+    [
+     "PENNSYLVANIA",
+     481992
+    ],
+    [
+     "PUERTO RICO",
+     102539
+    ],
+    [
+     "RHODE ISLAND",
+     50704
+    ],
+    [
+     "SOUTH CAROLINA",
+     233625
+    ],
+    [
+     "SOUTH DAKOTA",
+     27777
+    ],
+    [
+     "TENNESSEE",
+     167869
+    ],
+    [
+     "TEXAS",
+     1126452
+    ],
+    [
+     "UTAH",
+     128515
+    ],
+    [
+     "VERMONT",
+     29338
+    ],
+    [
+     "VIRGIN ISLANDS",
+     8093
+    ],
+    [
+     "VIRGINIA",
+     372663
+    ],
+    [
+     "WASHINGTON",
+     347570
+    ],
+    [
+     "WEST VIRGINIA",
+     32483
+    ],
+    [
+     "WISCONSIN",
+     209517
+    ],
+    [
+     "WYOMING",
+     20782
+    ]
+   ]
+  },
+  "locations_by_state": {
+   "AK": {
+    "total": 125,
+    "Postal": 26,
+    "Court": 2,
+    "County / State": 1,
+    "Municipal": 5,
+    "Library": 5,
+    "other": 86
+   },
+   "AL": {
+    "total": 167,
+    "Postal": 32,
+    "Court": 44,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 1,
+    "other": 90
+   },
+   "AR": {
+    "total": 133,
+    "Postal": 51,
+    "Court": 4,
+    "County / State": 1,
+    "Municipal": 0,
+    "Library": 3,
+    "other": 74
+   },
+   "AS": {
+    "total": 3,
+    "Postal": 1,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 2
+   },
+   "AZ": {
+    "total": 177,
+    "Postal": 53,
+    "Court": 24,
+    "County / State": 0,
+    "Municipal": 8,
+    "Library": 1,
+    "other": 91
+   },
+   "CA": {
+    "total": 1229,
+    "Postal": 368,
+    "Court": 0,
+    "County / State": 22,
+    "Municipal": 57,
+    "Library": 30,
+    "other": 752
+   },
+   "CO": {
+    "total": 245,
+    "Postal": 101,
+    "Court": 1,
+    "County / State": 6,
+    "Municipal": 12,
+    "Library": 0,
+    "other": 125
+   },
+   "CT": {
+    "total": 245,
+    "Postal": 114,
+    "Court": 6,
+    "County / State": 0,
+    "Municipal": 9,
+    "Library": 9,
+    "other": 107
+   },
+   "DC": {
+    "total": 166,
+    "Postal": 12,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 1,
+    "other": 153
+   },
+   "DE": {
+    "total": 33,
+    "Postal": 16,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 17
+   },
+   "FL": {
+    "total": 566,
+    "Postal": 134,
+    "Court": 91,
+    "County / State": 3,
+    "Municipal": 19,
+    "Library": 5,
+    "other": 314
+   },
+   "FM": {
+    "total": 1,
+    "Postal": 0,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 1
+   },
+   "GA": {
+    "total": 375,
+    "Postal": 77,
+    "Court": 89,
+    "County / State": 1,
+    "Municipal": 1,
+    "Library": 3,
+    "other": 204
+   },
+   "GU": {
+    "total": 5,
+    "Postal": 0,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 5
+   },
+   "HI": {
+    "total": 167,
+    "Postal": 31,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 2,
+    "other": 134
+   },
+   "IA": {
+    "total": 202,
+    "Postal": 38,
+    "Court": 21,
+    "County / State": 58,
+    "Municipal": 2,
+    "Library": 2,
+    "other": 81
+   },
+   "ID": {
+    "total": 83,
+    "Postal": 19,
+    "Court": 19,
+    "County / State": 23,
+    "Municipal": 2,
+    "Library": 0,
+    "other": 20
+   },
+   "IL": {
+    "total": 528,
+    "Postal": 270,
+    "Court": 41,
+    "County / State": 9,
+    "Municipal": 42,
+    "Library": 12,
+    "other": 154
+   },
+   "IN": {
+    "total": 221,
+    "Postal": 113,
+    "Court": 27,
+    "County / State": 2,
+    "Municipal": 1,
+    "Library": 1,
+    "other": 77
+   },
+   "KS": {
+    "total": 196,
+    "Postal": 72,
+    "Court": 9,
+    "County / State": 22,
+    "Municipal": 0,
+    "Library": 1,
+    "other": 92
+   },
+   "KY": {
+    "total": 221,
+    "Postal": 79,
+    "Court": 6,
+    "County / State": 1,
+    "Municipal": 8,
+    "Library": 3,
+    "other": 124
+   },
+   "LA": {
+    "total": 181,
+    "Postal": 51,
+    "Court": 34,
+    "County / State": 1,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 95
+   },
+   "MA": {
+    "total": 433,
+    "Postal": 184,
+    "Court": 2,
+    "County / State": 0,
+    "Municipal": 29,
+    "Library": 10,
+    "other": 208
+   },
+   "MD": {
+    "total": 401,
+    "Postal": 174,
+    "Court": 6,
+    "County / State": 0,
+    "Municipal": 4,
+    "Library": 11,
+    "other": 206
+   },
+   "ME": {
+    "total": 140,
+    "Postal": 42,
+    "Court": 8,
+    "County / State": 2,
+    "Municipal": 11,
+    "Library": 4,
+    "other": 73
+   },
+   "MH": {
+    "total": 1,
+    "Postal": 0,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 1
+   },
+   "MI": {
+    "total": 605,
+    "Postal": 198,
+    "Court": 8,
+    "County / State": 39,
+    "Municipal": 56,
+    "Library": 1,
+    "other": 303
+   },
+   "MN": {
+    "total": 307,
+    "Postal": 50,
+    "Court": 1,
+    "County / State": 71,
+    "Municipal": 9,
+    "Library": 1,
+    "other": 175
+   },
+   "MO": {
+    "total": 296,
+    "Postal": 110,
+    "Court": 40,
+    "County / State": 9,
+    "Municipal": 0,
+    "Library": 9,
+    "other": 128
+   },
+   "MP": {
+    "total": 3,
+    "Postal": 0,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 3
+   },
+   "MS": {
+    "total": 185,
+    "Postal": 46,
+    "Court": 42,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 97
+   },
+   "MT": {
+    "total": 94,
+    "Postal": 23,
+    "Court": 42,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 1,
+    "other": 28
+   },
+   "NC": {
+    "total": 380,
+    "Postal": 95,
+    "Court": 21,
+    "County / State": 3,
+    "Municipal": 3,
+    "Library": 2,
+    "other": 256
+   },
+   "ND": {
+    "total": 97,
+    "Postal": 8,
+    "Court": 20,
+    "County / State": 17,
+    "Municipal": 1,
+    "Library": 0,
+    "other": 51
+   },
+   "NE": {
+    "total": 143,
+    "Postal": 17,
+    "Court": 71,
+    "County / State": 4,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 51
+   },
+   "NH": {
+    "total": 92,
+    "Postal": 42,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 50
+   },
+   "NJ": {
+    "total": 427,
+    "Postal": 176,
+    "Court": 18,
+    "County / State": 13,
+    "Municipal": 9,
+    "Library": 5,
+    "other": 206
+   },
+   "NM": {
+    "total": 115,
+    "Postal": 51,
+    "Court": 2,
+    "County / State": 1,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 61
+   },
+   "NV": {
+    "total": 92,
+    "Postal": 43,
+    "Court": 0,
+    "County / State": 5,
+    "Municipal": 4,
+    "Library": 0,
+    "other": 40
+   },
+   "NY": {
+    "total": 957,
+    "Postal": 513,
+    "Court": 27,
+    "County / State": 33,
+    "Municipal": 47,
+    "Library": 9,
+    "other": 328
+   },
+   "OH": {
+    "total": 598,
+    "Postal": 235,
+    "Court": 78,
+    "County / State": 10,
+    "Municipal": 9,
+    "Library": 46,
+    "other": 220
+   },
+   "OK": {
+    "total": 164,
+    "Postal": 40,
+    "Court": 40,
+    "County / State": 2,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 82
+   },
+   "OR": {
+    "total": 137,
+    "Postal": 39,
+    "Court": 9,
+    "County / State": 18,
+    "Municipal": 9,
+    "Library": 0,
+    "other": 62
+   },
+   "PA": {
+    "total": 450,
+    "Postal": 203,
+    "Court": 59,
+    "County / State": 1,
+    "Municipal": 0,
+    "Library": 23,
+    "other": 164
+   },
+   "PR": {
+    "total": 67,
+    "Postal": 24,
+    "Court": 0,
+    "County / State": 4,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 39
+   },
+   "PW": {
+    "total": 1,
+    "Postal": 0,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 1
+   },
+   "RI": {
+    "total": 53,
+    "Postal": 16,
+    "Court": 0,
+    "County / State": 0,
+    "Municipal": 4,
+    "Library": 3,
+    "other": 30
+   },
+   "SC": {
+    "total": 211,
+    "Postal": 65,
+    "Court": 6,
+    "County / State": 2,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 138
+   },
+   "SD": {
+    "total": 110,
+    "Postal": 20,
+    "Court": 17,
+    "County / State": 6,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 67
+   },
+   "TN": {
+    "total": 217,
+    "Postal": 78,
+    "Court": 26,
+    "County / State": 15,
+    "Municipal": 1,
+    "Library": 1,
+    "other": 96
+   },
+   "TX": {
+    "total": 813,
+    "Postal": 295,
+    "Court": 94,
+    "County / State": 10,
+    "Municipal": 6,
+    "Library": 10,
+    "other": 398
+   },
+   "UT": {
+    "total": 97,
+    "Postal": 24,
+    "Court": 3,
+    "County / State": 21,
+    "Municipal": 6,
+    "Library": 0,
+    "other": 43
+   },
+   "VA": {
+    "total": 480,
+    "Postal": 124,
+    "Court": 39,
+    "County / State": 4,
+    "Municipal": 6,
+    "Library": 7,
+    "other": 300
+   },
+   "VI": {
+    "total": 4,
+    "Postal": 0,
+    "Court": 0,
+    "County / State": 2,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 2
+   },
+   "VT": {
+    "total": 112,
+    "Postal": 33,
+    "Court": 7,
+    "County / State": 0,
+    "Municipal": 6,
+    "Library": 0,
+    "other": 66
+   },
+   "WA": {
+    "total": 304,
+    "Postal": 64,
+    "Court": 10,
+    "County / State": 30,
+    "Municipal": 47,
+    "Library": 1,
+    "other": 152
+   },
+   "WI": {
+    "total": 293,
+    "Postal": 151,
+    "Court": 38,
+    "County / State": 18,
+    "Municipal": 4,
+    "Library": 1,
+    "other": 81
+   },
+   "WV": {
+    "total": 115,
+    "Postal": 28,
+    "Court": 21,
+    "County / State": 0,
+    "Municipal": 0,
+    "Library": 5,
+    "other": 61
+   },
+   "WY": {
+    "total": 56,
+    "Postal": 16,
+    "Court": 18,
+    "County / State": 1,
+    "Municipal": 0,
+    "Library": 0,
+    "other": 21
+   }
+  },
+  "locations_total": 14321
+ }
+}

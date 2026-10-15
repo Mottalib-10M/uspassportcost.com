@@ -1,0 +1,26 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Legal Notice: Publisher of the US Passport Cost Calculator" description="Legal notice of US Passport Cost: publisher, host, what the site does and does not do, no affiliation with the U.S. Department of State, and no sale of any passport service." lang={lang} noindex={true} breadcrumbs={[{ label: 'Legal notice' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Legal notice</h1>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+    <p>Publication director: {AUTHOR_NAME}. Contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Host</h2>
+    <LegalIdentity mode="hosting" lang={lang} />
+    <h2>Not a government site</h2>
+    <p>{SITE_URL} publishes general information and calculations from public data: passport fees, processing times, renewal rules and destination entry rules. It is not affiliated with the U.S. Department of State or any government agency, sells no expediting or application service and gives no legal advice. The Department decides fees, processing and eligibility in each case.</p>
+    <h2>Data</h2>
+    <p>State Department pages, fee charts and Consular Affairs data are works of the U.S. federal government and in the public domain. No official seal or logo is used.</p>
+    <h2>Liability and embedding</h2>
+    <p>Figures are checked and tested before each update and provided without warranty. The calculator may be embedded free of charge: <a href={route('widget', lang)}>embed the calculator</a>. Methods: <a href={route('method', lang)}>method and sources</a>. Last updated: {upd}.</p>
+  </div>
+</PageLayout>

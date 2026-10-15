@@ -1,0 +1,58 @@
+name: Official sources watch
+
+# Chaque lundi et jeudi : relit la grille des frais (PDF), les pages Passport Fees, Processing Time, Renew Online /
+# by Mail, 22 CFR 22.1 (eCFR) et les fiches pays de l'API Consular Affairs (scripts/fetch-official.py).
+# - Délais publiés modifiés : recopiés dans params-2026.json (--sync-times), tests, commit, redéploiement.
+# - Frais, règles ou texte d'un pays modifiés : les tests échouent ; rien n'est publié, une issue est ouverte
+#   avec l'avant/après pour relecture humaine (RECETTE §17.4, §22).
+on:
+  schedule:
+    - cron: '41 13 * * 1,4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: pip install pypdf
+      - name: Relevé officiel
+        run: python3 scripts/fetch-official.py --sync-times --report
+      - name: Tests (paramètres contre relevé)
+        id: tests
+        continue-on-error: true
+        run: npx vitest run
+      - name: Issue si une source a changé ou si les tests échouent
+        if: steps.tests.outcome == 'failure' || hashFiles('scripts/.cache-raw/changes.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -s scripts/.cache-raw/changes.md ] || [ "${{ steps.tests.outcome }}" = "failure" ]; then
+            { echo "Relevé du $(date -u +%F). Tests : ${{ steps.tests.outcome }}."; echo; cat scripts/.cache-raw/changes.md 2>/dev/null; } > body.md
+            gh issue create --title "Source officielle modifiée ($(date -u +%F))" --body-file body.md || true
+          fi
+      - name: Commit et redéploiement (seulement si les tests passent)
+        if: steps.tests.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "official-watch"
+          git config user.email "official-watch@users.noreply.github.com"
+          git add src/data/official.json src/data/params-2026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Données : relevé officiel du $(date -u +%F)" && git push
+            gh workflow run deploy.yml --ref main
+          fi

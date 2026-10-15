@@ -1,0 +1,22 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, AUTHOR_ROLE, CONTACT_EMAIL, LAST_UPDATED, SITE_URL, SITE_NAMES, LEGAL, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema, contactPageSchema } from '../../lib/seo';
+const lang = 'es';
+const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
+---
+<PageLayout title="Contacto de US Passport Cost: avise de una tarifa errónea" description="Escriba a US Passport Cost si una tarifa del pasaporte, un tiempo de trámite o la regla de un destino parece errónea, o si quiere insertar la calculadora en su sitio." lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contacto', description: 'Avise de un error o inserte la calculadora.', path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contacto' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Contacto</h1>
+    <p>Correo: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Leemos cada mensaje y solemos responder en una semana, en español o en inglés.</p>
+    <h2>Una cifra parece errónea</h2>
+    <p>Díganos la página y la cifra oficial que ve, con su enlace. No envíe números de pasaporte, números de localizador ni copias de documentos: no los necesitamos.</p>
+    <h2>Insertar la calculadora</h2>
+    <p>Bibliotecas, oficinas del condado, agencias de viaje y grupos comunitarios pueden insertarla gratis: <a href={route('widget', lang)}>insertar la calculadora</a>.</p>
+    <h2>Lo que no podemos hacer</h2>
+    <p>No podemos revisar el estado de su solicitud, contactar al Departamento por usted, acelerar nada ni reservar una cita. Para eso, use passportstatus.state.gov o llame al 877-487-2778.</p>
+  </div>
+</PageLayout>
