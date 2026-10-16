@@ -21,7 +21,7 @@ GitHub Action (`.github/workflows/watch.yml`) ouvre alors une issue avec le dét
 Les délais de traitement publiés sont recopiés d'office dans params par `--sync-times` (règle de l'éditeur : mise
 à jour automatique des délais), les frais et les règles des pays jamais.
 """
-import hashlib, html, json, os, re, sys, urllib.request, datetime, io
+import hashlib, html, json, os, re, sys, urllib.parse, urllib.request, datetime, io
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(ROOT, 'scripts', '.cache-raw')
@@ -37,14 +37,18 @@ COUNTRIES = ['MX', 'CA', 'DR', 'JM', 'BF', 'CS', 'CO', 'PE', 'ES', 'GT', 'HO', '
 
 
 def get(url: str, binary=False, accept=None, timeout=60, tries=5):
-    """Le miroir répond 404 une fois sur deux pour un fichier qui existe (nœuds non synchronisés) : on réessaie."""
-    import time, urllib.error
+    """Le miroir répond 404 une fois sur deux pour un fichier qui existe (nœuds non synchronisés) : on réessaie.
+    web.archive.org est parfois lent : délai dépassé et coupure réseau sont aussi réessayés."""
+    import time, urllib.error, socket
     for k in range(tries):
         try:
             return _get(url, binary, accept, timeout)
         except urllib.error.HTTPError as e:
             if k == tries - 1 or e.code not in (404, 429, 500, 502, 503, 504): raise
             time.sleep(1.5 * (k + 1))
+        except (TimeoutError, socket.timeout, urllib.error.URLError, ConnectionError):
+            if k == tries - 1: raise
+            time.sleep(3 * (k + 1))
 
 
 def _get(url: str, binary=False, accept=None, timeout=60):
@@ -259,7 +263,53 @@ def countries():
             pass
         out[c] = {'name': x['geopoliticalarea'], 'last_update': lu, 'sha256': hashlib.sha256(e.encode()).hexdigest(),
                   'sentences': [m.group(0).strip() for m in SENT.finditer(e)][:8], 'text': e}
+    for c, url in ARCHIVED_COUNTRIES.items():
+        x = by[c]
+        e = clean(x['entry_exit_requirements'])
+        lu = re.sub(r'^Last Updated:\s*', '', x.get('last_update_date', '')).strip()
+        try:
+            lu = datetime.datetime.strptime(lu, '%B %d, %Y').date().isoformat()
+        except ValueError:
+            pass
+        try:
+            a = archived_country(url)
+        except Exception as err:  # noqa: BLE001 — une copie absente ne prive pas les autres pays de leur relevé
+            out[c] = {'name': x['geopoliticalarea'], 'error': f'{type(err).__name__}: {err}'}
+            continue
+        # sha256 = encadré de la page officielle (règle citée) ; api_sha256 = fiche de l'API (alerte de changement).
+        out[c] = {'name': x['geopoliticalarea'], 'last_update': lu, 'source': 'archive', **a,
+                  'api_sha256': hashlib.sha256(e.encode()).hexdigest(), 'sentences': [a['text']]}
     return out
+
+
+# Pays dont la fiche de l'API ne porte aucune règle de validité, alors que la page pays de travel.state.gov en publie
+# une (encadré « Quick Facts »). travel.state.gov refusant les programmes, on lit la dernière copie de cette page
+# officielle conservée par web.archive.org (statut 200), datée ; la fiche de l'API reste suivie pour détecter un changement.
+ARCHIVED_COUNTRIES = {
+    'RP': 'https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Philippines.html',
+    'IN': 'https://travel.state.gov/en/international-travel/travel-advisories/india.html',
+}
+QUICK = re.compile(r'(PASSPORT VALIDITY:.*?)(?:VACCINATIONS:|$)|(Valid passport requirements .*?)(?:Currency on entry|$)', re.S)
+
+
+def archived_country(url):
+    import gzip
+    cdx = json.loads(get('https://web.archive.org/cdx/search/cdx?' + urllib.parse.urlencode(
+        {'url': url.split('://', 1)[1], 'output': 'json', 'filter': 'statuscode:200', 'limit': '-1'}), timeout=120, tries=4))
+    if len(cdx) < 2:
+        raise RuntimeError(f'aucune copie archivée lisible de {url}')
+    ts = cdx[-1][1]
+    raw = get(f'https://web.archive.org/web/{ts}id_/{url}', binary=True, timeout=120, tries=4)
+    if raw[:2] == b'\x1f\x8b':
+        raw = gzip.decompress(raw)
+    t = text_of(raw.decode('utf-8', 'ignore'))
+    m = QUICK.search(t)
+    if not m:
+        raise RuntimeError(f'encadré de validité introuvable dans la copie {ts} de {url}')
+    q = re.sub(r'\s+', ' ', (m.group(1) or m.group(2))).strip()
+    return {'official_url': url, 'archive_url': f'https://web.archive.org/web/{ts}/{url}',
+            'snapshot': f'{ts[:4]}-{ts[4:6]}-{ts[6:8]}', 'page_updated': last_updated(t), 'text': q,
+            'sha256': hashlib.sha256(q.encode()).hexdigest()}
 
 
 def stats():
@@ -297,7 +347,7 @@ PROBE = [
     ('eCFR titres', 'https://www.ecfr.gov/api/versioner/v1/titles.json'),
     ('API Consular Affairs, pays', f'{CA}/api/CountryTravelInformation'),
     ('API Consular Affairs, délivrances', f'{CA}/api/Passport/US/Issuances/FiscalYear'),
-    ('Web Archive, page Processing Time', 'https://web.archive.org/web/2026id_/https://travel.state.gov/en/passports/apply/help/processing-time.html'),
+    ('Web Archive, index des copies (page pays Philippines)', 'https://web.archive.org/cdx/search/cdx?url=travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Philippines.html&output=json&filter=statuscode:200&limit=-1'),
 ]
 
 
@@ -308,7 +358,7 @@ def probe():
     for label, url in PROBE:
         try:
             req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Encoding': 'gzip'})
-            with urllib.request.urlopen(req, timeout=40) as r:
+            with urllib.request.urlopen(req, timeout=120) as r:
                 print(f'{r.status}  {label}  {url}')
         except urllib.error.HTTPError as e:
             print(f'{e.code}  {label}  {url}'); bad += 1
@@ -331,16 +381,34 @@ def main():
             res[name] = {'error': f'{type(e).__name__}: {e}'}
             print('ERREUR', name, e)
     old = json.load(open(OUT)) if os.path.exists(OUT) else {}
-    json.dump(res, open(OUT, 'w'), ensure_ascii=False, indent=1)
     # Écarts avec le relevé précédent (hors date et statistiques qui bougent seules).
     changes = []
+    # Source injoignable (miroir du Bureau consulaire, eCFR ou API hors service, runner bloqué) : on le signale et
+    # on garde son dernier relevé valide, marqué « stale_since » ; les autres sources continuent d'être contrôlées.
+    for name in ('fee_chart', 'fee_page', 'cfr', 'times', 'get_fast', 'refund', 'online', 'mail', 'countries', 'stats'):
+        if isinstance(res.get(name), dict) and 'error' in res[name]:
+            repli = ' Repli : les frais restent vérifiés contre 22 CFR 22.1 (eCFR) et les fiches pays contre l\'API Consular Affairs ; les autres valeurs gardent le dernier relevé valide.' if name in ('fee_chart', 'fee_page') else ''
+            changes.append(f'### Source injoignable : {name}\n\n{res[name]["error"]}.{repli}\n')
+            if name in old:  # on garde le dernier relevé valide plutôt qu'une erreur
+                res[name] = {**old[name], 'stale_since': today}
+    for c, v in list((res.get('countries') or {}).items()):
+        if isinstance(v, dict) and 'error' in v:
+            changes.append(f'### Source injoignable : page pays {c}\n\n{v["error"]}.\n')
+            prev = (old.get('countries') or {}).get(c)
+            if prev and 'error' not in prev:
+                res['countries'][c] = {**prev, 'stale_since': today}
+    json.dump(res, open(OUT, 'w'), ensure_ascii=False, indent=1)
     for k in ('fee_chart', 'fee_page', 'cfr', 'times', 'get_fast', 'refund', 'online', 'mail'):
-        a, b = {x: y for x, y in (old.get(k) or {}).items() if x not in ('sha256',)}, {x: y for x, y in res[k].items() if x not in ('sha256',)}
+        a, b = {x: y for x, y in (old.get(k) or {}).items() if x not in ('sha256', 'stale_since')}, {x: y for x, y in res[k].items() if x not in ('sha256', 'stale_since')}
         if a != b:
             changes.append(f'### {k}\n\nAvant : `{json.dumps(a, ensure_ascii=False)}`\n\nAprès : `{json.dumps(b, ensure_ascii=False)}`\n')
     for c, v in (res.get('countries') or {}).items():
-        if isinstance(v, dict) and (old.get('countries') or {}).get(c, {}).get('sha256') not in (None, v.get('sha256')):
-            changes.append(f'### Pays {c} ({v["name"]})\n\nLe texte « Entry, Exit and Visa Requirements » a changé (mis à jour le {v["last_update"]}). Phrases relevées :\n\n' + '\n'.join(f'- {s}' for s in v['sentences']) + '\n')
+        oc = (old.get('countries') or {}).get(c, {})
+        if isinstance(v, dict) and v.get('api_sha256') and oc.get('api_sha256') not in (None, v['api_sha256']):
+            changes.append(f'### Pays {c} ({v["name"]}) : fiche de l\'API modifiée (mise à jour le {v["last_update"]}) ; relire la page pays officielle.\n')
+        if isinstance(v, dict) and oc.get('sha256') not in (None, v.get('sha256')):
+            quoi = f'L\'encadré de la page pays officielle (copie archivée du {v.get("snapshot")})' if v.get('source') == 'archive' else 'Le texte « Entry, Exit and Visa Requirements »'
+            changes.append(f'### Pays {c} ({v["name"]})\n\n{quoi} a changé (mis à jour le {v["last_update"]}). Phrases relevées :\n\n' + '\n'.join(f'- {s}' for s in v['sentences']) + '\n')
     if '--sync-times' in sys.argv and isinstance(res['times'], dict) and res['times'].get('routine_weeks'):
         P = json.load(open(PARAMS))
         t = res['times']

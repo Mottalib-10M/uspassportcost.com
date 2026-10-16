@@ -236,6 +236,9 @@ export interface ValidityResult {
 
 export function requiredDate(kind: string, months: number, arrival: string, departure: string): string {
   if (kind === 'afterEntry') return addMonths(arrival, months);
+  // Inde : N mois après la demande de visa. La demande précède forcément l'arrivée : compter depuis l'arrivée donne
+  // la date qui satisfait la règle quel que soit le jour de la demande (borne prudente, dite telle quelle à l'écran).
+  if (kind === 'afterVisa') return addMonths(arrival, months);
   if (kind === 'afterDeparture') return addMonths(departure, months);
   if (kind === 'stay') return departure;
   return arrival;

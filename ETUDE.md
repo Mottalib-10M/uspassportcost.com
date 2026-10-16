@@ -21,7 +21,7 @@ Verdict : volume > 300 000, SERP non imprenable (indépendants classés) → GO 
 - Grille PDF « United States Passport Fees », octobre 2026 (miroir adoptions.state.gov du Bureau of Consular Affairs ; travel.state.gov refuse les robots, pas de contournement) + page Passport Fees.
 - 22 CFR 22.1 par l'API eCFR (50 $ + 80 $ de surcharge = 130 $).
 - Pages Processing Time (5 oct. 2026), Renew Online (30 sept.), Renew by Mail (1er oct.), Get Fast, Refund (15 jours ouvrés), fériés OPM.
-- API Consular Affairs (cadataapi.state.gov) : fiches pays (24 destinations, citations vérifiées par test), 14 321 lieux de dépôt par État, délivrances par exercice.
+- API Consular Affairs (cadataapi.state.gov) : fiches pays (24 destinations, citations vérifiées par test ; + Philippines et Inde depuis la copie web.archive.org datée de leur page pays officielle, l'API n'y portant pas la règle), 14 321 lieux de dépôt par État, délivrances par exercice.
 
 ## Angle
 « Combien je paie et quand je le reçois » : total au centime par destinataire (chèque « U.S. Department of State » / structure d'accueil / carte), fenêtre d'arrivée calculée tronçon par tronçon, comparaison avec la date de départ, et validité exigée par le pays de destination. Jamais de vente d'accélération.

@@ -104,7 +104,7 @@ const cid = (code: string) => `country-${code.toLowerCase()}`;
     <h2 id="six" class="text-2xl font-bold text-navy-900">{T('Destinations that want six months left', 'Destinos que piden seis meses de vigencia')}</h2>
     <p class="mt-3 flex flex-wrap gap-x-4 gap-y-2">
       {six.map((c) => <a class="font-medium text-accent-800 underline" href={r(cid(c.code))}>{c.name[lang]}</a>)}
-      <a class="font-medium text-navy-800 underline" href={r('passport-validity')}>{T('All 24 destinations', 'Los 24 destinos')}</a>
+      <a class="font-medium text-navy-800 underline" href={r('passport-validity')}>{T('All 26 destinations', 'Los 26 destinos')}</a>
     </p>
   </section>
   <div class="prose prose-slate mt-10 max-w-none border-t border-navy-200 pt-4">

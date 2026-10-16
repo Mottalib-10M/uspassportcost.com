@@ -1,7 +1,9 @@
 name: Official sources watch
 
 # Chaque lundi et jeudi : relit la grille des frais (PDF), les pages Passport Fees, Processing Time, Renew Online /
-# by Mail, 22 CFR 22.1 (eCFR) et les fiches pays de l'API Consular Affairs (scripts/fetch-official.py).
+# by Mail, 22 CFR 22.1 (eCFR), les fiches pays de l'API Consular Affairs et, pour les Philippines et l'Inde, la dernière
+# copie web.archive.org de leur page pays officielle (scripts/fetch-official.py). Sources joignables depuis un runner
+# GitHub (sonde sources-probe.yml du 2026-10-16 : miroir adoptions.state.gov, eCFR et API 200 ; travel.state.gov 403).
 # - Délais publiés modifiés : recopiés dans params-2026.json (--sync-times), tests, commit, redéploiement.
 # - Frais, règles ou texte d'un pays modifiés : les tests échouent ; rien n'est publié, une issue est ouverte
 #   avec l'avant/après pour relecture humaine (RECETTE §17.4, §22).
@@ -29,6 +31,11 @@ jobs:
           python-version: '3.12'
       - run: npm ci
       - run: pip install pypdf
+      - name: Joignabilité des sources depuis le runner (diagnostic, journal seulement)
+        continue-on-error: true
+        run: python3 scripts/fetch-official.py --probe
+      # Une source injoignable n'arrête pas le relevé : son dernier relevé valide est gardé (stale_since), les frais
+      # restent contrôlés contre 22 CFR 22.1 (eCFR) et les pays contre l'API Consular Affairs, et l'issue le signale.
       - name: Relevé officiel
         run: python3 scripts/fetch-official.py --sync-times --report
       - name: Tests (paramètres contre relevé)

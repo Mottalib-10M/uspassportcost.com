@@ -31,7 +31,7 @@ export default definePage({
     ],
     body: (h) => `
 <h2>The strictest count in this list</h2>
-<p>Among the 24 destinations here, Vietnam is the only one that asks for six months after the end of the stay. Thailand and China count six months from arrival; Schengen counts three months after departure. A three-week trip to Vietnam therefore needs close to seven months of validity on arrival day. The checker uses your planned departure as the base, exactly as the rule says.</p>
+<p>Among the destinations here, Vietnam and the ${h.a('country-rp', 'Philippines')} ask for six months after the end of the stay. Thailand and China count six months from arrival; Schengen counts three months after departure. A three-week trip to Vietnam therefore needs close to seven months of validity on arrival day. The checker uses your planned departure as the base, exactly as the rule says.</p>
 <h2>One passport, start to finish</h2>
 <p>Vietnam requires entering and leaving on the same passport, so a renewal cannot happen mid-trip without complications. Dual nationals using a Vietnamese passport face their own rule: six months of validity from the return date to the United States. Check both rules if you hold two passports.</p>
 <h2>Pages and visas</h2>

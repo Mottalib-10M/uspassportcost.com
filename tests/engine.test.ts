@@ -132,6 +132,14 @@ describe('validité par pays (fiches Consular Affairs relues le 2026-10-15)', ()
   it('Vietnam : 6 mois après la fin du séjour', () => {
     expect(validity(countryByCode('VM')!, '2027-09-01', '2027-02-01', '2027-02-20', '2026-10-15').mustBeValidUntil).toBe('2027-08-20');
   });
+  it('Philippines : 6 mois après la fin du séjour prévu (page pays, copie archivée)', () => {
+    const v = validity(countryByCode('RP')!, '2027-08-31', '2027-02-12', '2027-03-05', '2026-10-16');
+    expect(v.mustBeValidUntil).toBe('2027-09-05'); expect(v.ok).toBe(false); expect(v.margin).toBe(-5);
+  });
+  it('Inde : 6 mois après la demande de visa, comptés au plus tard depuis l’arrivée', () => {
+    expect(requiredDate('afterVisa', 6, '2027-03-10', '2027-03-24')).toBe('2027-09-10');
+    expect(validity(countryByCode('IN')!, '2027-09-10', '2027-03-10', '2027-03-24', '2026-10-16').ok).toBe(true);
+  });
   it('mois de fin plus court : 31 août + 6 mois = 28 février', () => {
     expect(addMonths('2026-08-31', 6)).toBe('2027-02-28'); expect(addYears('2028-02-29', 1)).toBe('2029-02-28');
   });

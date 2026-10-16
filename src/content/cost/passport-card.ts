@@ -32,7 +32,7 @@ export default definePage({
 <h2>The trips it covers</h2>
 <p>Think of the card as a border-crossing document for driving to Canada or Mexico and for closed-loop cruises in the Caribbean. The Bahamas and Jamaica pages of the State Department accept it for cruise passengers, while still recommending a book in case an emergency forces you to fly home. The ${h.a('guide-book-vs-card', 'book versus card guide')} compares the two for each kind of trip.</p>
 <h2>Renewing a card</h2>
-<p>An adult card renews by mail or online exactly like a book, at ${h.usd(F.card.adult)}, if it was issued at 16 or older in the last 15 years. Online, you can renew a card into a card, or a card into both documents.</p>`,
+<p>An adult card renews like a book, at ${h.usd(F.card.adult)}: by mail if it was issued at 16 or older within the last 15 years, online if you also meet the online rules (age 25 or older, expiring within a year or expired less than five years ago). Online, you can renew a card into a card, or a card into both documents.</p>`,
   },
   es: {
     path: 'tarjeta-de-pasaporte', nav: 'Tarjeta de pasaporte', card: `${$(first.total, 'es')} por la primera tarjeta de adulto: tierra y mar a Canadá, México y el Caribe.`,
@@ -52,6 +52,6 @@ export default definePage({
 <h2>Los viajes que cubre</h2>
 <p>La tarjeta es un documento para cruzar en auto a Canadá o a México y para cruceros de ida y vuelta por el Caribe. Las fichas de Bahamas y Jamaica del Departamento de Estado la aceptan para pasajeros de crucero, aunque recomiendan llevar libreta por si una emergencia obliga a volver en avión. La ${h.a('guide-book-vs-card', 'guía de libreta o tarjeta')} compara las dos para cada tipo de viaje.</p>
 <h2>Renovar la tarjeta</h2>
-<p>La tarjeta de un adulto se renueva por correo o en línea igual que la libreta, por ${h.usd(F.card.adult)}, si se emitió con 16 años o más en los últimos 15 años. En línea puede renovar tarjeta por tarjeta, o tarjeta por los dos documentos.</p>`,
+<p>La tarjeta de un adulto se renueva igual que la libreta, por ${h.usd(F.card.adult)}: por correo si se emitió con 16 años o más en los últimos 15 años, en línea si además cumple las reglas de la renovación en línea (25 años o más, vence dentro de un año o venció hace menos de cinco). En línea puede renovar tarjeta por tarjeta, o tarjeta por los dos documentos.</p>`,
   },
 });

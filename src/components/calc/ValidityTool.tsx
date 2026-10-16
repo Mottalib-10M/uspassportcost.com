@@ -35,6 +35,7 @@ export default function ValidityTool({ lang = 'en', country: c0 = 'PE', methodHr
     stay: tx(lang, 'valid for your whole stay', 'vigente durante toda la estancia'),
     afterDeparture: tx(lang, `valid ${country.months} months after you leave`, `vigente ${country.months} meses después de salir`),
     afterEntry: tx(lang, `valid ${country.months} months after you arrive`, `vigente ${country.months} meses después de llegar`),
+    afterVisa: tx(lang, `valid ${country.months} months after your visa application (counted here from arrival, the latest possible day)`, `vigente ${country.months} meses después de pedir la visa (contados aquí desde la llegada, el último día posible)`),
   };
   const rows: Row[] = [
     { label: tx(lang, 'Rule for', 'Regla de') + ' ' + country.name[lang], value: RULE[country.kind] },

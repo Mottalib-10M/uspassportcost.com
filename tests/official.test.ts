@@ -71,3 +71,16 @@ describe('pays : chaque citation est dans la fiche officielle', () => {
     });
   }
 });
+
+describe('pays lus sur la copie archivée de la page officielle (Philippines, Inde)', () => {
+  for (const c of C.list.filter((x: any) => x.source === 'archive')) {
+    it(`${c.code} : copie web.archive.org datée de la page travel.state.gov`, () => {
+      const rec = o.countries[c.code];
+      expect(rec.source).toBe('archive');
+      expect(rec.archive_url).toMatch(/^https:\/\/web\.archive\.org\/web\/\d{14}\/https:\/\/travel\.state\.gov\//);
+      expect(rec.snapshot).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(rec.api_sha256).toMatch(/^[0-9a-f]{64}$/);
+    });
+  }
+});
+
