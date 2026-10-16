@@ -15,7 +15,7 @@ export default definePage({
   id: 'country-ja', group: 'country', order: 519, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'JA' },
   data: { country: 'JA' },
-  related: ["country-th", "country-ch", "country-vm", "passport-validity"],
+  related: ["country-th", "country-rp", "country-in", "passport-validity"],
   sources: ["caApi", "processing", "lostStolen"],
   en: {
     path: 'passport-validity/japan', nav: "Japan", card: "Valid for the entire stay; airlines may refuse boarding under six months.",

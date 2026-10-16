@@ -18,7 +18,7 @@ export default definePage({
   id: 'country-in', group: 'country', order: 526, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'IN' },
   data: { country: 'IN' },
-  related: ['country-ae', 'country-th', 'country-rp', 'passport-validity'],
+  related: ['country-ja', 'country-th', 'country-rp', 'passport-validity'],
   sources: ['countryIN', 'caApi', 'processing', 'mail'],
   en: {
     path: 'passport-validity/india', nav: 'India', card: 'Six months past the date you apply for the visa, and two blank pages.',

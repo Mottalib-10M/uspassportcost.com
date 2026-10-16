@@ -4,6 +4,8 @@ import { P, type SourceKey } from './params';
 import type { Helpers } from './guide-types';
 import { formatMoney, formatNumber, formatPercent, displayDate } from './format';
 import { LANG_TAGS } from '../data/site-config';
+import C from '../data/countries.json';
+import { destHref } from './destinations';
 
 const esc = (s: string | number) => String(s).replace(/&(?!(?:[a-z]+|#\d+);)/g, '&amp;').replace(/</g, '&lt;');
 
@@ -11,7 +13,13 @@ const esc = (s: string | number) => String(s).replace(/&(?!(?:[a-z]+|#\d+);)/g, 
 export function helpers(lang: Locale): Helpers {
   return {
     lang, P,
-    a: (id, text) => (ROUTES.some((r) => r.id === id && r.paths[lang]) ? `<a href="${route(id, lang)}">${text}</a>` : ROUTES.some((r) => r.id === id) ? `<a href="${route(id, 'en')}">${text}</a>` : text),
+    a: (id, text) => {
+      if (ROUTES.some((r) => r.id === id && r.paths[lang])) return `<a href="${route(id, lang)}">${text}</a>`;
+      // Destination sans page dans cette langue : son résumé sur la page de synthèse, dans la même langue.
+      const c = C.list.find((x) => `country-${x.code.toLowerCase()}` === id);
+      if (c) return `<a href="${destHref(c.code, lang)}">${text}</a>`;
+      return ROUTES.some((r) => r.id === id) ? `<a href="${route(id, 'en')}">${text}</a>` : text;
+    },
     usd: (n) => formatMoney(n, 0, lang),
     usd2: (n) => formatMoney(n, Number.isInteger(n) ? 0 : 2, lang),
     num: (n, d = 0) => formatNumber(n, d, lang),

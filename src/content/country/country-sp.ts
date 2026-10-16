@@ -15,7 +15,7 @@ export default definePage({
   id: 'country-sp', group: 'country', order: 516, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'SP' },
   data: { country: 'SP' },
-  related: ["country-fr", "country-it", "country-gm", "passport-validity"],
+  related: ["country-fr", "country-it", "country-uk", "passport-validity"],
   sources: ["caApi", "schengen", "processing"],
   en: {
     path: 'passport-validity/spain', nav: "Spain", card: "Three months beyond the stay if you transit Schengen; six months remaining advised.",
@@ -36,25 +36,5 @@ export default definePage({
 <p>Two clocks run on a Schengen trip: the 90 days of presence, shared by all members, and the passport validity measured from the last exit. A route Madrid, Lisbon, Paris ends in France, so the three months start there; check ${h.a('country-fr', 'France')} with the same dates. Outside Schengen, ${h.a('country-uk', 'the United Kingdom')} and ${h.a('country-ei', 'Ireland')} have their own, looser rules.</p>
 <h2>Renewing before the peak</h2>
 <p>The State Department says its busiest season runs from late winter into summer, which is exactly when Spain trips are booked. A ${h.a('passport-renewal', 'renewal')} at ${h.usd(h.P.fees.book.adult)} filed in the autumn quiet months avoids the rush, and leaves time to expedite later if the application is held up by a photo or a missing document. If you also need a Spanish visa for study or work, the visa has to be placed in a passport with enough validity, so renew before you book the consulate appointment rather than after.</p>`,
-  },
-  es: {
-    path: 'vigencia-del-pasaporte/espana', nav: "España", card: "Tres meses después de la estancia si transita por Schengen; se recomiendan seis.",
-    title: "Vigencia del pasaporte España 2026: 3 meses, 6 sugeridos",
-    description: "España aplica la regla Schengen: tres meses de vigencia del pasaporte después de la estancia, y el Departamento recomienda seis. Pruebe su pasaporte aquí.",
-    h1: "Pasaporte para España: tres meses, seis recomendados",
-    intro: "España cuenta los meses Schengen desde el final de la estancia. El límite de 90 días de visita también se cuenta en toda la zona.",
-    resume: `La ficha de España del Departamento de Estado dice que el pasaporte debe estar vigente al menos tres meses después del periodo de estancia si piensa transitar por un país Schengen, y recomienda tener al menos seis meses de vigencia restante. Para un viaje de verano de tres semanas, del ${d(ARR, 'es')} al ${d(DEP, 'es')}, la regla pide un pasaporte vigente hasta el ${d(need, 'es')} y la recomendación hasta el ${d(addMonths(ARR, 6), 'es')}. El límite Schengen de 90 días de visita sin visa se cuenta en todos los países Schengen juntos: los días en Portugal o en Francia antes de Madrid gastan la misma cuota. Si su pasaporte no cumple la regla, renuévelo con tiempo: enviada antes del ${d(mailBy, 'es')}, una renovación ordinaria regresa antes de esta llegada incluso en el caso más lento publicado, ${worst} días. Un adulto elegible que no viajará en seis semanas puede renovar en línea por la misma tarifa.`,
-    faqs: [
-      { q: "¿La regla de los seis meses para España es obligatoria?", a: `No, es una recomendación. La exigencia que cita el Departamento de Estado es de tres meses después de su estancia en la zona Schengen; los seis meses de vigencia se aconsejan para evitar problemas. El verificador muestra la regla y la recomendación por separado, para que vea cuál de las dos no cumple su pasaporte.` },
-      { q: "¿Los días en Portugal cuentan para mis 90 días en España?", a: `Sí. El límite de 90 días para visitas sin visa se aplica a toda la zona Schengen, y España y Portugal forman parte de ella. Un viaje de 50 días en Portugal seguido de 50 días en España supera la cuota aunque ninguno de los dos países llegue a 90 por separado.` },
-      { q: "¿Cuándo debo renovar el pasaporte para un viaje de verano a España?", a: `Cuente hacia atrás desde la llegada: el camino ordinario más lento publicado, correo de ida y vuelta más seis semanas de trámite, tarda unas diez semanas. Para llegar a principios de julio, envíe la renovación ordinaria en abril a más tardar, o pague el servicio urgente si ya está más cerca.` },
-    ],
-    body: (h) => `
-<h2>El calendario de un verano en España</h2>
-<p>Los viajes de verano a España suelen ser largos, y la cuenta Schengen sigue la fecha de salida. Un pasaporte que vence a principios de octubre alcanza para una semana en Sevilla en junio y se queda corto para un mes que termina a fines de julio. El verificador trabaja con sus dos fechas y da el margen en días, a favor o en contra.</p>
-<h2>Varios países, un solo reloj</h2>
-<p>En un viaje Schengen corren dos relojes: los 90 días de presencia, compartidos por todos los miembros, y la vigencia del pasaporte medida desde la última salida. Una ruta Madrid, Lisboa, París termina en Francia, así que los tres meses empiezan allí. Fuera de Schengen, el Reino Unido e Irlanda tienen reglas propias y más flexibles.</p>
-<h2>Renovar antes de la temporada alta</h2>
-<p>El Departamento de Estado dice que su temporada de más demanda va de fines del invierno al verano, justo cuando se reservan los viajes a España. Una ${h.a('passport-renewal', 'renovación')} de ${h.usd(h.P.fees.book.adult)} presentada en los meses tranquilos del otoño evita las prisas y deja margen para pedir el urgente si una foto o un documento retrasan el trámite.</p>`,
   },
 });

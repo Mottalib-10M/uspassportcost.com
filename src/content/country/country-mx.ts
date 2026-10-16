@@ -10,7 +10,7 @@ export default definePage({
   id: 'country-mx', group: 'country', order: 500, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'MX' },
   data: { country: 'MX' },
-  related: ['passport-card', 'country-ca', 'country-gt', 'passport-validity'],
+  related: ['passport-card', 'country-ca', 'country-dr', 'passport-validity'],
   sources: ['caApi', 'cardVsBook', 'processing'],
   en: {
     path: 'passport-validity/mexico', nav: 'Mexico', card: 'Book to fly, book or card to drive in, plus the FMM permit.',

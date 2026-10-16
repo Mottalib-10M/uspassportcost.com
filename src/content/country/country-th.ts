@@ -15,7 +15,7 @@ export default definePage({
   id: 'country-th', group: 'country', order: 520, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'TH' },
   data: { country: 'TH' },
-  related: ["country-vm", "country-ja", "country-ch", "passport-validity"],
+  related: ["country-rp", "country-ja", "country-in", "passport-validity"],
   sources: ["caApi", "processing", "mail"],
   en: {
     path: 'passport-validity/thailand', nav: "Thailand", card: "Six months beyond arrival strongly recommended; register online before you fly.",

@@ -17,7 +17,7 @@ export default definePage({
   id: 'passport-validity', group: 'validity', order: 400,
   tool: { kind: 'validity', country: 'PE' },
   data: { countries: true },
-  related: ['country-pe', 'country-th', 'country-fr', 'country-mx', 'guide-when-to-renew', 'passport-renewal'],
+  related: ['country-rp', 'country-th', 'country-fr', 'country-mx', 'guide-when-to-renew', 'passport-renewal'],
   sources: ['caApi', 'countryPH', 'countryIN', 'schengen', 'processing', 'online'],
   en: {
     path: 'passport-validity', nav: 'Passport validity by country', card: `Six months, three months or the whole stay: the rule of ${N} destinations.`,
@@ -34,7 +34,7 @@ export default definePage({
     body: (h) => `
 <h2>Five ways countries count validity</h2>
 <p>The State Department’s country information pages, which this site reads through the Consular Affairs data service (and, for the Philippines and India, on the country page itself), use five different measures. The strictest counts forward from the day you land: six months after entry in Peru, where travelers with less are refused, and in Türkiye, the Emirates, Honduras, Thailand and China. Vietnam and the Philippines are stricter still in practice, since their six months start when your planned stay ends. India counts from the day you apply for its visa, before the trip. Europe’s Schengen area uses three months after the date you intend to leave the area, a rule that applies once across all its members. Finally, some countries simply want the passport valid while you are there, or on the day you cross the border.</p>
-<p>The table below this text lists the rule for each of the ${N} destinations, with the State Department’s advice where it goes further than the legal minimum. Each country has its own page with the official wording quoted word for word and the date that wording was last updated.</p>
+<p>The table below this text lists the rule for each of the ${N} destinations, with the State Department’s advice where it goes further than the legal minimum. The most visited destinations have their own page; for the others, the official wording is quoted word for word further down, with the date it was last updated, and the checker applies their rule all the same.</p>
 <h2>Why the airline matters as much as the border</h2>
 <p>Check-in agents apply the destination’s rule before you board, and they often read it strictly. Japan’s page notes that airlines there may refuse travelers whose passport has less than six months left, even though Japan itself only requires validity for the stay. A connection adds the rule of the transit country. When you are near any threshold, ${h.a('passport-renewal', 'renewing first')} is cheaper than a missed flight.</p>
 <h2>Turning the rule into a renewal date</h2>
@@ -55,7 +55,7 @@ export default definePage({
     body: (h) => `
 <h2>Cinco maneras de contar la vigencia</h2>
 <p>Las fichas de país del Departamento de Estado, que este sitio lee en el servicio de datos de Asuntos Consulares (y, para Filipinas y la India, en la propia ficha del país), usan cinco medidas distintas. La más estricta cuenta hacia adelante desde el día en que aterriza: seis meses después de la entrada en Perú, donde rechazan a quien tenga menos, y en Turquía, los Emiratos, Honduras, Tailandia y China. Vietnam y Filipinas son todavía más exigentes en la práctica, porque sus seis meses empiezan cuando termina la estancia prevista. La India cuenta desde el día en que pide su visa, antes del viaje. El espacio Schengen usa tres meses después de la fecha en que piensa salir de la zona, una regla que vale una sola vez para todos sus miembros. Por último, algunos países solo quieren que el pasaporte esté vigente mientras usted esté allí, o el día en que cruza la frontera.</p>
-<p>La tabla bajo este texto da la regla de cada uno de los ${N} destinos, con la recomendación del Departamento cuando va más allá del mínimo legal. Cada país tiene su página con el texto oficial citado palabra por palabra y la fecha de su última actualización.</p>
+<p>La tabla bajo este texto da la regla de cada uno de los ${N} destinos, con la recomendación del Departamento cuando va más allá del mínimo legal. Los destinos más consultados tienen su propia página; para los demás, el texto oficial se cita palabra por palabra más abajo, con la fecha de su última actualización, y el verificador aplica su regla igual.</p>
 <h2>La aerolínea cuenta tanto como la frontera</h2>
 <p>En el mostrador aplican la regla del destino antes de que suba al avión, y a menudo la leen al pie de la letra. La ficha de Japón advierte que las aerolíneas pueden negar el embarque si al pasaporte le quedan menos de seis meses, aunque Japón solo exija vigencia durante la estancia. Una escala suma la regla del país de tránsito. Si está cerca de cualquier límite, ${h.a('passport-renewal', 'renovar antes')} cuesta menos que perder un vuelo.</p>
 <h2>De la regla a una fecha de renovación</h2>

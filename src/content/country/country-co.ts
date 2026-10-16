@@ -10,7 +10,7 @@ export default definePage({
   id: 'country-co', group: 'country', order: 506, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'CO' },
   data: { country: 'CO' },
-  related: ['country-pe', 'country-cs', 'country-mx', 'passport-validity'],
+  related: ['country-es', 'country-cs', 'country-mx', 'passport-validity'],
   sources: ['caApi', 'processing'],
   en: {
     path: 'passport-validity/colombia', nav: 'Colombia', card: 'Valid U.S. passport, Check-Mig 72 hours before, two passports for dual citizens.',

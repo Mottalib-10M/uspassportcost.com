@@ -31,24 +31,4 @@ export default definePage({
 <h2>Children and custody</h2>
 <p>The State Department flags one more step: if you travel with a minor without having full custody, Canada’s border agency explains what letters and documents it may ask for. That rule is Canadian and separate from the passport fee you pay here.</p>`,
   },
-  es: {
-    path: 'vigencia-del-pasaporte/canada', nav: 'Canadá', card: 'Pasaporte, tarjeta o NEXUS para entrar, pero solo libreta para volver en avión.',
-    title: 'Vigencia del pasaporte para Canadá 2026: tarjeta o NEXUS',
-    description: 'Canadá y su pasaporte de EE. UU. 2026: sin meses mínimos, entrada con pasaporte, tarjeta o NEXUS, y solo libreta u otro documento aprobado si vuelve en avión.',
-    h1: 'Pasaporte para Canadá: con qué entra y con qué vuelve',
-    intro: 'Canadá acepta tres documentos estadounidenses en la frontera, pero el vuelo de regreso es donde se quedan atrapados quienes solo llevan la tarjeta.',
-    resume: `Para Canadá, el Departamento de Estado no fija una vigencia mínima: los ciudadanos estadounidenses pueden entrar con un pasaporte vigente, la tarjeta de pasaporte o la tarjeta NEXUS. La dificultad está en la vuelta. Si regresa a Estados Unidos en avión desde Canadá, debe mostrar la libreta de pasaporte u otro documento aprobado de la lista de la Oficina de Aduanas y Protección Fronteriza; la tarjeta solo sirve en cruces por tierra y por mar. Por eso la tarjeta, que cuesta ${$(cardRenew, 'es')} al renovarla frente a ${$(P.fees.book.adult, 'es')} de la libreta, funciona para ir y volver en auto a Vancouver o Montreal, pero no para ir manejando y regresar en avión. Quien viaja con menores que no son suyos, o sin la custodia completa, debe revisar además las reglas canadienses para viajar con niños.`,
-    faqs: [
-      { q: '¿Puedo ir a Canadá en auto solo con la tarjeta de pasaporte?', a: 'Sí. La ficha del Departamento de Estado sobre Canadá dice que se puede entrar con pasaporte, tarjeta de pasaporte o tarjeta NEXUS vigentes, y la tarjeta se acepta en los cruces por tierra y mar en ambos sentidos. Lo que no cubre es el avión: volar a Estados Unidos desde Canadá exige la libreta u otro documento aprobado por la Oficina de Aduanas.' },
-      { q: '¿Basta con NEXUS para visitar Canadá sin pasaporte?', a: 'Para entrar a Canadá, el Departamento de Estado pone la tarjeta NEXUS al lado de la libreta y de la tarjeta de pasaporte, y ambos gobiernos animan a los viajeros frecuentes a inscribirse. Para volver en avión a Estados Unidos, verifique que su documento esté en la lista aprobada de la Oficina de Aduanas, como lo está la libreta.' },
-      { q: 'Mi pasaporte vence el mes próximo: ¿puedo ir a Canadá?', a: 'La ficha de Canadá no fija meses mínimos, así que un pasaporte vigente el día del cruce sirve para entrar. El riesgo es un retraso que lo deje fuera del país después del vencimiento, sin documento válido para regresar. Renovar por correo o en línea antes de una estancia larga evita ese problema.' },
-    ],
-    body: (h) => `
-<h2>Tres documentos en la frontera canadiense</h2>
-<p>Canadá es flexible en el papel. La libreta, la tarjeta de pasaporte o la tarjeta de miembro de NEXUS aparecen en la ficha del Departamento de Estado como formas de entrada para los ciudadanos estadounidenses. No se menciona un número de meses de vigencia. En la práctica decide el agente de la agencia fronteriza canadiense, que también pregunta el motivo y la duración de la visita.</p>
-<h2>El vuelo de regreso es la verdadera prueba</h2>
-<p>El problema suele aparecer al volver. Un viaje por carretera a Columbia Británica que termina devolviendo el auto en Vancouver y tomando un vuelo a Seattle exige la libreta, porque la entrada aérea a Estados Unidos desde Canadá pide la libreta u otro documento aprobado. La tarjeta, de ${h.usd(cardRenew)} al renovarla, está pensada para tierra y mar. Si cabe la posibilidad de volar aunque sea una vez, ${h.a('passport-card', 'compare libreta y tarjeta')} antes de elegir.</p>
-<h2>Menores y custodia</h2>
-<p>El Departamento señala un paso más: si viaja con un menor sin tener la custodia completa, la agencia fronteriza canadiense explica qué cartas y documentos puede pedir. Esa regla es canadiense y no tiene que ver con la tarifa del pasaporte.</p>`,
-  },
 });

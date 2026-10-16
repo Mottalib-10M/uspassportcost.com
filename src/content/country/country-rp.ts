@@ -16,7 +16,7 @@ export default definePage({
   id: 'country-rp', group: 'country', order: 525, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'RP' },
   data: { country: 'RP' },
-  related: ['country-vm', 'country-th', 'country-ja', 'passport-validity'],
+  related: ['country-in', 'country-th', 'country-ja', 'passport-validity'],
   sources: ['countryPH', 'caApi', 'processing', 'mail'],
   en: {
     path: 'passport-validity/philippines', nav: 'Philippines', card: 'Six months beyond the end of your planned stay, and room for the entry stamp.',

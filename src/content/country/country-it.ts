@@ -15,7 +15,7 @@ export default definePage({
   id: 'country-it', group: 'country', order: 515, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'IT' },
   data: { country: 'IT' },
-  related: ["country-fr", "country-gr", "country-sp", "passport-validity"],
+  related: ["country-fr", "country-uk", "country-sp", "passport-validity"],
   sources: ["caApi", "schengen", "lostStolen"],
   en: {
     path: 'passport-validity/italy', nav: "Italy", card: "Three months beyond the stay; a passport once reported lost can be refused.",

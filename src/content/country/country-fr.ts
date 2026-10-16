@@ -15,7 +15,7 @@ export default definePage({
   id: 'country-fr', group: 'country', order: 514, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'FR' },
   data: { country: 'FR' },
-  related: ["country-it", "country-sp", "country-gm", "passport-validity"],
+  related: ["country-it", "country-sp", "country-uk", "passport-validity"],
   sources: ["caApi", "schengen", "lostStolen"],
   en: {
     path: 'passport-validity/france', nav: "France", card: "Three months after you leave the Schengen area; six months advised.",

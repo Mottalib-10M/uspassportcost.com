@@ -10,7 +10,7 @@ export default definePage({
   id: 'country-es', group: 'country', order: 508, parent: 'passport-validity',
   tool: { kind: 'validity', country: 'ES' },
   data: { country: 'ES' },
-  related: ['country-gt', 'country-ho', 'child-passport', 'passport-validity'],
+  related: ['country-mx', 'country-co', 'child-passport', 'passport-validity'],
   sources: ['caApi', 'processing', 'under16'],
   en: {
     path: 'passport-validity/el-salvador', nav: 'El Salvador', card: 'Passport plus a $12 tourist card; 90 days shared with Guatemala, Honduras and Nicaragua.',
@@ -28,7 +28,7 @@ export default definePage({
 <h2>Validity shapes the card, not the entry</h2>
 <p>The page for El Salvador states no minimum months on the U.S. passport. It does say the tourist card lasts 90 or 180 days depending on passport validity, which is the practical reason to travel with plenty of time left: an officer cannot grant a stay longer than your document. Run the checker with your real departure date to see the margin.</p>
 <h2>One clock for four countries</h2>
-<p>Visitors who combine Santa Ana, Antigua Guatemala and the Bay Islands of Honduras often assume each border restarts the count. It does not. The CA-4 agreement treats El Salvador, Guatemala, Honduras and Nicaragua as one area for the 90 days, and the extension is requested once, from the country you are in when you ask. The ${h.a('country-gt', 'Guatemala')} and ${h.a('country-ho', 'Honduras')} pages explain their own entry rules, which differ: Honduras wants six months of validity.</p>
+<p>Visitors who combine Santa Ana, Antigua Guatemala and the Bay Islands of Honduras often assume each border restarts the count. It does not. The CA-4 agreement treats El Salvador, Guatemala, Honduras and Nicaragua as one area for the 90 days, and the extension is requested once, from the country you are in when you ask. The entry rules of ${h.a('country-gt', 'Guatemala')} and ${h.a('country-ho', 'Honduras')}, quoted on the validity page, differ: Honduras wants six months of validity.</p>
 <h2>Children who live there</h2>
 <p>Families who spend long periods in El Salvador should plan the children’s departure early. After a year in the country, a U.S. citizen minor is treated as a resident, and the Salvadoran consent process can be lengthy. A ${h.a('child-passport', 'child’s U.S. passport')} lasts only five years, so check its date at the same time.</p>`,
   },
@@ -48,7 +48,7 @@ export default definePage({
 <h2>La vigencia define la tarjeta, no la entrada</h2>
 <p>La ficha de El Salvador no pide meses mínimos en el pasaporte estadounidense. Sí dice que la tarjeta de turista dura 90 o 180 días según la vigencia del pasaporte, y esa es la razón práctica para viajar con tiempo de sobra: el agente no puede darle una estancia más larga que su documento. Ponga en el verificador su fecha real de regreso para ver el margen.</p>
 <h2>Un solo reloj para cuatro países</h2>
-<p>Quienes combinan Santa Ana, Antigua Guatemala y las islas de la Bahía en Honduras suelen pensar que cada frontera reinicia la cuenta. No es así. El acuerdo CA-4 trata a El Salvador, Guatemala, Honduras y Nicaragua como una sola zona para los 90 días, y la prórroga se pide una vez, en el país donde esté al pedirla. Las páginas de ${h.a('country-gt', 'Guatemala')} y ${h.a('country-ho', 'Honduras')} explican sus propias reglas de entrada, que no son iguales: Honduras pide seis meses de vigencia.</p>
+<p>Quienes combinan Santa Ana, Antigua Guatemala y las islas de la Bahía en Honduras suelen pensar que cada frontera reinicia la cuenta. No es así. El acuerdo CA-4 trata a El Salvador, Guatemala, Honduras y Nicaragua como una sola zona para los 90 días, y la prórroga se pide una vez, en el país donde esté al pedirla. Las reglas de entrada de ${h.a('country-gt', 'Guatemala')} y ${h.a('country-ho', 'Honduras')}, citadas en la página de vigencia, no son iguales: Honduras pide seis meses de vigencia.</p>
 <h2>Los niños que viven allí</h2>
 <p>Las familias que pasan temporadas largas en El Salvador deben preparar con tiempo la salida de los hijos. Tras un año en el país, el menor estadounidense es tratado como residente, y el trámite salvadoreño del consentimiento puede tardar. El ${h.a('child-passport', 'pasaporte de un menor')} solo dura cinco años: revise su fecha al mismo tiempo.</p>`,
   },

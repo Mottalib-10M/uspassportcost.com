@@ -2,8 +2,25 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { route, DEFAULT_LOCALE } from '../i18n/routes';
 import { t } from '../i18n/ui';
+import C from '../data/countries.json';
+import { destHref } from '../lib/destinations';
+/* Adresses retirées le 2026-10-16 (plafond de 100 pages, RECETTE §3) : GitHub Pages sert cette 404 pour
+   elles, et le script renvoie aussitôt vers le résumé du pays sur la page de synthèse, même langue,
+   destination choisie dans le vérificateur. */
+const OLD: Array<[string, 'en' | 'es']> = [
+  ...['PE', 'HO', 'GT', 'AE', 'CH', 'TU', 'VM', 'GM', 'GR'].map((c) => [c, 'en'] as [string, 'en']),
+  ...['PE', 'HO', 'GT', 'CA', 'CS', 'SP'].map((c) => [c, 'es'] as [string, 'es']),
+];
+const MOVED = Object.fromEntries(OLD.map(([code, l]) => {
+  const c = C.list.find((x) => x.code === code)!;
+  const from = l === 'en' ? `/en/passport-validity/${c.slug.en}/` : `/es/vigencia-del-pasaporte/${c.slug.es}/`;
+  const [path, hash] = destHref(code, l).split('#');
+  return [from, `${path}?c=${code}${hash ? `#${hash}` : ''}`];
+}));
+const redirect = `(()=>{const m=${JSON.stringify(MOVED)};let p=location.pathname;if(!p.endsWith('/'))p+='/';const t=m[p];if(t)location.replace(t);})();`;
 const ui = t(DEFAULT_LOCALE);
 ---
 <BaseLayout title="404" description="404" lang={DEFAULT_LOCALE} noindex={true}>
+  <script is:inline set:html={redirect} />
   <div class="mx-auto max-w-3xl px-4 py-16 text-center"><h1 class="text-3xl font-bold text-navy-900">404</h1><p class="mt-4 text-navy-600">{ui.notFound}</p><p class="mt-6"><a href={route('home', DEFAULT_LOCALE)} class="rounded-lg bg-accent-600 px-5 py-2.5 font-semibold text-white hover:bg-accent-700">{ui.breadcrumbHome}</a></p></div>
 </BaseLayout>
