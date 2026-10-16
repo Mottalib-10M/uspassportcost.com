@@ -1,8 +1,11 @@
 name: Sources reachability probe
 
-# Lancement manuel : vérifie que chaque source officielle répond depuis un runner GitHub (RECETTE §22),
+# À chaque modification du script de relevé (et en lancement manuel) : vérifie que chaque source officielle répond depuis un runner GitHub (RECETTE §22),
 # puis rejoue le relevé complet sans rien écrire dans le dépôt. Sert à diagnostiquer watch.yml.
 on:
+  push:
+    branches: ['main']
+    paths: ['scripts/fetch-official.py', '.github/workflows/sources-probe.yml']
   workflow_dispatch:
 
 permissions:
