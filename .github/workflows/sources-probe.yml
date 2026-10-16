@@ -1,0 +1,23 @@
+name: Sources reachability probe
+
+# Lancement manuel : vérifie que chaque source officielle répond depuis un runner GitHub (RECETTE §22),
+# puis rejoue le relevé complet sans rien écrire dans le dépôt. Sert à diagnostiquer watch.yml.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pypdf
+      - name: Joignabilité de chaque source
+        run: python3 scripts/fetch-official.py --probe
+      - name: Relevé complet (sans commit)
+        run: python3 scripts/fetch-official.py

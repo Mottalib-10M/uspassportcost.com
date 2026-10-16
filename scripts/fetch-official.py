@@ -287,7 +287,39 @@ def stats():
     }
 
 
+PROBE = [
+    ('grille PDF (miroir adoptions)', f'{MIRROR}/content/dam/tsg_aem/passports/documents/forms-fees/Passport_Fees_OCT_2026.pdf'),
+    ('grille PDF (travel.state.gov)', 'https://travel.state.gov/content/dam/tsg_aem/passports/documents/forms-fees/Passport_Fees_OCT_2026.pdf'),
+    ('page Passport Fees (miroir)', f'{MIRROR}/en/passports/apply/help/fees.html'),
+    ('page Passport Fees (travel)', 'https://travel.state.gov/en/passports/apply/help/fees.html'),
+    ('page Processing Time (miroir)', f'{MIRROR}/en/passports/apply/help/processing-time.html'),
+    ('page Processing Time (travel)', 'https://travel.state.gov/en/passports/apply/help/processing-time.html'),
+    ('eCFR titres', 'https://www.ecfr.gov/api/versioner/v1/titles.json'),
+    ('API Consular Affairs, pays', f'{CA}/api/CountryTravelInformation'),
+    ('API Consular Affairs, délivrances', f'{CA}/api/Passport/US/Issuances/FiscalYear'),
+    ('Web Archive, page Processing Time', 'https://web.archive.org/web/2026id_/https://travel.state.gov/en/passports/apply/help/processing-time.html'),
+]
+
+
+def probe():
+    """Joignabilité de chaque source depuis la machine qui exécute (runner GitHub compris)."""
+    import urllib.error
+    bad = 0
+    for label, url in PROBE:
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Encoding': 'gzip'})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                print(f'{r.status}  {label}  {url}')
+        except urllib.error.HTTPError as e:
+            print(f'{e.code}  {label}  {url}'); bad += 1
+        except Exception as e:  # noqa: BLE001
+            print(f'ERR  {label}  {url}  {type(e).__name__}: {e}'); bad += 1
+    print(f'{bad} source(s) injoignable(s) sur {len(PROBE)}')
+
+
 def main():
+    if '--probe' in sys.argv:
+        return probe()
     today = datetime.date.today().isoformat()
     res = {'retrieved_at': today}
     for name, fn in (('fee_chart', fee_chart), ('fee_page', fee_page), ('cfr', cfr), ('times', times), ('get_fast', get_fast),
