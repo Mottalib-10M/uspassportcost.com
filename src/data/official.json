@@ -1,5 +1,5 @@
 {
- "retrieved_at": "2026-10-19",
+ "retrieved_at": "2026-10-22",
  "fee_chart": {
   "file": "Passport_Fees_OCT_2026.pdf",
   "url_official": "https://travel.state.gov/content/dam/tsg_aem/passports/documents/forms-fees/Passport_Fees_OCT_2026.pdf",
@@ -70,7 +70,7 @@
   "check_payee": "U.S. Department of State"
  },
  "cfr": {
-  "issue_date": "2026-10-13",
+  "issue_date": "2026-10-19",
   "url": "https://www.ecfr.gov/current/title-22/chapter-I/subchapter-F/part-22/section-22.1",
   "execution": 35.0,
   "book_16_plus": 50.0,
@@ -355,8 +355,7 @@
    "api_sha256": "be4e74bf1cbecec4fe1276c68dc7dd606a491c7b7c92caf4d4a7a3025fe7b427",
    "sentences": [
     "PASSPORT VALIDITY: 6 months beyond the end of your planned stay. BLANK PASSPORT PAGES: Sufficient space for an entry visa stamp. TOURIST VISA REQUIRED: Not required for tourist travel under 30 days."
-   ],
-   "stale_since": "2026-10-19"
+   ]
   },
   "IN": {
    "name": "India",
