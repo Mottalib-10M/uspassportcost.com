@@ -1,5 +1,5 @@
 {
- "retrieved_at": "2026-10-26",
+ "retrieved_at": "2026-10-29",
  "fee_chart": {
   "file": "Passport_Fees_OCT_2026.pdf",
   "url_official": "https://travel.state.gov/content/dam/tsg_aem/passports/documents/forms-fees/Passport_Fees_OCT_2026.pdf",
@@ -103,8 +103,7 @@
  },
  "refund": {
   "last_updated": "2026-05-11",
-  "expedite_commitment_business_days": 15,
-  "stale_since": "2026-10-26"
+  "expedite_commitment_business_days": 15
  },
  "online": {
   "url_official": "https://travel.state.gov/en/passports/renew-replace/online.html",
@@ -357,7 +356,7 @@
    "sentences": [
     "PASSPORT VALIDITY: 6 months beyond the end of your planned stay. BLANK PASSPORT PAGES: Sufficient space for an entry visa stamp. TOURIST VISA REQUIRED: Not required for tourist travel under 30 days."
    ],
-   "stale_since": "2026-10-26"
+   "stale_since": "2026-10-29"
   },
   "IN": {
    "name": "India",
