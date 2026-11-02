@@ -1,5 +1,5 @@
 {
- "retrieved_at": "2026-10-29",
+ "retrieved_at": "2026-11-02",
  "fee_chart": {
   "file": "Passport_Fees_OCT_2026.pdf",
   "url_official": "https://travel.state.gov/content/dam/tsg_aem/passports/documents/forms-fees/Passport_Fees_OCT_2026.pdf",
@@ -58,7 +58,8 @@
   },
   "expedite": 60.0,
   "delivery": 26.87,
-  "file_search": 150.0
+  "file_search": 150.0,
+  "stale_since": "2026-11-02"
  },
  "fee_page": {
   "url_official": "https://travel.state.gov/en/passports/apply/help/fees.html",
@@ -67,7 +68,8 @@
   "expedite": 60.0,
   "delivery": 26.87,
   "file_search": 150.0,
-  "check_payee": "U.S. Department of State"
+  "check_payee": "U.S. Department of State",
+  "stale_since": "2026-11-02"
  },
  "cfr": {
   "issue_date": "2026-10-21",
@@ -94,16 +96,19 @@
   ],
   "mail_in_max_weeks": 2,
   "mail_out_max_weeks": 2,
-  "urgent_days": 14
+  "urgent_days": 14,
+  "stale_since": "2026-11-02"
  },
  "get_fast": {
   "last_updated": "2026-09-30",
   "visa_days": 28,
-  "expedite_if_travel_within_weeks": 6
+  "expedite_if_travel_within_weeks": 6,
+  "stale_since": "2026-11-02"
  },
  "refund": {
   "last_updated": "2026-05-11",
-  "expedite_commitment_business_days": 15
+  "expedite_commitment_business_days": 15,
+  "stale_since": "2026-11-02"
  },
  "online": {
   "url_official": "https://travel.state.gov/en/passports/renew-replace/online.html",
@@ -112,14 +117,16 @@
   "expiring_within_years": 1,
   "expired_less_than_years": 5,
   "no_travel_weeks": 6,
-  "can_expedite": false
+  "can_expedite": false,
+  "stale_since": "2026-11-02"
  },
  "mail": {
   "url_official": "https://travel.state.gov/en/passports/renew-replace/mail.html",
   "last_updated": "2026-10-01",
   "issued_within_years": 15,
   "issued_at_age": 16,
-  "appointment_if_travel_within_weeks": 3
+  "appointment_if_travel_within_weeks": 3,
+  "stale_since": "2026-11-02"
  },
  "countries": {
   "MX": {
@@ -355,8 +362,7 @@
    "api_sha256": "be4e74bf1cbecec4fe1276c68dc7dd606a491c7b7c92caf4d4a7a3025fe7b427",
    "sentences": [
     "PASSPORT VALIDITY: 6 months beyond the end of your planned stay. BLANK PASSPORT PAGES: Sufficient space for an entry visa stamp. TOURIST VISA REQUIRED: Not required for tourist travel under 30 days."
-   ],
-   "stale_since": "2026-10-29"
+   ]
   },
   "IN": {
    "name": "India",
