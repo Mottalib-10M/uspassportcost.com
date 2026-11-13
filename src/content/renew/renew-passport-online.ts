@@ -30,7 +30,7 @@ export default definePage({
     body: (h) => `
 <h2>The rule people miss: six weeks without travel</h2>
 <p>The online form is routine service only, and the State Department asks you to have no trip planned for at least ${O.noTravelWeeks} weeks from the day you submit. The old passport is canceled at submission, so there is no fallback document. The checker flags a trip date inside that period; the full calculator then shows the mail renewal with expedited service as the alternative, at ${h.usd(F.book.adult + F.expedite)} or more.</p>
-<h2>What it costs, and what it saves</h2>
+<h2>What renewing online costs, and what it saves</h2>
 <p>The fee is identical to the mail renewal. The saving is time and paper: no check, no envelope, no post office, and no outbound mail leg of up to ${T.mailInMaxWeeks} weeks. With 1-3 day delivery, an online book renewal comes to ${h.usd2(on.total)}, charged to your card. You still need a digital photo that meets the same rules as a printed one.</p>
 <h2>Unofficial renewal sites</h2>
 <p>Several companies sell “online passport renewal” services. The State Department warns that they are not authorized to accept or process online renewals, that it cannot get involved in disputes with them or refund an unauthorized application, and that only you may sign your application. This site does not sell any service: the ${h.a('guide-expediters', 'expediting guide')} compares government fees with what such companies add.</p>`,
@@ -51,7 +51,7 @@ export default definePage({
     body: (h) => `
 <h2>La regla que muchos pasan por alto: seis semanas sin viajar</h2>
 <p>El formulario en línea solo ofrece servicio ordinario, y el Departamento de Estado pide no tener ningún viaje durante al menos ${O.noTravelWeeks} semanas desde el día en que lo envía. El pasaporte viejo queda anulado al enviar, así que no hay documento de respaldo. El verificador señala una fecha de viaje dentro de ese periodo; la calculadora completa muestra entonces la renovación por correo con servicio urgente como alternativa, desde ${h.usd(F.book.adult + F.expedite)}.</p>
-<h2>Lo que cuesta y lo que ahorra</h2>
+<h2>Lo que cuesta renovar en línea y lo que ahorra</h2>
 <p>La tarifa es idéntica a la del correo. Se ahorra tiempo y papel: sin cheque, sin sobre, sin oficina de correos y sin el tramo de ida de hasta ${T.mailInMaxWeeks} semanas. Con entrega en 1 a 3 días, una renovación de libreta en línea llega a ${h.usd2(on.total)}, cobrados a su tarjeta. Igual necesita una foto digital que cumpla las mismas reglas que una impresa.</p>
 <h2>Sitios de renovación no oficiales</h2>
 <p>Varias empresas venden servicios de “renovación del pasaporte en línea”. El Departamento de Estado advierte que no están autorizadas a recibir ni tramitar renovaciones en línea, que no puede intervenir en disputas con ellas ni reembolsar una solicitud no autorizada, y que solo usted puede firmar su solicitud. Este sitio no vende ningún servicio: la ${h.a('guide-expediters', 'guía de gestores')} compara las tarifas del gobierno con lo que agregan esas empresas.</p>`,

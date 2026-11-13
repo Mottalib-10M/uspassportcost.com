@@ -34,7 +34,7 @@ export default definePage({
 <h2>One document travels everywhere, the other only by road and sea</h2>
 <p>The difference between the two is not quality but scope. The ${h.src('cardVsBook', 'State Department comparison page')} describes the book as valid for international travel by air, sea and land, and the card as valid for entering the United States from Canada, Mexico, Bermuda and some Caribbean countries by land or sea. The card has no visa pages, so no other country can stamp it or put a visa in it. Its main advantage is the format: it fits a wallet and is faster to show at Ready Lanes on the borders with Mexico and Canada. Its main limit is just as plain: no airline will accept it for an international flight.</p>
 <p>Both documents prove U.S. citizenship and identity, and both are valid instead of a REAL ID driver's license at domestic airport security. Both last 10 years for adults and 5 years for children under 16. That shared validity means an adult who gets them together renews them together, a decade later.</p>
-<h2>What each one costs</h2>
+<h2>What a passport book and card each cost</h2>
 ${h.table(['Applicant', 'Book', 'Card', 'Book and card'], [
   ['Adult, first time (with execution fee)', h.usd(bookA), h.usd(cardA), h.usd(bothA)],
   ['Child under 16 (with execution fee)', h.usd(bookM), h.usd(cardM), h.usd(bothM)],
@@ -76,7 +76,7 @@ ${h.mini('checks')}
 <h2>Un documento sirve para todo; el otro, solo por carretera y mar</h2>
 <p>La diferencia entre los dos no es de calidad, sino de alcance. La ${h.src('cardVsBook', 'página comparativa del Departamento de Estado')} dice que la libreta vale para viajes internacionales en avión, barco y por tierra, y que la tarjeta vale para entrar a Estados Unidos desde Canadá, México, Bermudas y algunos países del Caribe por tierra o por mar. La tarjeta no tiene páginas para visas, así que ningún otro país puede sellarla ni poner una visa en ella. Su ventaja principal es el formato: cabe en la cartera y se muestra más rápido en los carriles Ready Lanes de las fronteras con México y Canadá. Su límite es igual de claro: ninguna aerolínea la acepta para un vuelo internacional.</p>
 <p>Los dos documentos prueban la ciudadanía y la identidad, y los dos valen en lugar de una licencia REAL ID en los controles de los aeropuertos nacionales. Los dos duran 10 años para adultos y 5 para menores de 16. Esa vigencia común significa que un adulto que los pide juntos los renueva juntos, una década después.</p>
-<h2>Cuánto cuesta cada uno</h2>
+<h2>Cuánto cuestan la libreta y la tarjeta</h2>
 ${h.table(['Solicitante', 'Libreta', 'Tarjeta', 'Libreta y tarjeta'], [
   ['Adulto, primera vez (con ejecución)', h.usd(bookA), h.usd(cardA), h.usd(bothA)],
   ['Menor de 16 (con ejecución)', h.usd(bookM), h.usd(cardM), h.usd(bothM)],

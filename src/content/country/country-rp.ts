@@ -35,7 +35,7 @@ export default definePage({
 <p>Like ${h.a('country-vm', 'Vietnam')}, and unlike ${h.a('country-th', 'Thailand')}, the Philippines counts six months from the end of the planned stay. Every extra week of travel moves the deadline by a week. Enter both dates in the checker: it applies the rule to your planned departure and shows the margin in days.</p>
 <h2>Entry stamp and stay limit</h2>
 <p>The page asks for sufficient space for an entry visa stamp rather than a fixed number of blank pages. The stay you are admitted for is the date immigration stamps in the passport; staying past it exposes you to fines or detention by the Bureau of Immigration, according to the State Department. Work, retirement and long stays go through Philippine agencies.</p>
-<h2>If the passport is too short</h2>
+<h2>If the passport is too short for the Philippines</h2>
 <p>A ${h.a('passport-renewal', 'renewal by mail')} costs ${h.usd(h.P.fees.book.adult)}; ${h.a('expedited-passport', 'expedited service')} adds ${h.usd(h.P.fees.expedite)}. Testing the last country of a Southeast Asia route usually covers the others, as long as each rule counts from the right date. With the slowest published routine times, a mailed renewal takes up to ${worst} days door to door, so a passport that misses the Philippines deadline by a few weeks still leaves time to renew if you start now; within ${h.P.times.urgentDays} days of travel, an appointment at a passport agency is the remaining route.</p>`,
   },
 });

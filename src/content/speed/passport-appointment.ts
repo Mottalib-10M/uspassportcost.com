@@ -18,7 +18,7 @@ export default definePage({
     title: `Passport Appointment for Urgent Travel 2026: ${T.urgentDays}-Day Rule`,
     description: `Traveling within ${T.urgentDays} days, or ${T.urgentVisaDays} with a foreign visa? Book a free passport agency appointment. A first adult book costs ${$(first.total, 'en')} there, a renewal ${$(renew.total, 'en')}, by card.`,
     h1: 'Passport agency appointment for urgent travel',
-    intro: 'When the trip is too close for mail, the State Department’s own agencies issue passports by appointment. The rules are strict and the appointment is free.',
+    intro: 'When urgent travel is too close for mail, the State Department’s own agencies issue passports by appointment. The rules are strict and the appointment is free.',
     resume: `The State Department runs ${P.network.agencies} passport agencies and centers across the country, from Boston to Honolulu and San Juan. They take appointments when you have international travel within ${T.urgentDays} calendar days, or need a foreign visa within ${T.urgentVisaDays} days, and require proof of travel such as a ticket or hotel reservation. For a life-or-death emergency, the death, hospice care or life-threatening illness of an immediate family member abroad, there is a separate emergency appointment within 14 days. Appointments are free: the State Department says any request to pay for one should be considered fraudulent, and it may not honor appointments booked through third parties. At the agency, the ${$(F.expedite, 'en')} expedite fee is always charged and fees are paid by card: ${$(first.total, 'en')} for a first adult book including the ${$(F.execution, 'en')} execution fee, ${$(renew.total, 'en')} for a renewal. Book through the Online Passport Appointment System, up to seven people per household.`,
     faqs: [
       { q: 'How soon before my trip can I get a passport agency appointment?', a: `Within ${T.urgentDays} calendar days of your international travel date, or within ${T.urgentVisaDays} days if you need a foreign visa first. Earlier than that, the State Department expects you to apply at an acceptance facility or renew by mail, with expedited service if the trip is less than six weeks away.` },
@@ -26,7 +26,7 @@ export default definePage({
       { q: 'Who counts as immediate family for a life-or-death passport appointment?', a: 'Parents or legal guardians, children, spouses, siblings and grandparents. Aunts, uncles, cousins and other relatives do not qualify, and neither does travel abroad for your own medical care. You need documentation such as a death certificate or a hospital letter, translated if not in English, and proof of travel within two weeks.' },
     ],
     body: (h) => `
-<h2>What to bring to the agency</h2>
+<h2>What to bring to an urgent travel appointment</h2>
 <p>The same documents as any application, plus proof of the trip. A first passport still means Form DS-11, citizenship evidence, a photo ID and a photo; a renewal means Form DS-82 and the old passport. Bring the confirmation details the system gives you: the agency checks them on the day, and an appointment cannot be transferred to someone else. The calculator above prices the visit with the expedite fee included, since agencies charge it in every case.</p>
 <h2>If you already applied</h2>
 <p>When an application is already in process and your plans become urgent, you do not book online; you call. The State Department checks whether the passport can be issued before your travel and, if not, makes the appointment itself. The first two digits of your nine-digit application locator number tell which agency or center holds your file.</p>
@@ -46,7 +46,7 @@ export default definePage({
       { q: '¿Quién cuenta como familiar directo para una cita de vida o muerte?', a: 'Padres o tutores legales, hijos, cónyuges, hermanos y abuelos. Tíos, primos y otros parientes no cuentan, y tampoco un viaje para recibir atención médica propia. Necesita documentos como un acta de defunción o una carta del hospital, traducidos si no están en inglés, y prueba de un viaje dentro de dos semanas.' },
     ],
     body: (h) => `
-<h2>Qué llevar a la agencia</h2>
+<h2>Qué llevar a la cita por viaje urgente</h2>
 <p>Los mismos documentos que cualquier solicitud, más la prueba del viaje. Un primer pasaporte sigue siendo el DS-11, la prueba de ciudadanía, una identificación con foto y una foto; una renovación, el DS-82 y el pasaporte anterior. Lleve los datos de confirmación que le da el sistema: la agencia los revisa ese día, y una cita no se puede pasar a otra persona. La calculadora de arriba calcula la visita con la tarifa urgente incluida, porque las agencias la cobran siempre.</p>
 <h2>Si ya presentó la solicitud</h2>
 <p>Cuando su solicitud ya está en trámite y el viaje se vuelve urgente, no reserva en línea: llama. El Departamento revisa si puede emitir el pasaporte antes del viaje y, si no, hace la cita por usted. Los dos primeros dígitos de su número de localizador de nueve cifras indican qué agencia o centro tiene su expediente.</p>

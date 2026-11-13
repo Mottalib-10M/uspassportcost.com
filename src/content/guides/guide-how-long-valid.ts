@@ -33,7 +33,7 @@ export default definePage({
       { q: 'Does an expired passport still prove US citizenship?', a: 'Yes. The State Department notes that previous passports can always be used as proof of citizenship, even when they are expired. An expired passport is not valid for travel, but it can support a new application, and it is returned to you after a renewal by mail.' },
     ],
     body: (h) => `
-<h2>One rule, two lengths</h2>
+<h2>One rule, two passport validity lengths</h2>
 <p>The age that counts is the age on the issue date. From 16, the State Department issues a 10-year passport; under 16, a 5-year passport. The mini-calculator at the top takes your issue date and that age, and returns the expiration date and the renewal route you will have when it comes, by mail, online or in person. For a passport issued on ${h.date(ISS)}, the difference between 15 and 16 is five years of validity: ${h.date(at15)} against ${h.date(at16)}.</p>
 <h2>What each length means for renewal</h2>
 <p>An adult passport, issued at 16 or older, can be renewed by mail for ${h.P.mail.issuedWithinYears} years after issue, which gives five years of grace after a 10-year passport expires. Online renewal opens a year before expiry and closes five years after, for holders aged 25 or more. A child passport never renews: every new passport is a fresh application in person, with both parents or the consent form. A teenager whose last passport was a child one must apply in person at 16 or 17, and only the passport after that can be renewed.</p>

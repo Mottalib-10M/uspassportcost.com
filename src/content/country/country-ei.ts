@@ -30,7 +30,7 @@ export default definePage({
       { q: "Why are some Americans refused entry to Ireland?", a: `The State Department reports that an increased number of U.S. citizens have been refused entry or granted a limited stay because they failed to demonstrate their travel intent. Carry evidence of sufficient funds, a return ticket and, for anything other than tourism, the right documents obtained before travel.` },
     ],
     body: (h) => `
-<h2>A rule and an advice that point to different dates</h2>
+<h2>Ireland’s passport rule and advice point to different dates</h2>
 <p>Ireland is the clearest case of the gap between a legal minimum and good practice. The rule is satisfied on the day you land; the recommendation stretches to the day you leave. The checker above shows both, because a passport that is valid on arrival but expires mid-trip complies with Irish law and still leaves you stranded for the return flight.</p>
 <h2>Dublin as a gateway</h2>
 <p>Many travelers combine Ireland with the continent. The Schengen countries ask for three months after the last day in the area, which can be the stricter test of the whole itinerary: check ${h.a('country-fr', 'France')}, ${h.a('country-it', 'Italy')} or ${h.a('country-sp', 'Spain')} with the same passport before booking.</p>

@@ -32,7 +32,7 @@ export default definePage({
     body: (h) => `
 <h2>The departure date is the deadline</h2>
 <p>For most of Europe the question is how many months remain after you leave. For the United Kingdom it is only whether the passport reaches the day you fly home. That makes the UK forgiving for a passport near its end, as long as nothing delays the return. The checker above treats the departure date as the rule; if you are flying on to the continent, test the Schengen country too, since ${h.a('country-fr', 'France')} or ${h.a('country-sp', 'Spain')} count three months after you leave the area.</p>
-<h2>Two documents to check, not one</h2>
+<h2>Two documents to check, not one: passport and ETA</h2>
 <p>The passport rule and the ETA are separate conditions. The ETA is for visits of six months or less; longer stays, work or study beyond that need a UK visa. For residents, the State Department notes that UK Visas and Immigration has been replacing physical documents with an online immigration status called an eVisa since fall 2024. If you renew online, the old passport is canceled the moment you submit, which is one more reason to keep ${h.P.online.noTravelWeeks} clear weeks before the trip.</p>
 <h2>Timing a renewal for a UK trip</h2>
 <p>With routine service and mail both ways, ${worst} days is the published worst case. A ${h.a('passport-renewal', 'renewal by mail')} sent on ${h.date(mailBy)} covers a landing on ${h.date(ARR)}; later than that, ${h.a('expedited-passport', 'expedited service')} costs ${h.usd(h.P.fees.expedite)} more.</p>`,

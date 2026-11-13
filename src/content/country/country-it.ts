@@ -32,7 +32,7 @@ export default definePage({
     body: (h) => `
 <h2>The detail that sends travelers home</h2>
 <p>Italy’s page is short, but it contains one of the bluntest sentences in the State Department’s country pages: a passport ever reported lost or stolen can mean being returned to the United States. The system records the report, not your later discovery of the passport in a coat pocket. If you are unsure whether an old passport was reported, travel on the newest one: the older book stays canceled in the records even when it looks perfectly intact.</p>
-<h2>Three months in practice</h2>
+<h2>Three months of passport validity in practice</h2>
 <p>The rule counts from the end of the stay, so the same passport may pass for a weekend in Venice and fail for a long summer in Tuscany. Enter both dates in the checker. The State Department advises six months for its neighbors ${h.a('country-fr', 'France')} and ${h.a('country-gr', 'Greece')}; aiming for that margin in Italy avoids surprises at the airline counter.</p>
 <h2>If you must renew</h2>
 <p>A ${h.a('passport-renewal', 'mail renewal')} at ${h.usd(h.P.fees.book.adult)} mailed by ${h.date(mailBy)} is safe for a ${h.date(ARR)} landing; with ${h.a('expedited-passport', 'expedited service')} and 1-3 day delivery, the worst case shrinks to about five and a half weeks.</p>`,

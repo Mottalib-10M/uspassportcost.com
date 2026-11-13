@@ -27,7 +27,7 @@ export default definePage({
       { q: 'What do I mail with Form DS-5504 for a name change?', a: 'Four things: the completed DS-5504, your most recent U.S. passport, an original or certified document showing the name change within one year of issue (marriage certificate, divorce decree or court order) and one passport photo. The mailing address is on the form. No fee is due unless you add expedited service.' },
     ],
     body: (h) => `
-<h2>The one-year test</h2>
+<h2>The one-year test for a free passport name change</h2>
 <p>Form DS-5504 is free within its one-year window, as the State Department’s change and correct page states. Both clocks must be under a year: the issue date printed in the passport and the date of the marriage or court order. When the passport is younger than a year but the marriage is older, or the reverse, DS-5504 does not apply and the change is a paid application. The calculator’s “Name change within 1 year” choice covers the free case, ${h.usd(free.total)}, and shows ${h.usd(freeFast.total)} when you add expedited processing; for the paid cases, choose renewal by mail.</p>
 <h2>A data error is a different case</h2>
 <p>A misspelled name, a wrong date or place of birth, or a printing defect is corrected free on the same DS-5504 at any time while the passport is valid. Reported within a year of issue, the corrected passport gets a full 10 or 5 years; later, it keeps the expiration date of the faulty one. A new photo is free only for a printing error: if the photo printed correctly and you simply want a new one, you renew normally.</p>
@@ -47,7 +47,7 @@ export default definePage({
       { q: '¿Qué envío con el formulario DS-5504 para cambiar el nombre?', a: 'Cuatro cosas: el DS-5504 lleno, su pasaporte más reciente, un documento original o certificado que muestre el cambio de nombre dentro del primer año (acta de matrimonio, sentencia de divorcio u orden judicial) y una foto de pasaporte. La dirección de envío está en el formulario. No se paga nada salvo que pida el servicio urgente.' },
     ],
     body: (h) => `
-<h2>La prueba del año</h2>
+<h2>La prueba del año para un cambio de nombre gratis</h2>
 <p>El DS-5504 es gratis dentro de su plazo de un año, como indica la página del Departamento de Estado sobre cambios y correcciones. Los dos relojes deben marcar menos de un año: la fecha de emisión impresa en el pasaporte y la fecha del matrimonio o de la orden judicial. Si el pasaporte tiene menos de un año pero el matrimonio es anterior, o al revés, el DS-5504 no se aplica y el cambio es una solicitud pagada. La opción “Cambio de nombre en el primer año” de la calculadora cubre el caso gratuito, ${h.usd(free.total)}, y muestra ${h.usd(freeFast.total)} si agrega el trámite urgente; para los casos pagados, elija la renovación por correo.</p>
 <h2>Un error de datos es otro caso</h2>
 <p>Un nombre mal escrito, una fecha o un lugar de nacimiento equivocados o un defecto de impresión se corrigen gratis con el mismo DS-5504 mientras el pasaporte esté vigente. Si se reporta dentro del primer año, el pasaporte corregido recibe 10 o 5 años completos; después, conserva el vencimiento del pasaporte con el error. Una foto nueva solo es gratis si hubo un error de impresión: si la foto se imprimió bien y solo quiere cambiarla, renueva de forma normal.</p>

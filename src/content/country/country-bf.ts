@@ -29,7 +29,7 @@ export default definePage({
 <p>Many Caribbean pages speak of WHTI documents in general. The Bahamas page goes further and names the U.S. passport card for cruise travel. That matters for families booking a short sailing from Florida to Nassau or a private island: a child’s card costs ${h.usd(P.fees.card.minor + P.fees.execution)} with the facility fee, against ${h.usd(P.fees.book.minor + P.fees.execution)} for a child’s book. The saving is real, and so is the limit: the card does not work on any international flight.</p>
 <h2>Flying to Nassau or the Out Islands</h2>
 <p>Air passengers need the book, valid on arrival, and evidence they will leave, such as the return ticket. No margin of months appears on the page. If the passport would expire during your stay, ${h.a('passport-renewal', 'renew it')} before you go, since being stranded with an expired document is far more expensive than the renewal.</p>
-<h2>Picking the document</h2>
+<h2>Picking a passport for the Bahamas</h2>
 <p>If a cruise is the only foreign trip you plan, the card is enough. If a flight might follow, ${h.a('guide-book-vs-card', 'book or card')} explains the trade-off, and ordering both in one application saves the second execution fee. A renewal of both by mail costs ${h.usd(P.fees.both.adult)}, with no facility visit at all.</p>`,
   },
 });

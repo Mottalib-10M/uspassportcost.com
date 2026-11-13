@@ -18,7 +18,7 @@ export default definePage({
     title: 'Passport at 16 or 17 in 2026: Adult Fee, 10-Year Book',
     description: `At 16 or 17 a first passport costs the adult ${$(teen.total, 'en')}, in person on Form DS-11, valid 10 years. Show one parent knows, with an ID or a note. Fee and date here.`,
     h1: 'Passport for 16 and 17 year olds',
-    intro: 'From the 16th birthday the State Department charges the adult price and issues a 10-year passport, but a teen still applies in person.',
+    intro: 'From the 16th birthday the State Department charges the adult price and issues a 10-year passport, but a teen of 16 or 17 still applies in person.',
     resume: `A teenager aged 16 or 17 applying for a first adult passport pays exactly what an adult pays: ${$(F.book.adult, 'en')} for a book, ${$(F.card.adult, 'en')} for a card or ${$(F.both.adult, 'en')} for both, to the U.S. Department of State, plus the ${$(F.execution, 'en')} execution fee to the acceptance facility, so ${$(teen.total, 'en')} for a book. That is ${$(teen.total - kid.total, 'en')} more than the ${$(kid.total, 'en')} a 15-year-old pays, but the passport lasts 10 years instead of 5, which makes it the cheapest passport per year of validity at any age. The application is Form DS-11, in person, and the teen must show that one parent or guardian is aware of it: the parent comes along and signs, writes a signed note, appears as the emergency contact on the form, or pays the fee with a check in the parent’s name. Without an acceptable photo ID of their own, a parent with ID signs the application with them.`,
     faqs: [
       { q: 'Does a 16-year-old need both parents to get a passport?', a: 'No. The two-parent rule ends at 16. A 16 or 17 year old applies on Form DS-11 and only has to show that one parent or guardian knows: a parent present who signs, a signed note with a copy of the parent’s ID, a parent listed as emergency contact, or a check from the parent.' },
@@ -26,7 +26,7 @@ export default definePage({
       { q: 'Is it worth waiting until 16 for a passport?', a: `In cost per year, yes: ${$(teen.total, 'en')} buys 10 years at 16, while ${$(kid.total, 'en')} buys 5 years at 15. A passport issued just before the 16th birthday is a child passport of 5 years. If no trip is planned, waiting a few weeks past the birthday doubles the validity for ${$(teen.total - kid.total, 'en')} more.` },
     ],
     body: (h) => `
-<h2>Same price as an adult, different paperwork</h2>
+<h2>A passport at 16 or 17: same price as an adult, different paperwork</h2>
 <p>The fee schedule draws its line at 16: the book fee jumps from ${h.usd(F.book.minor)} to ${h.usd(F.book.adult)} and validity doubles. The rest of the file looks like a child’s. The teen brings citizenship evidence such as a certified birth certificate, a photocopy of it on single-sided letter paper, a photo ID and its copy, and one photo that the agent staples. The first adult passport can never be a renewal, even if the teen held child passports before: the DS-82 is closed to passports issued before 16.</p>
 <h2>Four ways to prove a parent knows</h2>
 <p>The State Department accepts any one of four signs. A parent applies with the teen, shows ID and signs the DS-11. Or the teen brings a note signed by the parent with a photocopy of that parent’s ID. Or a parent is listed in the emergency contact section of the form. Or the fee check bears the parent’s name. If none of these makes it clear, the Department may ask for the notarized Form DS-3053.</p>
@@ -46,7 +46,7 @@ export default definePage({
       { q: '¿Conviene esperar a cumplir 16 para sacar el pasaporte?', a: `Por costo por año, sí: con ${$(teen.total, 'es')} se compran 10 años a los 16, mientras que ${$(kid.total, 'es')} compran 5 años a los 15. Un pasaporte emitido justo antes de los 16 es de menor y vale 5 años. Si no hay viaje a la vista, esperar unas semanas después del cumpleaños duplica la vigencia por ${$(teen.total - kid.total, 'es')} más.` },
     ],
     body: (h) => `
-<h2>Precio de adulto, papeles de menor</h2>
+<h2>Pasaporte a los 16 o 17 años: precio de adulto, papeles de menor</h2>
 <p>La lista de tarifas marca la línea en los 16 años: la libreta pasa de ${h.usd(F.book.minor)} a ${h.usd(F.book.adult)} y la vigencia se duplica. El resto del expediente se parece al de un niño. El joven lleva su prueba de ciudadanía, como un acta de nacimiento certificada, una copia por un solo lado en papel carta, una identificación con foto y su copia, y una foto que engrapa el agente. El primer pasaporte de adulto nunca es una renovación, aunque haya tenido pasaportes de menor: el DS-82 no sirve para pasaportes emitidos antes de los 16 años.</p>
 <h2>Cuatro formas de probar que un padre lo sabe</h2>
 <p>El Departamento de Estado acepta cualquiera de cuatro señales. Un padre solicita con el joven, muestra su identificación y firma el DS-11. O el joven lleva una nota firmada por el padre con copia de su identificación. O un padre aparece en la sección de contacto de emergencia del formulario. O el cheque de la tarifa lleva el nombre del padre. Si nada de esto basta, el Departamento puede pedir el formulario DS-3053 notariado.</p>

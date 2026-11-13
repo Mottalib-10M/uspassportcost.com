@@ -30,7 +30,7 @@ export default definePage({
     body: (h) => `
 <h2>What the checker asks, and why</h2>
 <p>Each field of the checker maps to one sentence of the State Department’s two renewal pages. The issue date decides the 15-year limit for mail and, through the expiration date it implies, the online window. The age at issue tells a 10-year adult passport from a 5-year child passport, which can never be renewed. Your age today matters only online, where the minimum is ${P.online.minAge}. A name change with a legal document keeps you eligible by mail but rules out online renewal; without a document, only an in-person application works. Damage beyond wear, or a passport reported lost, sends you to Form DS-11.</p>
-<h2>Mail or online when you qualify for both</h2>
+<h2>Renewal by mail or online when you qualify for both</h2>
 <p>The fee is the same, so the choice is about time and risk. Online, you skip the outbound mail, pay by card and keep your old passport until you submit, but you cannot expedite and the old passport is canceled on submission. By mail, the envelope can take up to ${T.mailInMaxWeeks} weeks to arrive, but you can expedite it for ${h.usd(F.expedite)} and write “EXPEDITE” on the envelope. If a trip falls within ${P.online.noTravelWeeks} weeks, mail with expedited service is the only renewal left. The calculator on ${h.a('passport-processing-time', 'processing times')} dates both.</p>
 ${h.mini('renewWindow')}
 <h2>One check for the household</h2>
@@ -52,7 +52,7 @@ ${h.mini('renewWindow')}
     body: (h) => `
 <h2>Lo que pregunta el verificador y por qué</h2>
 <p>Cada campo del verificador corresponde a una frase de las dos páginas de renovación del Departamento de Estado. La fecha de emisión decide el límite de 15 años del correo y, por el vencimiento que implica, la ventana en línea. La edad al emitirse distingue un pasaporte de adulto de 10 años de uno de menor de 5 años, que nunca se renueva. Su edad actual solo cuenta en línea, donde el mínimo es de ${P.online.minAge} años. Un cambio de nombre con documento legal mantiene la renovación por correo pero descarta la de en línea; sin documento, solo queda la solicitud en persona. Un daño más allá del uso, o un pasaporte reportado perdido, lo lleva al DS-11.</p>
-<h2>Correo o en línea cuando cumple ambas</h2>
+<h2>Renovar por correo o en línea cuando cumple ambas</h2>
 <p>La tarifa es la misma, así que la elección depende del tiempo y del riesgo. En línea se salta el correo de ida, paga con tarjeta y conserva su pasaporte hasta enviar la solicitud, pero no puede pedir urgente y el pasaporte viejo se anula al enviar. Por correo, el sobre puede tardar hasta ${T.mailInMaxWeeks} semanas en llegar, pero puede pedir urgente por ${h.usd(F.expedite)} escribiendo “EXPEDITE” en el sobre. Si viaja en menos de ${P.online.noTravelWeeks} semanas, la única renovación posible es por correo con servicio urgente. La calculadora de ${h.a('passport-processing-time', 'tiempos de trámite')} fecha las dos.</p>
 ${h.mini('renewWindow')}
 <h2>Un solo cheque para la familia</h2>

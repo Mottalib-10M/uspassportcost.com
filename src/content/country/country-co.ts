@@ -25,7 +25,7 @@ export default definePage({
       { q: 'How long can a U.S. tourist stay in Colombia?', a: 'Up to 90 days without a visa for tourism or business, and no more than 180 days in total per calendar year. Before the 90 days run out, you can ask Migración Colombia for a 90-day extension. Staying longer than allowed brings a fine, and you may not be able to leave until it is paid.' },
     ],
     body: (h) => `
-<h2>A passport without a countdown</h2>
+<h2>A passport without a countdown in Colombia</h2>
 <p>Colombia’s page asks for a valid U.S. passport at entry and at exit, nothing more on validity. In practice that means the expiration date must fall after the day you leave Bogotá, Medellín or Cartagena. A passport expiring a few weeks after the trip is legal, though a delayed return flight would leave you holding an expired document, which the checker above shows as a margin of days.</p>
 <h2>The form and the return ticket</h2>
 <p>Two practical requirements cause more trouble than validity. The Check-Mig declaration is done online 72 hours before the outbound and return flights. And the State Department warns that travelers can be refused entry without a return ticket, so a one-way booking is a real risk.</p>

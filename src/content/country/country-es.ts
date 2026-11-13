@@ -25,7 +25,7 @@ export default definePage({
       { q: 'My child lived in El Salvador over a year: can they fly back with one parent?', a: 'Only with consent. A U.S. citizen minor present in El Salvador for more than one year is considered a resident, and needs written consent from any parent on the birth certificate who is not traveling. It must be notarized by a Salvadoran notary; El Salvador does not accept consent notarized at the U.S. Embassy.' },
     ],
     body: (h) => `
-<h2>Validity shapes the card, not the entry</h2>
+<h2>Passport validity shapes the card, not the entry</h2>
 <p>The page for El Salvador states no minimum months on the U.S. passport. It does say the tourist card lasts 90 or 180 days depending on passport validity, which is the practical reason to travel with plenty of time left: an officer cannot grant a stay longer than your document. Run the checker with your real departure date to see the margin.</p>
 <h2>One clock for four countries</h2>
 <p>Visitors who combine Santa Ana, Antigua Guatemala and the Bay Islands of Honduras often assume each border restarts the count. It does not. The CA-4 agreement treats El Salvador, Guatemala, Honduras and Nicaragua as one area for the 90 days, and the extension is requested once, from the country you are in when you ask. The entry rules of ${h.a('country-gt', 'Guatemala')} and ${h.a('country-ho', 'Honduras')}, quoted on the validity page, differ: Honduras wants six months of validity.</p>
