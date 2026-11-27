@@ -126,6 +126,6 @@ export function DateField({ id, label, value, onChange, min = '1975-01-01', max 
 }
 
 export const box = 'mt-6 rounded-xl border border-accent-200 bg-accent-50/50 p-4 sm:p-5 lg:mt-0 lg:sticky lg:top-20';
-export const frame = 'rechner not-prose overflow-hidden rounded-xl border border-navy-200 bg-white';
+export const frame = 'rechner not-prose overflow-clip rounded-xl border border-navy-200 bg-white';
 export const layout = 'p-4 sm:p-6 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:items-start lg:gap-6';
 export const isIso = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);

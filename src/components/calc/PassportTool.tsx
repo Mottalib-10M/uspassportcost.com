@@ -92,7 +92,7 @@ export default function PassportTool({ lang = 'en', situation: s0 = 'first', doc
     <div className={frame} data-chrome>
       <div className="srg h-1.5" aria-hidden="true" />
       <div className={layout}>
-        <form onSubmit={(e) => e.preventDefault()} className="grid content-start gap-y-5">
+        <form onSubmit={(e) => e.preventDefault()} className="grid content-start gap-y-5 lg:sticky lg:top-20">
           <SelectField id="pp-sit" label={tx(lang, 'What are you doing?', '¿Qué trámite hace?')} value={situation} onChange={(v) => setSituation(v as Situation)} options={SITUATIONS.map((s) => ({ value: s, label: SITUATION_LABEL[lang][s] }))} />
           <div className="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2">
             <SelectField id="pp-doc" label={tx(lang, 'Document', 'Documento')} value={doc} onChange={(v) => setDoc(v as Doc)} options={(['book', 'card', 'both'] as Doc[]).map((d) => ({ value: d, label: DOC_LABEL[lang][d] }))} />

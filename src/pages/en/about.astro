@@ -13,8 +13,8 @@ const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
   <div class="prose prose-slate max-w-none">
     <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
     <p>{SITE_NAMES.en} is published by Radif Partners. It answers the two questions every passport applicant asks before going to the post office: how much will I pay, to whom, and will the passport arrive before my trip? The State Department publishes the answers in pieces: a PDF fee chart, a processing-time page, renewal rules on two other pages and entry rules on a page per country. This site puts them together for one person and one trip.</p>
-    <h2>Why this site does better than the first search result</h2>
-    <p>Many pages that rank for passport fees still print an older delivery fee or a processing time from a past backlog, and several calculators exist mainly to sell expediting. Here the fees come from the October 2026 chart and 22 CFR 22.1, the times from the page updated on the date shown, each total is split by payee, and the arrival date is compared with your departure. Nothing is for sale.</p>
+    <h2>What each answer includes</h2>
+    <p>The fees come from the October 2026 chart and 22 CFR 22.1, the times from the page updated on the date shown, each total is split by payee, and the arrival date is compared with your departure. Nothing is for sale.</p>
     <h2>How the numbers are checked</h2>
     <p>A script reads the official sources, stores them, and automated tests compare them with the values the calculators use. When the published processing times change, the site follows; when a fee or a rule changes, a notice is opened and a person reads the source again. The <a href={route('method', lang)}>method page</a> lists every source and date.</p>
     <h2>What we are not</h2>
