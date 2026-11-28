@@ -10,8 +10,8 @@ const description = GA4_ID ? 'Cookies de medición de audiencia de Google Analyt
      retoucher à la main : relancer le script. Un passage propre au site se garde entre
      les marqueurs site:debut et site:fin. */}
 <PageLayout title={title} description={description} lang={lang} noindex={true} breadcrumbs={[{ label: 'Cookies' }]} showAuthor={false}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">Cookies</h1></header>
   <div class="prose prose-slate max-w-none">
-    <h1>Cookies</h1>
     {GA4_ID ? (<>
     <p>El sitio instala cookies de medición de audiencia de Google Analytics y solo esas: ninguna cookie publicitaria ni de redes sociales. El detalle de los tratamientos está en la <a href={route('privacy', lang)}>política de privacidad</a>.</p>
     <h2>Cookies instaladas</h2>

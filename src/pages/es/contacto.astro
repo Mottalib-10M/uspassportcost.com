@@ -9,8 +9,8 @@ const lang = 'es';
 const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
 ---
 <PageLayout title="Contacto de US Passport Cost: avise de una tarifa errónea" description="Escriba a US Passport Cost si una tarifa del pasaporte, un tiempo de trámite o la regla de un destino parece errónea, o si quiere insertar la calculadora en su sitio." lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contacto', description: 'Avise de un error o inserte la calculadora.', path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contacto' }]} showAuthor={false}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">Contacto</h1></header>
   <div class="prose prose-slate max-w-none">
-    <h1>Contacto</h1>
     <p>Correo: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Leemos cada mensaje y solemos responder en una semana, en español o en inglés.</p>
     <h2>Una cifra parece errónea</h2>
     <p>Díganos la página y la cifra oficial que ve, con su enlace. No envíe números de pasaporte, números de localizador ni copias de documentos: no los necesitamos.</p>

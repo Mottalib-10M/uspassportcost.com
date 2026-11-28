@@ -38,7 +38,14 @@ h1, h2, h3, h4 { hyphens: auto; overflow-wrap: break-word; }
   main :not(.overflow-x-auto) > table { display: block; }
   .tableau-defile { box-shadow: inset -14px 0 12px -12px rgb(0 0 0 / .3); }
   .tableau-defile.fin { box-shadow: none; }
+  /* en-têtes lisibles sur une ligne (pas de petites capitales empilées), légende qui reste dans l'écran */
+  .prose thead th, table.journal thead th, main table thead th { font-variant: normal !important; letter-spacing: 0 !important; white-space: nowrap; }
+  main .tableau-defile caption, main .tableau-defile > caption { max-width: calc(100vw - 2rem); position: sticky; left: 0; }
 }
+/* pages à propos / légales : le premier titre ne colle pas au bandeau */
+main header[class^="mb-"] + .prose:has(> h2:first-child) { padding-top: 1.75rem; }
+.indice-defilement { margin: 0 0 .25rem; font-size: .8125rem; color: #475569; text-align: right; }
+.prose .indice-defilement { margin: 1.75em 0 .25rem; } .prose .indice-defilement + .overflow-x-auto { margin-top: 0; }
 
 /* Aide d'un champ (RECETTE §10.3) : dans une rangée à deux champs, si le voisin de droite n'a pas
    d'aide, celle du champ de gauche s'étend sur toute la rangée au lieu de s'enrouler sur 3 à 8

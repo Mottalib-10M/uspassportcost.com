@@ -7,7 +7,7 @@ export default (l: Lang): MiniSpec => ({
   cta: tx(l, 'Full cost and date calculator', 'Calculadora completa de costo y fecha'),
   inputs: [
     { id: 'trip', label: tx(l, 'Departure date', 'Fecha de salida'), type: 'date', def: addDays(TODAY, 75) },
-    { id: 'way', label: tx(l, 'How you apply', 'Cómo solicita'), type: 'select', def: 'mail', options: [{ value: 'mail', label: tx(l, 'In person or by mail, routine', 'En persona o por correo, ordinario') }, { value: 'exp', label: tx(l, 'Expedited, 1-3 day delivery', 'Urgente, entrega en 1-3 días') }, { value: 'online', label: tx(l, 'Online renewal', 'Renovación en línea') }] },
+    { id: 'way', label: tx(l, 'How you apply', 'Cómo solicita'), type: 'select', def: 'mail', options: [{ value: 'mail', label: tx(l, 'In person or by mail, routine', 'Ordinario, en persona o correo') }, { value: 'exp', label: tx(l, 'Expedited, 1-3 day delivery', 'Urgente, entrega en 1-3 días') }, { value: 'online', label: tx(l, 'Online renewal', 'Renovación en línea') }] },
   ],
   run: (v) => {
     const F = f(l);

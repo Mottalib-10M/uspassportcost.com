@@ -9,8 +9,8 @@ const lang = 'en';
 const upd = displayDate(LAST_UPDATED, LANG_TAGS[lang]);
 ---
 <PageLayout title="Contact US Passport Cost: Report a Wrong Fee or Date" description="Write to US Passport Cost if a passport fee, a processing time or a destination rule looks wrong, or if you would like to embed the passport cost calculator." lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description: 'Report an error or embed the calculator.', path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">Contact</h1></header>
   <div class="prose prose-slate max-w-none">
-    <h1>Contact</h1>
     <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. We read every message and usually answer within a week, in English or Spanish.</p>
     <h2>A number looks wrong</h2>
     <p>Tell us the page and the official figure you see, with its link. Please do not send passport numbers, application locator numbers or copies of documents: we do not need them.</p>

@@ -51,9 +51,9 @@ export default function ValidityTool({ lang = 'en', country: c0 = 'PE', methodHr
   ];
   return (
     <div className={frame} data-chrome>
-      <div className="srg h-1.5" aria-hidden="true" />
+      <div className="srg h-1.5 rounded-t-[11px]" aria-hidden="true" />
       <div className={layout}>
-        <form onSubmit={(e) => e.preventDefault()} className="grid content-start gap-y-5">
+        <form onSubmit={(e) => e.preventDefault()} className="grid content-start gap-y-5 lg:sticky lg:top-20">
           <SelectField id="va-c" label={tx(lang, 'Destination', 'Destino')} value={code} onChange={setCode} options={[...COUNTRIES].sort((a, b) => a.name[lang].localeCompare(b.name[lang], lang)).map((c) => ({ value: c.code, label: c.name[lang] }))} />
           <DateField id="va-exp" label={tx(lang, 'Passport expiration date', 'Fecha de vencimiento del pasaporte')} value={expiry} onChange={setExpiry} min="2020-01-01" max="2040-12-31" />
           <div className="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2">

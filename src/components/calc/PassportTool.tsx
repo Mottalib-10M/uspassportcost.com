@@ -90,7 +90,7 @@ export default function PassportTool({ lang = 'en', situation: s0 = 'first', doc
 
   return (
     <div className={frame} data-chrome>
-      <div className="srg h-1.5" aria-hidden="true" />
+      <div className="srg h-1.5 rounded-t-[11px]" aria-hidden="true" />
       <div className={layout}>
         <form onSubmit={(e) => e.preventDefault()} className="grid content-start gap-y-5 lg:sticky lg:top-20">
           <SelectField id="pp-sit" label={tx(lang, 'What are you doing?', '¿Qué trámite hace?')} value={situation} onChange={(v) => setSituation(v as Situation)} options={SITUATIONS.map((s) => ({ value: s, label: SITUATION_LABEL[lang][s] }))} />

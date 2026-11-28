@@ -4,16 +4,16 @@ export type L = 'en' | 'es';
 
 export const SITUATIONS: Situation[] = ['first', 'renew-mail', 'renew-online', 'child', 'teen', 'lost', 'name-change'];
 export const SITUATION_LABEL: Record<L, Record<Situation, string>> = {
-  en: { first: 'First passport, age 18+ (DS-11)', 'renew-mail': 'Renew by mail (DS-82)', 'renew-online': 'Renew online', child: 'Child under 16 (DS-11)', teen: 'Age 16 or 17 (DS-11)', lost: 'Replace a lost or stolen one (DS-11)', 'name-change': 'Name change within 1 year (DS-5504)' },
-  es: { first: 'Primer pasaporte, 18 años o más (DS-11)', 'renew-mail': 'Renovar por correo (DS-82)', 'renew-online': 'Renovar en línea', child: 'Menor de 16 años (DS-11)', teen: '16 o 17 años (DS-11)', lost: 'Reemplazar uno perdido o robado (DS-11)', 'name-change': 'Cambio de nombre en el primer año (DS-5504)' },
+  en: { first: 'First passport, age 18+ (DS-11)', 'renew-mail': 'Renew by mail (DS-82)', 'renew-online': 'Renew online', child: 'Child under 16 (DS-11)', teen: 'Age 16 or 17 (DS-11)', lost: 'Lost or stolen passport (DS-11)', 'name-change': 'Name change within 1 year (DS-5504)' },
+  es: { first: 'Primer pasaporte, 18+ (DS-11)', 'renew-mail': 'Renovar por correo (DS-82)', 'renew-online': 'Renovar en línea', child: 'Menor de 16 años (DS-11)', teen: '16 o 17 años (DS-11)', lost: 'Pasaporte perdido o robado (DS-11)', 'name-change': 'Nombre nuevo, <1 año (DS-5504)' },
 };
 export const DOC_LABEL: Record<L, Record<Doc, string>> = {
   en: { book: 'Passport book', card: 'Passport card', both: 'Book and card' },
   es: { book: 'Libreta', card: 'Tarjeta', both: 'Libreta y tarjeta' },
 };
 export const SERVICE_LABEL: Record<L, Record<Service, string>> = {
-  en: { routine: 'Routine (4 to 6 weeks)', expedited: 'Expedited (2 to 3 weeks)', agency: 'Agency appointment (trip within 14 days)' },
-  es: { routine: 'Ordinario (4 a 6 semanas)', expedited: 'Urgente (2 a 3 semanas)', agency: 'Cita en agencia (viaje en 14 días)' },
+  en: { routine: 'Routine (4 to 6 weeks)', expedited: 'Expedited (2 to 3 weeks)', agency: 'Agency appointment (trip ≤ 14 days)' },
+  es: { routine: 'Ordinario (4 a 6 semanas)', expedited: 'Urgente (2 a 3 semanas)', agency: 'Cita en agencia (viaje ≤ 14 días)' },
 };
 export const LINE_LABEL: Record<L, Record<string, string>> = {
   en: { application: 'Application fee', expedite: 'Expedited service', delivery: '1-3 day return delivery', fileSearch: 'File search', execution: 'Execution (acceptance) fee' },

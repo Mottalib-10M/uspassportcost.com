@@ -6,7 +6,7 @@ export default (l: Lang): MiniSpec => ({
   title: tx(l, 'What goes on each check', 'Lo que va en cada cheque'),
   cta: tx(l, 'Add dates and your trip', 'Agregar fechas y viaje'),
   inputs: [
-    { id: 's', label: tx(l, 'Application', 'Solicitud'), type: 'select', def: 'first', options: [{ value: 'first', label: tx(l, 'Adult, first passport (DS-11)', 'Adulto, primer pasaporte (DS-11)') }, { value: 'child', label: tx(l, 'Child under 16 (DS-11)', 'Menor de 16 (DS-11)') }, { value: 'renew-mail', label: tx(l, 'Renewal by mail (DS-82)', 'Renovación por correo (DS-82)') }] },
+    { id: 's', label: tx(l, 'Application', 'Solicitud'), type: 'select', def: 'first', options: [{ value: 'first', label: tx(l, 'Adult, first passport (DS-11)', 'Primer pasaporte, 18+ (DS-11)') }, { value: 'child', label: tx(l, 'Child under 16 (DS-11)', 'Menor de 16 (DS-11)') }, { value: 'renew-mail', label: tx(l, 'Renewal by mail (DS-82)', 'Renovación por correo (DS-82)') }] },
     { id: 'o', label: tx(l, 'Options', 'Opciones'), type: 'select', def: 'none', options: [{ value: 'none', label: tx(l, 'None', 'Ninguna') }, { value: 'exp', label: tx(l, 'Expedited', 'Urgente') }, { value: 'both', label: tx(l, 'Expedited + 1-3 day delivery', 'Urgente + entrega 1-3 días') }] },
   ],
   run: (v) => {

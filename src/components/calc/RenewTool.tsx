@@ -65,9 +65,9 @@ export default function RenewTool({ lang = 'en', focus = 'online', methodHref }:
   ];
   return (
     <div className={frame} data-chrome>
-      <div className="srg h-1.5" aria-hidden="true" />
+      <div className="srg h-1.5 rounded-t-[11px]" aria-hidden="true" />
       <div className={layout}>
-        <form onSubmit={(e) => e.preventDefault()} className="grid content-start gap-y-5">
+        <form onSubmit={(e) => e.preventDefault()} className="grid content-start gap-y-5 lg:sticky lg:top-20">
           <div className="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2">
             <DateField id="rn-issue" label={tx(lang, 'Issue date of your passport', 'Fecha de emisión de su pasaporte')} value={issue} onChange={setIssue} min="1990-01-01" max="2026-12-31" />
             <NumberField id="rn-age" label={tx(lang, 'Your age today', 'Su edad hoy')} value={age} onChange={setAge} max={120} unit={tx(lang, 'years', 'años')} />
