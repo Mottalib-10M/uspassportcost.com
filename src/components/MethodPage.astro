@@ -34,8 +34,8 @@ const table = h.table([T('Data', 'Dato'), T('Official source', 'Fuente oficial')
 ], undefined, ['l', 'l', 'l', 'l']);
 ---
 <PageLayout title={title} description={description} lang={lang} jsonLd={jsonLd} sources={sources.map((k) => ({ name: P.sources[k].label[lang], url: P.sources[k].url }))} breadcrumbs={[{ label: T('Method and sources', 'Método y fuentes') }]} dateEnHaut>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">{T('Method and sources', 'Método y fuentes')}</h1></header>
   <article class="prose prose-slate max-w-none">
-    <h1>{T('Method and sources', 'Método y fuentes')}</h1>
     {es ? (
       <Fragment>
         <p>Cada monto y cada plazo de este sitio vienen de páginas del Departamento de Estado leídas por un programa que cualquiera puede volver a ejecutar, y se guardan en un archivo de parámetros que las pruebas automáticas comparan con la última lectura. Esta página dice qué se lee, cuándo, y qué se hace cuando algo cambia.</p>
